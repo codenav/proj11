@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 27, 2017 at 05:10 PM
--- Server version: 10.1.8-MariaDB
--- PHP Version: 5.6.14
+-- Host: localhost
+-- Generation Time: May 28, 2017 at 04:19 PM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `program_penelitian`
+-- Database: `perizinandb`
 --
 
 -- --------------------------------------------------------
@@ -46,7 +46,168 @@ INSERT INTO `admin` (`id_admin`, `nama_lengkap`, `alamat`, `tanggal_lahir`, `ema
 (4, 'Zamzam Nurzaman', 'sekeloa kubangari 8 no 8', '0000-00-00', 'zamzam_nurzaman@outlook.com', 'zamzam', '$2y$10$IxK9H/3x/34QCF92L6dxPOh1Zq5YLD0jlvQTgF.dYYHV2igrbWFQq', 'super_admin', '2017-01-05 12:44:59'),
 (5, 'Admin Datin', 'Sekeloa', '0000-00-00', 'datin@gmail.com', 'admin_datin', '$2y$10$M9XHNa3QsAgGyggQ/RI.n.lksPDCgbYzG0oSiFM3T4Lb6ctyGUYMK', 'admin_datin', '2016-10-12 04:23:09'),
 (6, 'admin', 'admin', '0000-00-00', 'admin@gmail.com', 'admin', '$2y$10$wCTcCHmJrMhECfsG8u/s7O5V6OpcvQrSZWmObbU.HLL9uKpY38Zuu', 'super_admin', '2016-10-12 04:15:05'),
-(7, 'admin_pkl', 'admin_pkl', '0000-00-00', 'admin_pkl@gmail.com', 'admin_pkl', '$2y$10$FEtD8eZ5rSFl8Vs6nOlS4epswizocEGdWRxxPqDQMeJYDYc9dISTK', 'admin_pkl', '2016-10-12 04:23:37');
+(7, 'admin_pkl', 'admin_pkl', '0000-00-00', 'admin_pkl@gmail.com', 'admin_pkl', '$2y$10$FEtD8eZ5rSFl8Vs6nOlS4epswizocEGdWRxxPqDQMeJYDYc9dISTK', 'super_admin', '2017-05-28 07:28:59'),
+(8, 'adminpukesmas', 'Test', '0000-00-00', 'test@gmail.com', 'adminpuskesmas', '$2y$10$WEUUmKdnQ.NWacTYu3wqA.Q1/8FUtqTaYemFQNHvIlxVEMdCqv9WS', 'admin_pkl', '2017-05-28 07:29:56');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `administrasi`
+--
+
+CREATE TABLE `administrasi` (
+  `id_admin` int(11) NOT NULL,
+  `laporan` enum('ya','tidak','','') NOT NULL,
+  `keterangan` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bangunan`
+--
+
+CREATE TABLE `bangunan` (
+  `id_bangunan` int(11) NOT NULL,
+  `st_bangunan_permanen` varchar(20) NOT NULL,
+  `bangunan_bergabung_fisik` varchar(20) NOT NULL,
+  `ctt_dan_saran_bangunan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hasil_pengawasan`
+--
+
+CREATE TABLE `hasil_pengawasan` (
+  `id_pengawsan` int(11) NOT NULL,
+  `st_hasil_pengawasan` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hasil_pengawasan_tt`
+--
+
+CREATE TABLE `hasil_pengawasan_tt` (
+  `id_hasil_pengawasan_tt` int(11) NOT NULL,
+  `b_tst_hasil_pengawasan_tt` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jenis_kepemilikan`
+--
+
+CREATE TABLE `jenis_kepemilikan` (
+  `id_jns_milik` int(11) NOT NULL,
+  `jenis_layanan` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jenis_klinik`
+--
+
+CREATE TABLE `jenis_klinik` (
+  `id_jenis_klinik` int(11) NOT NULL,
+  `klinik` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jenis_layanan_klinik`
+--
+
+CREATE TABLE `jenis_layanan_klinik` (
+  `id_jns_layanan` int(11) NOT NULL,
+  `jenis_layanan` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kecamatan`
+--
+
+CREATE TABLE `kecamatan` (
+  `id_kec` int(11) NOT NULL,
+  `kecamatan` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kelurahan`
+--
+
+CREATE TABLE `kelurahan` (
+  `id_keli` int(20) NOT NULL,
+  `kelurahan` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kesesuaian_lokasi_klinik`
+--
+
+CREATE TABLE `kesesuaian_lokasi_klinik` (
+  `id_klinik` varchar(20) NOT NULL,
+  `st_lokasi` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `klinik`
+--
+
+CREATE TABLE `klinik` (
+  `no_surat_izin` int(20) NOT NULL,
+  `tgl_mulai_izin` date NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `rt` int(5) NOT NULL,
+  `rw` int(5) NOT NULL,
+  `kecamatan` varchar(20) NOT NULL,
+  `kelurahan` varchar(20) NOT NULL,
+  `puskesmas` varchar(20) NOT NULL,
+  `penanggun_jawab` varchar(50) NOT NULL,
+  `jenis_klinik` varchar(20) NOT NULL,
+  `milik` varchar(20) NOT NULL,
+  `jenis_layanan` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kunjungan_pengawasan`
+--
+
+CREATE TABLE `kunjungan_pengawasan` (
+  `id_pp` int(11) NOT NULL,
+  `tgl_pemeriksaan` date NOT NULL,
+  `id_klinik` varchar(20) NOT NULL,
+  `petugas_pp` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `operasional`
+--
+
+CREATE TABLE `operasional` (
+  `id_operasional` int(11) NOT NULL,
+  `st_beroprasi` varchar(20) NOT NULL,
+  `st_plat` varchar(20) NOT NULL,
+  `st_kesesuaian_jenis_ijin_operasional` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -714,7 +875,7 @@ INSERT INTO `pengaju` (`id_pengaju`, `nama`, `alamat`, `institusi`, `mail`) VALU
 (267, 'Tresya Anggi Tania', 'Komp.Permata Kec.Serang Kota Serang ', 'Universitas Islam Bandung (UNISBA)', ''),
 (268, 'Tri Ardayani.S.Kep. Ners. MKM', 'Jl Jatinegara 45 Kec Batununggal Kota Bandung', 'STIK Imanuel ', ''),
 (269, 'Tri Fena Melilia', 'Link Jadimulya Rt 01/08 Kec Pataruman Kota Banjar', 'Universitas Maranatha', ''),
-(270, 'Vevi Nur''Afifah Sanusi', 'Kp. Jabong Kec. Pagaden Kab. Subang', 'Universitas Pendidikan Indonesia (UPI)', ''),
+(270, 'Vevi Nur\'Afifah Sanusi', 'Kp. Jabong Kec. Pagaden Kab. Subang', 'Universitas Pendidikan Indonesia (UPI)', ''),
 (271, 'Wa Astuti', 'Jl. Cenderawasih Rt. 009/002 Kab. Fakfak', 'Universitas Komputer Indonesia (UNIKOM)', ''),
 (272, 'Wawan Sanusi', 'Dsn. Cipareuag Kec. Cimanggung Kab. Sumedang', 'Universitas Pasundan (UNPAS)', ''),
 (273, 'Wiwin Aswati', 'Dusun Kliwon Kec. Ciniru Kab. Kuningan', 'STIKes Dharma Husada Bandung', ''),
@@ -761,6 +922,129 @@ INSERT INTO `pengaju` (`id_pengaju`, `nama`, `alamat`, `institusi`, `mail`) VALU
 (315, 'asd', 'ds', 'asdas', 'asd'),
 (316, 'ffffff', 'sdklasjdlkj', 'Universitas Komputer Indonesia (UNIKOM)', 'dddd@gmai.com');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `puskesmas`
+--
+
+CREATE TABLE `puskesmas` (
+  `id_puskesmas` varchar(20) NOT NULL,
+  `puskesmas` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rekam_medik`
+--
+
+CREATE TABLE `rekam_medik` (
+  `id_medrek` int(11) NOT NULL,
+  `id_pasien` varchar(20) NOT NULL,
+  `kelengkapan_anamnesa` enum('ya','tidak','','') NOT NULL,
+  `fisik` enum('ya','tidak','','') NOT NULL,
+  `jenis_terapi` enum('ya','tidak','','') NOT NULL,
+  `tindakan` enum('ya','tidak','','') NOT NULL,
+  `nama_ttd_pemeriksa` enum('ya','tidak','','') NOT NULL,
+  `keterangan` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ruangan`
+--
+
+CREATE TABLE `ruangan` (
+  `ruang_tunggu` varchar(20) NOT NULL,
+  `ruang_konsul` varchar(20) NOT NULL,
+  `ruang_obat` varchar(20) NOT NULL,
+  `ruang_asi` varchar(20) NOT NULL,
+  `ruang_admin` varchar(20) NOT NULL,
+  `ruang_tindakan` varchar(20) NOT NULL,
+  `ruang_mandi` varchar(20) NOT NULL,
+  `rawat_inap` varchar(20) NOT NULL,
+  `ruang_farmasi` varchar(20) NOT NULL,
+  `ruang_dapur` varchar(20) NOT NULL,
+  `keterangan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sanitasi`
+--
+
+CREATE TABLE `sanitasi` (
+  `id_sapras` int(11) NOT NULL,
+  `tsmp_organik` enum('ya','tidak','','') NOT NULL,
+  `tsmp_nonorganik` enum('ya','tidak','','') NOT NULL,
+  `tsmp_medis` enum('ya','tidak','','') NOT NULL,
+  `wastafel` enum('ya','tidak','','') NOT NULL,
+  `saluran_air_kotor` enum('ya','tidak','','') NOT NULL,
+  `septictenk` enum('ya','tidak','','') NOT NULL,
+  `limbah_mds` enum('ya','tidak','','') NOT NULL,
+  `keterangan` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sarana_prasarana`
+--
+
+CREATE TABLE `sarana_prasarana` (
+  `instalasi_listrik` enum('ya','tidak','','') NOT NULL,
+  `instalasi_kebakaran` enum('ya','tidak','','') NOT NULL,
+  `sarana_gas_mds` enum('ya','tidak','','') NOT NULL,
+  `tata_udara` enum('ya','tidak','','') NOT NULL,
+  `sarana_pencahayaan` enum('ya','tidak','','') NOT NULL,
+  `air_bersih` enum('ya','tidak','','') NOT NULL,
+  `ambulans` enum('ya','tidak','','') NOT NULL,
+  `kat_jml_tt` varchar(50) NOT NULL,
+  `jml_tt` int(20) NOT NULL,
+  `keterangan` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tenaga_kesehatan`
+--
+
+CREATE TABLE `tenaga_kesehatan` (
+  `id_nakes` int(11) NOT NULL,
+  `dokter` enum('ya','tidak','','') NOT NULL,
+  `str_dokter` enum('ye','tidak','','') NOT NULL,
+  `sip_dokter` enum('ya','tidak','','') NOT NULL,
+  `perawat` enum('ya','tidak','','') NOT NULL,
+  `str_perawat` enum('ya','tidak','','') NOT NULL,
+  `sip_perawat` enum('ya','tidak','','') NOT NULL,
+  `bidan` enum('ya','tidak','','') NOT NULL,
+  `str_bidan` enum('ya','tidak','','') NOT NULL,
+  `sip_bidan` enum('ya','tidak','','') NOT NULL,
+  `apoteker` enum('ya','tidak','','') NOT NULL,
+  `sipa_apoteker` enum('ya','tidak','','') NOT NULL,
+  `analisis` enum('ya','tidak','','') NOT NULL,
+  `str_analis` enum('ya','tidak','','') NOT NULL,
+  `sip_analis` enum('ya','tidak','','') NOT NULL,
+  `str_gizi` enum('ya','tidak','','') NOT NULL,
+  `sip_gizi` enum('ya','tidak','','') NOT NULL,
+  `keterangan` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tst_hasil_pengawasan_bangunan`
+--
+
+CREATE TABLE `tst_hasil_pengawasan_bangunan` (
+  `id_st_hasil_pengawasan_bangunan` int(11) NOT NULL,
+  `st_hasil_pengawasan_bangunan` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -771,6 +1055,60 @@ INSERT INTO `pengaju` (`id_pengaju`, `nama`, `alamat`, `institusi`, `mail`) VALU
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`),
   ADD KEY `id_admin` (`id_admin`);
+
+--
+-- Indexes for table `administrasi`
+--
+ALTER TABLE `administrasi`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `bangunan`
+--
+ALTER TABLE `bangunan`
+  ADD PRIMARY KEY (`id_bangunan`);
+
+--
+-- Indexes for table `hasil_pengawasan`
+--
+ALTER TABLE `hasil_pengawasan`
+  ADD PRIMARY KEY (`id_pengawsan`);
+
+--
+-- Indexes for table `hasil_pengawasan_tt`
+--
+ALTER TABLE `hasil_pengawasan_tt`
+  ADD PRIMARY KEY (`id_hasil_pengawasan_tt`);
+
+--
+-- Indexes for table `jenis_kepemilikan`
+--
+ALTER TABLE `jenis_kepemilikan`
+  ADD PRIMARY KEY (`id_jns_milik`);
+
+--
+-- Indexes for table `jenis_klinik`
+--
+ALTER TABLE `jenis_klinik`
+  ADD PRIMARY KEY (`id_jenis_klinik`);
+
+--
+-- Indexes for table `jenis_layanan_klinik`
+--
+ALTER TABLE `jenis_layanan_klinik`
+  ADD PRIMARY KEY (`id_jns_layanan`);
+
+--
+-- Indexes for table `kunjungan_pengawasan`
+--
+ALTER TABLE `kunjungan_pengawasan`
+  ADD PRIMARY KEY (`id_pp`);
+
+--
+-- Indexes for table `operasional`
+--
+ALTER TABLE `operasional`
+  ADD PRIMARY KEY (`id_operasional`);
 
 --
 -- Indexes for table `pejabat`
@@ -804,6 +1142,30 @@ ALTER TABLE `pengaju`
   ADD KEY `id_pengaju` (`id_pengaju`);
 
 --
+-- Indexes for table `rekam_medik`
+--
+ALTER TABLE `rekam_medik`
+  ADD PRIMARY KEY (`id_medrek`);
+
+--
+-- Indexes for table `sanitasi`
+--
+ALTER TABLE `sanitasi`
+  ADD PRIMARY KEY (`id_sapras`);
+
+--
+-- Indexes for table `tenaga_kesehatan`
+--
+ALTER TABLE `tenaga_kesehatan`
+  ADD PRIMARY KEY (`id_nakes`);
+
+--
+-- Indexes for table `tst_hasil_pengawasan_bangunan`
+--
+ALTER TABLE `tst_hasil_pengawasan_bangunan`
+  ADD PRIMARY KEY (`id_st_hasil_pengawasan_bangunan`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -811,7 +1173,52 @@ ALTER TABLE `pengaju`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `administrasi`
+--
+ALTER TABLE `administrasi`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `bangunan`
+--
+ALTER TABLE `bangunan`
+  MODIFY `id_bangunan` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `hasil_pengawasan`
+--
+ALTER TABLE `hasil_pengawasan`
+  MODIFY `id_pengawsan` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `hasil_pengawasan_tt`
+--
+ALTER TABLE `hasil_pengawasan_tt`
+  MODIFY `id_hasil_pengawasan_tt` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `jenis_kepemilikan`
+--
+ALTER TABLE `jenis_kepemilikan`
+  MODIFY `id_jns_milik` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `jenis_klinik`
+--
+ALTER TABLE `jenis_klinik`
+  MODIFY `id_jenis_klinik` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `jenis_layanan_klinik`
+--
+ALTER TABLE `jenis_layanan_klinik`
+  MODIFY `id_jns_layanan` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `kunjungan_pengawasan`
+--
+ALTER TABLE `kunjungan_pengawasan`
+  MODIFY `id_pp` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `operasional`
+--
+ALTER TABLE `operasional`
+  MODIFY `id_operasional` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `penelitian`
 --
@@ -827,6 +1234,26 @@ ALTER TABLE `penempatan`
 --
 ALTER TABLE `pengaju`
   MODIFY `id_pengaju` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=317;
+--
+-- AUTO_INCREMENT for table `rekam_medik`
+--
+ALTER TABLE `rekam_medik`
+  MODIFY `id_medrek` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `sanitasi`
+--
+ALTER TABLE `sanitasi`
+  MODIFY `id_sapras` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tenaga_kesehatan`
+--
+ALTER TABLE `tenaga_kesehatan`
+  MODIFY `id_nakes` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tst_hasil_pengawasan_bangunan`
+--
+ALTER TABLE `tst_hasil_pengawasan_bangunan`
+  MODIFY `id_st_hasil_pengawasan_bangunan` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
