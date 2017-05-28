@@ -38,7 +38,7 @@
       <div class="col s12">
         <div class="card-panel cus-tambah white lighten-2">
           <div class="input-field col m6">
-              <a class="waves-effect waves-light btn">Lanjutkan</a>
+              <a href="<?php echo site_url('puskesmas/puskesmas_ruangan'); ?>" class="waves-effect waves-light btn">Lanjutkan</a>
           </div>
         </div>
       </div>
