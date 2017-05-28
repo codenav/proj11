@@ -3,7 +3,7 @@
   <?php } ?>
 <?php
 $attributes = array('onsubmit' => "return validate();");
-echo form_open('admin/tambah',$attributes);
+echo form_open('admin/tambah_user_klinik',$attributes);
 ?>
 <main>
   <div class="title">

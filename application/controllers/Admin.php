@@ -34,7 +34,7 @@ class Admin extends CI_Controller {
 		if ($this->session->userdata('username')) {
 			$data = array('isi' => 'admin/user_puskesmas');
 			$data['title'] = $this->judul;
-			$data['admin'] = $this->admin_model->get_admin();
+			$data['admin'] = $this->admin_model->get_user_puskesmas();
 			$this->load->view('templates/themes', $data);
 		}
 		else{
@@ -46,7 +46,7 @@ class Admin extends CI_Controller {
 		if ($this->session->userdata('username')) {
 			$data = array('isi' => 'admin/user_klinik');
 			$data['title'] = $this->judul;
-			$data['admin'] = $this->admin_model->get_admin();
+			$data['admin'] = $this->admin_model->get_user_klinik();
 			$this->load->view('templates/themes', $data);
 		}
 		else{
@@ -58,7 +58,7 @@ class Admin extends CI_Controller {
 		if ($this->session->userdata('username')) {
 			$data = array('isi' => 'admin/user_yankes');
 			$data['title'] = $this->judul;
-			$data['admin'] = $this->admin_model->get_admin();
+			$data['admin'] = $this->admin_model->get_user_yankes();
 			$this->load->view('templates/themes', $data);
 		}
 		else{
@@ -70,7 +70,7 @@ class Admin extends CI_Controller {
 		if ($this->session->userdata('username')) {
 			$data = array('isi' => 'admin/user_kadinkes');
 			$data['title'] = $this->judul;
-			$data['admin'] = $this->admin_model->get_admin();
+			$data['admin'] = $this->admin_model->get_user_kadinkes();
 			$this->load->view('templates/themes', $data);
 		}
 		else{
@@ -88,7 +88,7 @@ class Admin extends CI_Controller {
 
 			if ($this->form_validation->run()) {
 				$this->admin_model->tambah_user_puskesmas();
-				$this->session->set_flashdata('success_msg', 'Admin Berhasil Ditambahkan');
+				$this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
         redirect('admin/user_puskesmas');
 	    }
 			else {
@@ -109,8 +109,8 @@ class Admin extends CI_Controller {
 			$this->form_validation->set_rules('username','Username','required|is_unique[admin.username]',$kata);
 
 			if ($this->form_validation->run()) {
-				$this->admin_model->set_admin();
-				$this->session->set_flashdata('success_msg', 'Admin Berhasil Ditambahkan');
+				$this->admin_model->tambah_user_klinik();
+				$this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
         redirect('admin/user_klinik');
 	    }
 			else {
@@ -131,8 +131,8 @@ class Admin extends CI_Controller {
 			$this->form_validation->set_rules('username','Username','required|is_unique[admin.username]',$kata);
 
 			if ($this->form_validation->run()) {
-				$this->admin_model->set_admin();
-				$this->session->set_flashdata('success_msg', 'Admin Berhasil Ditambahkan');
+				$this->admin_model->tambah_user_kadinkes();
+				$this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
         redirect('admin/user_kadinkes');
 	    }
 			else {
@@ -153,8 +153,8 @@ class Admin extends CI_Controller {
 			$this->form_validation->set_rules('username','Username','required|is_unique[admin.username]',$kata);
 
 			if ($this->form_validation->run()) {
-				$this->admin_model->set_admin();
-				$this->session->set_flashdata('success_msg', 'Admin Berhasil Ditambahkan');
+				$this->admin_model->tambah_user_yankes();
+				$this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
         redirect('admin/user_yankes');
 	    }
 			else {
