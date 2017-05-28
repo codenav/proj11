@@ -66,7 +66,7 @@
           </div>
           <div class="modal-footer">
             <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" >Tidak</a>
-            <a href="<?php echo site_url('admin/delete/'.$news_item->id_admin); ?>" class=" modal-action waves-effect waves-green btn-flat">Iya</a>
+            <a href="<?php echo site_url('admin/delete_puskesmas/'.$news_item->id_admin); ?>" class=" modal-action waves-effect waves-green btn-flat">Iya</a>
           </div>
         </div>
 

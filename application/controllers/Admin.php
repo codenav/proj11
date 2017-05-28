@@ -166,6 +166,28 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function delete_kadinkes($id){
+    $this->admin_model->delete_admin($id);
+		$this->session->set_flashdata('success_msg', 'Data Berhasil Di Hapus');
+    redirect('admin/user_kadinkes');
+  }
+
+	public function delete_klinik($id){
+    $this->admin_model->delete_admin($id);
+		$this->session->set_flashdata('success_msg', 'Data Berhasil Di Hapus');
+    redirect('admin/user_klinik');
+  }
+	public function delete_puskesmas($id){
+    $this->admin_model->delete_admin($id);
+		$this->session->set_flashdata('success_msg', 'Data Berhasil Di Hapus');
+    redirect('admin/user_puskesmas');
+  }
+	public function delete_yankes($id){
+    $this->admin_model->delete_admin($id);
+		$this->session->set_flashdata('success_msg', 'Data Berhasil Di Hapus');
+    redirect('admin/user_yankes');
+  }
+
   public function tambah(){
 		if ($this->session->userdata('username')) {
 
