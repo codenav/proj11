@@ -6,7 +6,7 @@
   <div class="title">
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
-        <a href="#!" class="breadcrumb">pengajuan Penelitian</a>
+        <a href="#!" class="breadcrumb">pengajuan Penelitian test</a>
         <a href="#!" class="breadcrumb">Data Pengajuan</a>
       </div>
 

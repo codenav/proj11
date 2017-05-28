@@ -5,7 +5,7 @@ class Admin extends CI_Controller {
 		$this->load->model('admin_model');
 	}
 
-	public $judul = "Sistem Informasi Pengelolaan Izin Penelitian & Kerja Praktek";
+	public $judul = "Sistem Informasi Pengawasan dan Pengendalaian Klinik oleh Puskemas";
 
   public function view(){
     if ($this->session->userdata('username')) {
