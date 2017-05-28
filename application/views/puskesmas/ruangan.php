@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php if ($this->session->flashdata('success_msg')) { ?>
       <div id="snackbar"> <?php echo $this->session->flashdata('success_msg') ?> </div>
   <?php } ?>
@@ -20,8 +21,13 @@
         </div>
   </main>
 =======
+=======
+>>>>>>> 89134c205f51f59def58488a437a7c59260e5b2e
 <main>
   ruangan
   <a href="<?php echo site_url('puskesmas/puskesmas_bangunan'); ?>" class="waves-effect waves-light btn">Lanjutkan</a>
 </main>
+<<<<<<< HEAD
+>>>>>>> 89134c205f51f59def58488a437a7c59260e5b2e
+=======
 >>>>>>> 89134c205f51f59def58488a437a7c59260e5b2e
