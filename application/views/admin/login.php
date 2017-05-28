@@ -7,7 +7,7 @@ echo form_open('login/validasi',$attributes);
 ?>
 <div class="title-login teal lighten-1 z-depth-1">
   <?php echo $title; ?>
-  <span>Dinas Kesehatan Kota Bandung coi banget</span>
+  <span>Dinas Kesehatan Kota Bandung</span>
 </div>
 <div class="container">
   <div class="row">

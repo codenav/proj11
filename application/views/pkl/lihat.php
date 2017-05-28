@@ -9,7 +9,7 @@
         <a href="#!" class="breadcrumb">Data Kerja Praktek</a>
       </div>
   </div>
-  <nav class="teal">
+  <nav class="blue">
     <div class="nav-wrapper ">
       <form>
         <div class="input-field">

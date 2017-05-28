@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Sistem Informasi Pengelolaan Izin Penelitian & Kerja Praktek</title>
+  <title>Sistem Informasi Pengendalian Klinik oleh Puskesmas</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="<?php echo base_url() ?>assets/img/logo_icon.png" type="image/x-icon">
