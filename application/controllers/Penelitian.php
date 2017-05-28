@@ -115,7 +115,7 @@ class Penelitian extends CI_Controller {
 	public function view(){
 		if ($this->session->userdata('username')) {
 
-			$data = array('isi' => 'penelitian/lihat');
+			$data = array('isi' => 'puskesmas/kelompok_sanitasi');
 						$data['title'] = $this->judul;
 			$data['penelitian'] = $this->penelitian_model->get_penelitian();
 			$this->load->view('templates/themes', $data);

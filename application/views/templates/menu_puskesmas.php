@@ -16,7 +16,15 @@
   <li class="no-padding">
     <ul class="collapsible collapsible-accordion">
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Input Data Hasil Pengawasan</a>
+        <a class="collapsible-header waves-effect waves-teal icon-menu">
+          <i class="material-icons">assignment</i>
+          Input Hasil Pengawasan
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="<?php echo site_url(''); ?>">Pilih Klinik </a></li>
+          </ul>
+        </div>
       </li>
       <li>
         <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Download Hasil Pengawasan</a>
