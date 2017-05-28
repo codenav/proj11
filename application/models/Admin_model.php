@@ -75,4 +75,26 @@
     public function delete_admin($id){
       $this->db->delete('admin', array('id_admin'=>$id));
     }
+
+    // ================================================================
+
+    public function tambah_user_puskesmas(){
+      $defpas = $this->input->post('password');
+      $password = password_hash($defpas, PASSWORD_DEFAULT);
+
+      $data = array (
+        'nama_lengkap'=> $this->input->post('nama_lengkap'),
+        'alamat'=> $this->input->post('alamat'),
+        'email'=> $this->input->post('email'),
+        'username'=> $this->input->post('username'),
+        'password'=> $password,
+        'akses'=> "puskesmas"
+      );
+
+      $this->db->insert('admin', $data);
+    }
+
+
+
+
 }

@@ -5,7 +5,7 @@ class Admin extends CI_Controller {
 		$this->load->model('admin_model');
 	}
 
-	public $judul = "Sistem Informasi Pengawasan dan Pengendalaian Klinik oleh Puskemas";
+	public $judul = "Sistem Informasi Pengawasan Dan Pengendalaian Klinik Oleh Puskemas";
 
   public function view(){
     if ($this->session->userdata('username')) {
@@ -78,6 +78,93 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function tambah_user_puskesmas(){
+		if ($this->session->userdata('username')) {
+
+			$data['isi'] = 'admin/tambah_user_puskesmas';
+			$data['title'] = $this->judul;
+			$kata = array('is_unique' => '<b> "%s" </b> Sudah Digunakan ');
+			$this->form_validation->set_rules('username','Username','required|is_unique[admin.username]',$kata);
+
+			if ($this->form_validation->run()) {
+				$this->admin_model->tambah_user_puskesmas();
+				$this->session->set_flashdata('success_msg', 'Admin Berhasil Ditambahkan');
+        redirect('admin/user_puskesmas');
+	    }
+			else {
+	    	$this->load->view('templates/themes', $data);
+	    }
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function tambah_user_klinik(){
+		if ($this->session->userdata('username')) {
+
+			$data['isi'] = 'admin/tambah_user_klinik';
+			$data['title'] = $this->judul;
+			$kata = array('is_unique' => '<b> "%s" </b> Sudah Digunakan ');
+			$this->form_validation->set_rules('username','Username','required|is_unique[admin.username]',$kata);
+
+			if ($this->form_validation->run()) {
+				$this->admin_model->set_admin();
+				$this->session->set_flashdata('success_msg', 'Admin Berhasil Ditambahkan');
+        redirect('admin/user_klinik');
+	    }
+			else {
+	    	$this->load->view('templates/themes', $data);
+	    }
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function tambah_user_kadinkes(){
+		if ($this->session->userdata('username')) {
+
+			$data['isi'] = 'admin/tambah_user_kadinkes';
+			$data['title'] = $this->judul;
+			$kata = array('is_unique' => '<b> "%s" </b> Sudah Digunakan ');
+			$this->form_validation->set_rules('username','Username','required|is_unique[admin.username]',$kata);
+
+			if ($this->form_validation->run()) {
+				$this->admin_model->set_admin();
+				$this->session->set_flashdata('success_msg', 'Admin Berhasil Ditambahkan');
+        redirect('admin/user_kadinkes');
+	    }
+			else {
+	    	$this->load->view('templates/themes', $data);
+	    }
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function tambah_user_yankes(){
+		if ($this->session->userdata('username')) {
+
+			$data['isi'] = 'admin/tambah_user_yankes';
+			$data['title'] = $this->judul;
+			$kata = array('is_unique' => '<b> "%s" </b> Sudah Digunakan ');
+			$this->form_validation->set_rules('username','Username','required|is_unique[admin.username]',$kata);
+
+			if ($this->form_validation->run()) {
+				$this->admin_model->set_admin();
+				$this->session->set_flashdata('success_msg', 'Admin Berhasil Ditambahkan');
+        redirect('admin/user_yankes');
+	    }
+			else {
+	    	$this->load->view('templates/themes', $data);
+	    }
+		}
+		else{
+			redirect('login');
+		}
+	}
 
   public function tambah(){
 		if ($this->session->userdata('username')) {

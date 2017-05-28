@@ -22,7 +22,9 @@
   </nav>
 
   <div class="content ">
+
     <div class="card-panel white lighten-2">
+        <a href="<?php echo site_url('admin/tambah_user_puskesmas'); ?>" class="waves-effect waves-light btn">Tambah</a>
     <table class="highlight striped" id="example">
       <thead>
         <tr>
