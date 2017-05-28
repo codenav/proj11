@@ -40,7 +40,7 @@ class Login extends CI_Controller {
 			$sesi=$this->session->set_userdata($newdata);
 			$this->session->set_flashdata('success_msg', 'Selamat Datang, '.$newdata['username'].'!');
 			if ($hak_akses =="super_admin") {
-				redirect('penelitian/beranda');
+				redirect('admin/beranda');
 			}elseif ($hak_akses =="admin_datin") {
 				redirect('penelitian/lihat');
 			}elseif ($hak_akses =="admin_pkl") {

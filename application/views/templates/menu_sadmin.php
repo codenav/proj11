@@ -16,13 +16,16 @@
   <li class="no-padding">
     <ul class="collapsible collapsible-accordion">
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User</a>
+        <a href="<?php echo site_url('admin/user_puskesmas'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Puskesmas</a>
       </li>
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Klinik</a>
+        <a href="<?php echo site_url('admin/user_klinik'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Klinik</a>
       </li>
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User YANKES</a>
+        <a href="<?php echo site_url('admin/user_yankes'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Yankes</a>
+      </li>
+      <li>
+        <a href="<?php echo site_url('admin/user_kadinkes'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Kadinkes</a>
       </li>
       <li>
         <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Perizinan</a>

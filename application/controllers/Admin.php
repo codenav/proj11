@@ -19,6 +19,66 @@ class Admin extends CI_Controller {
     }
   }
 
+	public function beranda(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'admin/beranda');
+			$data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+	public function user_puskesmas(){
+		if ($this->session->userdata('username')) {
+			$data = array('isi' => 'admin/user_puskesmas');
+			$data['title'] = $this->judul;
+			$data['admin'] = $this->admin_model->get_admin();
+			$this->load->view('templates/themes', $data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function user_klinik(){
+		if ($this->session->userdata('username')) {
+			$data = array('isi' => 'admin/user_klinik');
+			$data['title'] = $this->judul;
+			$data['admin'] = $this->admin_model->get_admin();
+			$this->load->view('templates/themes', $data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function user_yankes(){
+		if ($this->session->userdata('username')) {
+			$data = array('isi' => 'admin/user_yankes');
+			$data['title'] = $this->judul;
+			$data['admin'] = $this->admin_model->get_admin();
+			$this->load->view('templates/themes', $data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function user_kadinkes(){
+		if ($this->session->userdata('username')) {
+			$data = array('isi' => 'admin/user_kadinkes');
+			$data['title'] = $this->judul;
+			$data['admin'] = $this->admin_model->get_admin();
+			$this->load->view('templates/themes', $data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+
   public function tambah(){
 		if ($this->session->userdata('username')) {
 
