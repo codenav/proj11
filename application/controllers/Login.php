@@ -46,6 +46,9 @@ class Login extends CI_Controller {
 			}elseif ($hak_akses =="admin_pkl") {
 				redirect('pkl/lihat');
 			}
+			elseif ($hak_akses == "puskesmas") {
+				redirect('penelitian/lihat');
+			}
 
 		}else {
 

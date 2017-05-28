@@ -115,10 +115,17 @@ class Penelitian extends CI_Controller {
 	public function view(){
 		if ($this->session->userdata('username')) {
 
-			$data = array('isi' => 'puskesmas/input_data');
+			$data = array('isi' => 'puskesmas/dasboard');
 						$data['title'] = $this->judul;
 			$data['penelitian'] = $this->penelitian_model->get_penelitian();
 			$this->load->view('templates/themes', $data);
+
+			$data = array('isi' => 'puskesmas/ruangan');
+						$data['title'] = $this->judul;
+			$data['penelitian'] = $this->penelitian_model->get_penelitian();
+			$this->load->view('templates/themes', $data);
+
+
 		}
 		else{
 			redirect('login');
