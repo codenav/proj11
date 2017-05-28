@@ -22,12 +22,21 @@
         </a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="<?php echo site_url(''); ?>">Pilih Klinik </a></li>
+            <li><a href="<?php echo site_url(''); ?>">Ruangan</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Bangunan</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Operasional</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Kesesuiaan Lokasi</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Kunjungan Pengawasan</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Sanitasi</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Sarana Prasarana</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Rekam Medik</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Tenaga Kesehatan</a></li>
+            <li><a href="<?php echo site_url(''); ?>">Administrasi</a></li>
           </ul>
         </div>
       </li>
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Download Hasil Pengawasan</a>
+        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Daftar Klinik</a>
       </li>
       <li>
         <a class="collapsible-header waves-effect waves-teal icon-menu">
@@ -42,23 +51,10 @@
         </div>
       </li>
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Input Administrasi</a>
-      </li>
-      <li>
-        <a class="collapsible-header waves-effect waves-teal icon-menu">
-          <i class="material-icons">assignment</i>
-          Review Hasil Pengawasan Klinik
-        </a>
-        <div class="collapsible-body">
-          <ul>
-            <li><a href="<?php echo site_url(''); ?>">Input Lokasi </a></li>
-            <li><a href="<?php echo site_url(''); ?>">Input Operasional</a></li>
-              <li><a href="<?php echo site_url(''); ?>">Input NAKES</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
         <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Lihat Daftar Klinik</a>
+      </li>
+      <li>
+        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Download Hasil Pengawasan</a>
       </li>
       <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>

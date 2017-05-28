@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Penelitian extends CI_Controller {
 
-	public $judul = "Sistem Informasi Pengelolaan Izin Penelitian & Kerja Praktek";
+	public $judul = "Sistem Informasi Pengawasan dan Pengendalaian Klinik oleh Puskemas";
 
 	public function __construct(){
     parent::__construct();
@@ -115,7 +115,7 @@ class Penelitian extends CI_Controller {
 	public function view(){
 		if ($this->session->userdata('username')) {
 
-			$data = array('isi' => 'puskesmas/kelompok_sanitasi');
+			$data = array('isi' => 'puskesmas/input_data');
 						$data['title'] = $this->judul;
 			$data['penelitian'] = $this->penelitian_model->get_penelitian();
 			$this->load->view('templates/themes', $data);

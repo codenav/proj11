@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Login extends CI_Controller {
 
-	public $judul = "Sistem Informasi Pengelolaan Izin Penelitian & Kerja Praktek";
+	public $judul = "Sistem Informasi Pengawasan dan Pengendalaian Klinik oleh Puskemas";
 
 	function __construct() {
 		parent::__construct();

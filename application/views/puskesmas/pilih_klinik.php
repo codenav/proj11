@@ -7,6 +7,8 @@
       <div class="col s12 bred">
         <a href="#!" class="breadcrumb">Input Hasil Pengawasan Klinik</a>
         <a href="#!" class="breadcrumb">Pilih Klinik</a>
+        <a href="#!" class="breadcrumb">Pilih Klinik</a>
+
       </div>
   </div>
   <nav class="blue">
