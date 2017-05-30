@@ -8,8 +8,10 @@ if ($this->session->userdata('akses') == "super_admin") {
 }elseif ($this->session->userdata('akses') == "admin_pkl") {
   require_once('menu_pkl.php');
 }elseif ($this->session->userdata('akses') == "puskesmas") {
-    require_once('menu_puskesmas.php');
-  }
+  require_once('menu_puskesmas.php');
+}elseif ($this->session->userdata('akses') == "kadinkes") {
+  require_once('menu_kadinkes.php');
+}
 
 require_once('content.php');
 require_once('footer.php');
