@@ -24,31 +24,29 @@
     <div class="col l12">
       <div class="card-panel white">
         <div class="row">
-          <ul class="tabs">
-            <li class="tab col s3"><a href="#test1">Bangunan</a></li>
-            <li class="tab col s3"><a href="#test2">Ruangan</a></li>
-            <li class="tab col s3"><a href="#test3">Administarsi</a></li>
-            <li class="tab col s3"><a href="#test4">Dokter</a></li>
-            <li class="tab col s3"><a href="#test5">Bangunan</a></li>
-            <li class="tab col s3"><a href="#test6">Ruangan</a></li>
-            <li class="tab col s3"><a href="#test7">Administarsi</a></li>
-            <li class="tab col s3"><a href="#test8">Dokter</a></li>
-            <li class="tab col s3"><a href="#test9">Bangunan</a></li>
-            <li class="tab col s3"><a href="#test10">Ruangan</a></li>
-          </ul>
-          <div id="test1" class="col s12">Banagunan</div>
-          <div id="test2" class="col s12">Ruangan</div>
-          <div id="test3" class="col s12">Administasi</div>
-          <div id="test4" class="col s12">Dokter</div>
-          <div id="test5" class="col s12">Banagunan</div>
-          <div id="test6" class="col s12">Ruangan</div>
-          <div id="test7" class="col s12">Administasi</div>
-          <div id="test8" class="col s12">Dokter</div>
-          <div id="test9" class="col s12">Administasi</div>
-          <div id="test10" class="col s12">Dokter</div>
-    </div>
+         <div class="col s12">
+           <ul class="tabs tabs-fixed-width">
+             <li class="tab col s2"><a href="#test1">Bangunan</a></li>
+             <li class="tab col s2"><a href="#test2">Ruangan</a></li>
+             <li class="tab col s2"><a href="#test3">Administarsi</a></li>
+             <li class="tab col s2"><a href="#test4">Dokter</a></li>
+             <li class="tab col s2"><a href="#test5">Bangunan</a></li>
+             <li class="tab col s2"><a href="#test6">Ruangan</a></li>
+             <li class="tab col s2"><a href="#test7">Administarsi</a></li>
+             <li class="tab col s2"><a href="#test8">Dokter</a></li>
+           </ul>
+         </div>
+           <div id="test1" class="col s12">Banagunan</div>
+           <div id="test2" class="col s12">Ruangan</div>
+           <div id="test3" class="col s12">Administasi</div>
+           <div id="test4" class="col s12">Dokter</div>
+           <div id="test5" class="col s12">Banagunan</div>
+           <div id="test6" class="col s12">Ruangan</div>
+           <div id="test7" class="col s12">Administasi</div>
+           <div id="test8" class="col s12">Dokter</div>
+       </div>
 
-  </div>
+    </div>
         <span class="black-text"><p><h3>Bangunan</h3></p>
         <div class="card-panel white">
             <p>Standart Bangunnan Permanen</p>
