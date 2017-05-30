@@ -54,6 +54,18 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function user_perizinan(){
+		if ($this->session->userdata('username')) {
+			$data = array('isi' => 'admin/user_perizinan');
+			$data['title'] = $this->judul;
+			$data['admin'] = $this->admin_model->get_user_klinik();
+			$this->load->view('templates/themes', $data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
 	public function user_yankes(){
 		if ($this->session->userdata('username')) {
 			$data = array('isi' => 'admin/user_yankes');
@@ -112,6 +124,28 @@ class Admin extends CI_Controller {
 				$this->admin_model->tambah_user_klinik();
 				$this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
         redirect('admin/user_klinik');
+	    }
+			else {
+	    	$this->load->view('templates/themes', $data);
+	    }
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function tambah_user_perizinan(){
+		if ($this->session->userdata('username')) {
+
+			$data['isi'] = 'admin/tambah_user_perizinan';
+			$data['title'] = $this->judul;
+			$kata = array('is_unique' => '<b> "%s" </b> Sudah Digunakan ');
+			$this->form_validation->set_rules('username','Username','required|is_unique[admin.username]',$kata);
+
+			if ($this->form_validation->run()) {
+				$this->admin_model->tambah_user_klinik();
+				$this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
+        redirect('admin/user_perizinan');
 	    }
 			else {
 	    	$this->load->view('templates/themes', $data);

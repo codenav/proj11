@@ -16,6 +16,9 @@
   <li class="no-padding">
     <ul class="collapsible collapsible-accordion">
       <li>
+        <a href="<?php echo site_url('admin/beranda'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Beranda</a>
+      </li>
+      <li>
         <a href="<?php echo site_url('admin/user_puskesmas'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Puskesmas</a>
       </li>
       <li>
@@ -28,7 +31,7 @@
         <a href="<?php echo site_url('admin/user_kadinkes'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Kadinkes</a>
       </li>
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Perizinan</a>
+        <a href="<?php echo site_url('admin/user_perizinan'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Perizinan</a>
       </li>
       <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>
