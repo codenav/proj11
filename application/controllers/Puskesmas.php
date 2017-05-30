@@ -118,5 +118,15 @@ class Puskesmas extends CI_Controller {
     }
   }
 
+  public function puskesmas_input(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/input');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
 
 }
