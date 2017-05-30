@@ -208,6 +208,66 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function update_user_yankes($id){
+		if ($this->session->userdata('username')) {
+			$data['isi'] = 'admin/update_user_yankes';
+			$data['title'] = $this->judul;
+			$this->form_validation->set_rules('username','Username','required');
+
+			if ($this->form_validation->run() === FALSE) {
+				$data['news_item'] = $this->admin_model->get_admin_id($id);
+				$this->load->view('templates/themes', $data);
+			}else {
+				$this->admin_model->update_admin($id);
+				$this->session->set_flashdata('success_msg', 'Data Berhasil Di Perbaharui');
+				redirect('admin/user_yankes');
+			}
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function update_user_klinik($id){
+		if ($this->session->userdata('username')) {
+			$data['isi'] = 'admin/update_user_klinik';
+			$data['title'] = $this->judul;
+			$this->form_validation->set_rules('username','Username','required');
+
+			if ($this->form_validation->run() === FALSE) {
+				$data['news_item'] = $this->admin_model->get_admin_id($id);
+				$this->load->view('templates/themes', $data);
+			}else {
+				$this->admin_model->update_admin($id);
+				$this->session->set_flashdata('success_msg', 'Data Berhasil Di Perbaharui');
+				redirect('admin/user_klinik');
+			}
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+	public function update_user_kadinkes($id){
+		if ($this->session->userdata('username')) {
+			$data['isi'] = 'admin/update_user_kadinkes';
+			$data['title'] = $this->judul;
+			$this->form_validation->set_rules('username','Username','required');
+
+			if ($this->form_validation->run() === FALSE) {
+				$data['news_item'] = $this->admin_model->get_admin_id($id);
+				$this->load->view('templates/themes', $data);
+			}else {
+				$this->admin_model->update_admin($id);
+				$this->session->set_flashdata('success_msg', 'Data Berhasil Di Perbaharui');
+				redirect('admin/user_kadinkes');
+			}
+		}
+		else{
+			redirect('login');
+		}
+	}
+
 
 // ==============================================================================
   public function tambah(){

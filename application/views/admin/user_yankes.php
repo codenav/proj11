@@ -50,7 +50,7 @@
           <td><?php echo $news_item->email; ?></td>
           <td><?php echo $news_item->akses; ?></td>
           <td>
-            <a class="waves-effect waves-light btn blue lighten-1 pad" href="<?php echo site_url('admin/update/'.$news_item->id_admin); ?>">
+            <a class="waves-effect waves-light btn blue lighten-1 pad" href="<?php echo site_url('admin/update_user_yankes/'.$news_item->id_admin); ?>">
               <i class="material-icons">update</i>
             </a>
             <a href="#modal<?php echo $news_item->id_admin ?>" class="btn red lighten-2 modal-trigger waves-effect waves-light pad">

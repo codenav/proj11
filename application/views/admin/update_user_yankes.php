@@ -3,21 +3,21 @@
   <?php } ?>
 <?php
 $attributes = array('onsubmit' => "return validate();");
-echo form_open('admin/update_user_puskesmas/'.$news_item['id_admin'],$attributes);
+echo form_open('admin/update_user_yankes/'.$news_item['id_admin'],$attributes);
 ?>
 <main>
   <div class="title">
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
         <a href="#!" class="breadcrumb">admin</a>
-        <a href="#!" class="breadcrumb">Update User Puskesmas</a>
+        <a href="#!" class="breadcrumb">Update User Yankes</a>
       </div>
   </div>
   <div class="content">
     <div class="row form">
       <div class="col s12">
         <div class="card-panel cus-tambah white lighten-2">
-          <p class="sub-tit teal lighten-2">Update User Puskesmas</p>
+          <p class="sub-tit teal lighten-2">Update User Yankes</p>
           <div class="content">
             <div class="row">
               <div class="input-field col s12">
