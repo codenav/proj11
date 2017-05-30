@@ -22,16 +22,16 @@
         </a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="<?php echo site_url(''); ?>">Ruangan</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Bangunan</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Operasional</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Kesesuiaan Lokasi</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Kunjungan Pengawasan</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Sanitasi</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Sarana Prasarana</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Rekam Medik</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Tenaga Kesehatan</a></li>
-            <li><a href="<?php echo site_url(''); ?>">Administrasi</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_bangunan'); ?>">Ruangan</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_bangunan'); ?>">Bangunan</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_operasional'); ?>">Operasional</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_kesesuaian'); ?>">Kesesuiaan Lokasi</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_kunjungan'); ?>">Kunjungan Pengawasan</a></li>
+            <li><a href="<?php echo site_url('puskmas/puskesmas_sanitasi'); ?>">Sanitasi</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_sapras'); ?>">Sarana Prasarana</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_medrek'); ?>">Rekam Medik</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_tenagakes'); ?>">Tenaga Kesehatan</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_administrasi'); ?>">Administrasi</a></li>
           </ul>
         </div>
       </li>

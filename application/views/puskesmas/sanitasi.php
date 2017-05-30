@@ -22,82 +22,69 @@
   <div class="row">
     <div class="col s12 m8">
       <div class="card-panel white">
-        <span class="black-text"><p><h3>Ruangan</h3></p>
+        <span class="black-text"><p><h3>Sanitasi</h3></p>
         <div class="card-panel white">
-            <p>Adanya Ruan Tunggu</p>
+            <p>Tempat sampah Ogananik</p>
                 <input name="group1" type="radio" id="test21" />
                     <label for="test21">Ya</label>
                 <input name="group1" type="radio" id="test20" />
               <label for="test20">Tidak</label>
           </div>
         <div class="card-panel white">
-            <p>Adanya Ruang Konsul</p>
+            <p>Tempat Sampah Nonorganik</p>
                 <input name="group2" type="radio" id="2" />
                     <label for="2">Ya</label>
                 <input name="group2" type="radio" id="3" />
               <label for="3">Tidak</label>
           </div>
         <div class="card-panel white">
-           <p>Adanya Ruang Obat</p>
+           <p>Tempat Sampah Medis</p>
               <input name="group3" type="radio" id="test4" />
                 <label for="test4">Ya</label>
                   <input name="group3" type="radio" id="test5" />
               <label for="test5">Tidak</label>
         </div>
         <div class="card-panel white">
-          <p>Adanya Ruang Asi</p>
+          <p>Westafel</p>
               <input name="group4" type="radio" id="test6" />
                   <label for="test6">Ya</label>
               <input name="group4" type="radio" id="test7" />
           <label for="test7">Tidak</label>
         </div>
         <div class="card-panel white">
-          <p>Adanya Ruang Admin</p>
+          <p>Saluran Air Kotor</p>
             <input name="group5" type="radio" id="test8" />
               <label for="test8">Ya</label>
                 <input name="group5" type="radio" id="test9" />
             <label for="test9">Tidak</label>
           </div>
           <div class="card-panel white">
-            <p>Adanya Ruang Tndakan</p>
+            <p>Septictenk</p>
               <input name="group6" type="radio" id="test10" />
                 <label for="test10">Ya</label>
                 <input name="group6" type="radio" id="test11" />
             <label for="test11">Tidak</label>
           </div>
           <div class="card-panel white">
-            <p>Adanya Ruang Inap</p>
+            <p>Limbah Medis</p>
               <input name="group7" type="radio" id="test12" />
                 <label for="test12">Ya</label>
                   <input name="group7" type="radio" id="test13" />
               <label for="test13">Tidak</label>
            </div>
            <div class="card-panel white">
-             <p>Adanya Ruang Farmasi</p>
+             <p>Keretrangan</p>
                <input name="group8" type="radio" id="test14" />
                  <label for="test14">Ya</label>
                    <input name="group8" type="radio" id="test15" />
                <label for="test15">Tidak</label>
             </div>
-            <div class="card-panel white">
-              <p>Adanya Ruang Dapur</p>
-                <input name="group9" type="radio" id="test16" />
-                  <label for="test16">Ya</label>
-                  <input name="group9" type="radio" id="test17" />
-              <label for="test17">Tidak</label>
-            </div>
-            <div class="card-panel white">
-              <p>Adanya Ruang Sarana</p>
-                <input name="group10" type="radio" id="test18" />
-                  <label for="test18">Ya</label>
-                  <input name="group10" type="radio" id="test19" />
-              <label for="test19">Tidak</label>
-            </div>
             <div class="row">
               <div class="col s12">
                 <div class="card-panel cus-tambah white lighten-2">
                   <div class="input-field col m6">
-                      <a href="<?php echo site_url('puskesmas/puskesmas_bangunan'); ?>" class="waves-effect waves-light btn">Lanjutkan</a>
+                    <a href="<?php echo site_url('puskesmas/puskesmas_kunjungan'); ?>" class="waves-effect waves-light btn">Kembali</a>
+                      <a href="<?php echo site_url('puskesmas/puskesmas_sapras'); ?>" class="waves-effect waves-light btn">Lanjutkan</a>
                   </div>
                 </div>
               </div>

@@ -125,7 +125,6 @@ class Penelitian extends CI_Controller {
 			$data['penelitian'] = $this->penelitian_model->get_penelitian();
 			$this->load->view('templates/themes', $data);
 
-
 		}
 		else{
 			redirect('login');

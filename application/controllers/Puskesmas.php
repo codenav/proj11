@@ -29,4 +29,94 @@ class Puskesmas extends CI_Controller {
       redirect('login');
     }
   }
+
+  public function puskesmas_operasional(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/operasional');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function puskesmas_kesesuaian(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/kesesuaian');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function puskesmas_kunjungan(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/kunjungan');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function puskesmas_sanitasi(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/sanitasi');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function puskesmas_sapras(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/sapras');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function puskesmas_medrek(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/medrek');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function puskesmas_tenagakes(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/tenagakes');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function puskesmas_administrasi(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/administrasi');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+
 }
