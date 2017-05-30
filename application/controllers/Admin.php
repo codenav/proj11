@@ -188,6 +188,28 @@ class Admin extends CI_Controller {
     redirect('admin/user_yankes');
   }
 
+	public function update_user_puskesmas($id){
+		if ($this->session->userdata('username')) {
+			$data['isi'] = 'admin/update_user_puskesmas';
+			$data['title'] = $this->judul;
+			$this->form_validation->set_rules('username','Username','required');
+
+			if ($this->form_validation->run() === FALSE) {
+				$data['news_item'] = $this->admin_model->get_admin_id($id);
+				$this->load->view('templates/themes', $data);
+			}else {
+				$this->admin_model->update_admin($id);
+				$this->session->set_flashdata('success_msg', 'Data Berhasil Di Perbaharui');
+				redirect('admin/user_puskesmas');
+			}
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+
+// ==============================================================================
   public function tambah(){
 		if ($this->session->userdata('username')) {
 

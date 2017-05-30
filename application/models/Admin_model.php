@@ -37,7 +37,7 @@
           'tanggal_lahir'=> $this->input->post('tanggal_lahir'),
           'email'=> $this->input->post('email'),
           'username'=> $this->input->post('username'),
-          'akses'=> $this->input->post('akses')
+
         );
       } else {
         $password = password_hash($defpas, PASSWORD_DEFAULT);
@@ -48,7 +48,6 @@
           'email'=> $this->input->post('email'),
           'username'=> $this->input->post('username'),
           'password'=> $password,
-          'akses'=> $this->input->post('akses')
         );
       }
 
