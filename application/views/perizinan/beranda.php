@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php if ($this->session->flashdata('success_msg')) { ?>
       <div id="snackbar"> <?php echo $this->session->flashdata('success_msg') ?> </div>
   <?php } ?>
@@ -85,3 +86,6 @@
     var myNewChart = new Chart(ctx).Line(data);
   };
 </script>
+=======
+<h1>Akun Perizinan</h1>
+>>>>>>> f1b865d297e2aac7b906422202f27383d2a3d2d5

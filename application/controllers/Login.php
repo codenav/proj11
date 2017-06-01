@@ -61,6 +61,8 @@ class Login extends CI_Controller {
 			elseif ($hak_akses == "klinik") {
 				redirect('klinik/beranda');
 			}
+=======
+>>>>>>> f1b865d297e2aac7b906422202f27383d2a3d2d5
 
 		}else {
 
