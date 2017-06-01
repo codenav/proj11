@@ -52,6 +52,8 @@ class Login extends CI_Controller {
 			elseif ($hak_akses == "kadinkes") {
 				redirect('kadinkes/beranda');
 			}
+<<<<<<< HEAD
+=======
 			elseif ($hak_akses == "perizinan") {
 				redirect('perizinan/beranda');
 			}
@@ -61,6 +63,13 @@ class Login extends CI_Controller {
 			elseif ($hak_akses == "klinik") {
 				redirect('klinik/beranda');
 			}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f1b865d297e2aac7b906422202f27383d2a3d2d5
+>>>>>>> 4ea4426d229c16e491dd76c3eeb6b795a81e1110
+
+>>>>>>> 8d5d63c1d65b4e0c55b637a81bdb6ecdcaaa0cd0
 		}else {
 
 			$this->session->set_flashdata('fail', 'Username atau Password Salah!');
