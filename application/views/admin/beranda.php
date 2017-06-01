@@ -10,7 +10,7 @@
           <span class="white-text">
             <i class="material-icons cus-icon">work</i>
             <h4>jumlah klinik</h4>
-            <h3>123</h3>
+            <h3>1234</h3>
           </span>
         </div>
       </div>
@@ -32,10 +32,8 @@
           </span>
         </div>
       </div>
-
-
     </div>
-    <!-- Grafik -->
+    <!-- Gr -->
     <div class="row">
       <div class="col s12">
         <div class="card-panel white lighten-2">
