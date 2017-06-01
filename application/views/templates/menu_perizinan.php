@@ -16,10 +16,10 @@
   <li class="no-padding">
     <ul class="collapsible collapsible-accordion">
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Isi ID Perizinan</a>
+        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Isi Data Dasar Klinik</a>
       </li>
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Isi Data</a>
+        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Daftar Klinik</a>
       </li>
       <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>
