@@ -29,6 +29,16 @@ class Puskesmas extends CI_Controller {
       redirect('login');
     }
   }
+  public function puskesmas_daftar_klinik_takberizin(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/daftar_klinik_takberizin');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
 
 
 }

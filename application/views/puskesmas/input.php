@@ -46,9 +46,6 @@
                        <input name="1" type="radio" id="2" />
                      <label for="2">Tidak</label>
                  </div>
-               <div class="card-panel white">
-                   <p>Keterangan</p>
-                 </div>
                    <div class="row">
                      <div class="col s12">
                        <div class="card-panel cus-tambah white lighten-2">
@@ -81,6 +78,8 @@
                    </div>
              <div class="card-panel white">
                  <p>Catatan Operasional Jenis Layanan</p>
+                 <textarea id="textarea1" class="materialize-textarea"></textarea>
+                 <label for="textarea1">Catatan Jenis Layanan</label>
                </div>
                  <div class="row">
                    <div class="col s12">
@@ -154,8 +153,10 @@
                              <label for="89">Tidak</label>
                          </div>
                  <div class="card-panel white">
-                     <p>Keterangan</p>
-                   </div>
+                     <p>Catatan Ketersediaan Ruangan</p>
+                     <textarea id="textarea1" class="materialize-textarea"></textarea>
+                     <label for="textarea1">Catatan Ketersediaan Ruangan</label>
+                </div>
            </div>
            <div id="test5" class="col s12">
              <span class="black-text"><p><h3>Sarana Prasarana</h3></p>
@@ -216,7 +217,9 @@
                                  <label for="87">< 5 - > 10 </label>
                              </div>
                  <div class="card-panel white">
-                     <p>Keterangan</p>
+                     <p>Catatan Sarana Prasarana</p>
+                     <textarea id="textarea1" class="materialize-textarea"></textarea>
+                     <label for="textarea1">Catatan Saarana Prasarana</label>
                    </div>
            </div>
            <div id="test6" class="col s12">
@@ -257,7 +260,9 @@
                            <label for="63">Tidak</label>
                        </div>
                  <div class="card-panel white">
-                     <p>Keterangan</p>
+                     <p>Catatan Sanitasi</p>
+                     <textarea id="textarea1" class="materialize-textarea"></textarea>
+                     <label for="textarea1">Catatan Sanitasi</label>
                    </div>
            </div>
            <div id="test7" class="col s12">
@@ -305,7 +310,9 @@
                              <label for="50">Tidak Lengkap</label>
                          </div>
                  <div class="card-panel white">
-                     <p>Keterangan</p>
+                     <p>Catatan Rekam Medis</p>
+                     <textarea id="textarea1" class="materialize-textarea"></textarea>
+                     <label for="textarea1">Catatan Rekam Medis</label>
                    </div>
            </div>
            <div id="test8" class="col s12">
@@ -409,7 +416,9 @@
                                              <label for="22">Tidak</label>
                                          </div>
                  <div class="card-panel white">
-                     <p>Keterangan</p>
+                     <p>Catatan Ketenagaan</p>
+                     <textarea id="textarea1" class="materialize-textarea"></textarea>
+                     <label for="textarea1">Catatan Ketenagaan</label>
                    </div>
            </div>
            <div id="test9" class="col s12">
