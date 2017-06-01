@@ -16,7 +16,7 @@
   <li class="no-padding">
     <ul class="collapsible collapsible-accordion">
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Input ID</a>
+        <a href="<?php echo site_url('yankes/klinik'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Lihat Klinik</a>
       </li>
       <li>
         <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Lihat Laporan</a>

@@ -20,21 +20,21 @@
       </li>
       <li>
         <a class="collapsible-header waves-effect waves-teal icon-menu">
-          <i class="material-icons">assignment</i>Input Hasil Pengawasan
+          <i class="material-icons">assignment</i>Daftar Klinik
         </a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="<?php echo site_url('puskesmas/puskesmas_input'); ?>">Inut Data</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik'); ?>">Klinik Tervalidasi</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>">Klinik Tak Berizin</a></li>
           </ul>
         </div>
       </li>
       <li>
-        <a href="<?php echo site_url('puskesmas/daftar_klinik'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Daftar Klinik</a>
+        <a href="<?php echo site_url('puskesmas/puskesmas_input'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Input Hasil Klinik</a>
       </li>
       <li>
         <a class="collapsible-header waves-effect waves-teal icon-menu">
-          <i class="material-icons">assignment</i>
-          Laporan Klinik
+          <i class="material-icons">assignment</i>Laporan Klinik
         </a>
         <div class="collapsible-body">
           <ul>
