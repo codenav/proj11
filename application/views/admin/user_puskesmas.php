@@ -30,7 +30,7 @@
         <tr>
           <th>No</th>
           <th>Username</th>
-          <th>Nama Lengkap</th>
+          <th>Nama Puskesmas</th>
           <th>E-Mail</th>
           <th>Akses</th>
           <th width="80px">Control</th>
