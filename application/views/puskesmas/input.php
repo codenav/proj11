@@ -106,6 +106,8 @@
                  </div>
                  <div class="card-panel white">
                      <p>Catatan kesesuaian Bangunan</p>
+                     <textarea id="textarea1" class="materialize-textarea"></textarea>
+                     <label for="textarea1">Catatan Kesesuaian Bangunan</label>
                    </div>
              </div>
            <div id="test4" class="col s12">
