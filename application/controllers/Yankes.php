@@ -5,7 +5,20 @@ class Yankes extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this->load->model('yankes_model');
+		$this->load->model('admin_model');
+    $this->load->model('yankes_model');
+	}
+
+  public function user_klinik(){
+		if ($this->session->userdata('username')) {
+			$data = array('isi' => 'admin/user_klinik');
+			$data['title'] = $this->judul;
+			$data['admin'] = $this->admin_model->get_user_klinik();
+			$this->load->view('templates/themes', $data);
+		}
+		else{
+			redirect('login');
+		}
 	}
 
   public function beranda(){
@@ -23,6 +36,7 @@ class Yankes extends CI_Controller {
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'yankes/klinik');
       $data['title'] = $this->judul;
+      $data['admin'] = $this->admin_model->get_user_klinik();
       $this->load->view('templates/themes', $data);
     }
     else{

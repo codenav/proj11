@@ -39,6 +39,16 @@ class Puskesmas extends CI_Controller {
       redirect('login');
     }
   }
+  public function puskesmas_tambah_klinik_takberizin(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/tambah_klinik_takberizin');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
 
 
 }

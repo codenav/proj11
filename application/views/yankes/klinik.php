@@ -29,7 +29,7 @@
         <tr>
           <th>No</th>
           <th>Username</th>
-          <th>Nama Lengkap</th>
+          <th>Nama Klnik</th>
           <th>E-Mail</th>
           <th>Akses</th>
           <th width="80px">Control</th>
@@ -39,9 +39,9 @@
 
         <?php
         $i=1;
-         if ($yankes > 0 ) {
+         if ($admin > 0 ) {
 
-        foreach ($yankes as $news_item) { ?>
+        foreach ($admin as $news_item) { ?>
         <tr>
           <!-- atribut di table database -->
           <td align="center"><?php echo $i; ?></td>
