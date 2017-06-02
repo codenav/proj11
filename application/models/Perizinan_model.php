@@ -19,7 +19,10 @@ class Perizinan_model extends CI_Model{
 
     $data = array (
       'no_surat_izin'=> $this->input->post('no_surat_izin'),
+			'nama'=> $this->input->post('nama'),
       'tgl_mulai_izin'=> date("Y-m-d", strtotime($this->input->post('tgl_mulai_izin'))),
+			'periode'=> $this->input->post('periode'),
+			'status'=> $this->input->post('status'),
       'alamat'=> $this->input->post('alamat'),
       'rt'=> $this->input->post('rt'),
       'rw'=> $this->input->post('rw'),

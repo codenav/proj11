@@ -32,6 +32,16 @@ class Perizinan extends CI_Controller {
 		}
 	}
 
+  public function cetak_excel(){
+		if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('perizinan/excel',$data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
   public function data_dasar(){
 		if ($this->session->userdata('username')) {
 
@@ -43,7 +53,7 @@ class Perizinan extends CI_Controller {
 			if ($this->form_validation->run()) {
 				$this->perizinan_model->tambah_data_dasar();
 				$this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
-        redirect('perizinan/data_dasar');
+        redirect('perizinan/lihat_data_dasar');
 	    }
 			else {
 	    	$this->load->view('templates/themes', $data);

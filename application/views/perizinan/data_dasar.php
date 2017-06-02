@@ -25,8 +25,28 @@ echo form_open('perizinan/data_dasar',$attributes);
                 <input id="val1" type="text" name="no_surat_izin" value="<?php echo set_value('no_surat_izin'); ?>">
               </div>
               <div class="input-field col s6">
+                <label>Nama Klinik :</label>
+                <input id="val1" type="text" name="nama" value="<?php echo set_value('nama'); ?>">
+              </div>
+              <div class="input-field col s6">
                 <label class="active" for="dibuat">Tanggal Mulai Izin :</label>
                 <input type="date" class="datepicker" id="dibuat" name="tgl_mulai_izin" value="<?php echo date("d-m-Y"); ?>">
+              </div>
+              <div class="input-field col s6">
+                <select name="periode">
+                  <option selected disabled>Pilih Periode</option>
+                  <option value="1">I</option>
+                  <option value="2">II</option>
+                </select>
+                <label>Periode :</label>
+              </div>
+              <div class="input-field col s6">
+                <select name="status">
+                  <option selected disabled>Pilih Perizinan</option>
+                  <option value="tidak_berizin">Tidak Berizin</option>
+                  <option value="berizin">Sudah Berizin</option>
+                </select>
+                <label>Status Perizinan :</label>
               </div>
               <div class="input-field col s12">
                 <textarea name="alamat" id="val2" class="materialize-textarea"><?php echo set_value('alamat'); ?></textarea>
