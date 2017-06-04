@@ -17,12 +17,18 @@ class Perizinan_model extends CI_Model{
 				$hobi_to_sql = '';
 			}
 
+				if ( (date("Y-m-d") >= date("Y-01-01")) && (date("Y-m-d") <= date("Y-06-31"))) {
+					$periode = "1";
+				} else {
+					$periode = "2";
+				}
+
     $data = array (
       'no_surat_izin'=> $this->input->post('no_surat_izin'),
 			'nama'=> $this->input->post('nama'),
-      'tgl_mulai_izin'=> date("Y-m-d", strtotime($this->input->post('tgl_mulai_izin'))),
-			'periode'=> $this->input->post('periode'),
-			'status'=> $this->input->post('status'),
+      'tgl_mulai_izin'=> date("Y-m-d"),
+			'periode'=> $periode,
+			'status'=> "berizin",
       'alamat'=> $this->input->post('alamat'),
       'rt'=> $this->input->post('rt'),
       'rw'=> $this->input->post('rw'),
@@ -30,7 +36,7 @@ class Perizinan_model extends CI_Model{
       'kecamatan'=> $this->input->post('kecamatan'),
       'kelurahan'=> $this->input->post('kelurahan'),
       'penanggun_jawab'=> $this->input->post('penanggun_jawab'),
-      'jenis_klinik'=> $this->input->post('jenis_klinik'),
+      'jenis_klinik'=> "pratama",
       'milik'=> $this->input->post('milik'),
       'jenis_layanan'=> $hobi_to_sql
 
@@ -51,4 +57,33 @@ class Perizinan_model extends CI_Model{
 			return $penelitian;
 			}
 	}
+
+	public function get_data_dasar_tervalidasi(){
+		$this->db->select("*");
+		$this->db->from("klinik");
+		$this->db->where('status', "berizin");
+		$this->db->order_by("no_surat_izin","asc");
+		$query = $this->db->get();
+			if ($query->num_rows() >0){
+				foreach ($query->result() as $data) {
+					$penelitian[] = $data;
+				}
+			return $penelitian;
+			}
+	}
+
+	public function get_data_dasar_takberizin(){
+		$this->db->select("*");
+		$this->db->from("klinik");
+		$this->db->where('status', "tidak_berizin");
+		$this->db->order_by("no_surat_izin","asc");
+		$query = $this->db->get();
+			if ($query->num_rows() >0){
+				foreach ($query->result() as $data) {
+					$penelitian[] = $data;
+				}
+			return $penelitian;
+			}
+	}
+
 }

@@ -16,10 +16,17 @@
   <li class="no-padding">
     <ul class="collapsible collapsible-accordion">
       <li>
+<<<<<<< HEAD
         <a href="<?php echo site_url('klinik/lihat'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Lihat</a>
       </li>
       <li>
         <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Cetak</a>
+=======
+        <a href="<?php echo site_url('klinik/beranda'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Beranda</a>
+      </li>
+      <li>
+        <a href="<?php echo site_url('klinik/lihat_data'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Lihat Data Hasil Puskesmas</a>
+>>>>>>> 5231cabab6897ab8c4616bdc3652d34673cf5bf9
       </li>
       <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>

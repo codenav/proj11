@@ -20,34 +20,26 @@
       </li>
       <li>
         <a class="collapsible-header waves-effect waves-teal icon-menu">
-          <i class="material-icons">assignment</i>Daftar Klinik
-        </a>
-        <div class="collapsible-body">
-          <ul>
-            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik'); ?>">Klinik Tervalidasi</a></li>
-            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>">Klinik Tak Berizin</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <a href="<?php echo site_url('puskesmas/puskesmas_input'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Input Hasil Klinik</a>
-      </li>
-      <li>
-        <a class="collapsible-header waves-effect waves-teal icon-menu">
           <i class="material-icons">assignment</i>Laporan Klinik
         </a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="<?php echo site_url(''); ?>">Pilih Klinik </a></li>
-            <li><a href="<?php echo site_url(''); ?>">Pilih Periode</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik'); ?>">Klinik Tervalidasi</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_input'); ?>">Input Hasil Pengawasan</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>">Input Klinik Tak Berizin</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>">Download hasil pengawasan</a></li>
           </ul>
         </div>
       </li>
       <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Lihat Daftar Klinik</a>
-      </li>
-      <li>
-        <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Download Hasil Pengawasan</a>
+        <a class="collapsible-header waves-effect waves-teal icon-menu">
+          <i class="material-icons">assignment</i>Hasil Klinik
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik'); ?>">Laporan Klinik tak berizin</a></li>
+          </ul>
+        </div>
       </li>
       <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>

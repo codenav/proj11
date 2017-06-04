@@ -19,10 +19,13 @@
         <a href="<?php echo site_url('kadinkes/beranda'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Beranda</a>
       </li>
       <li>
-        <a href="<?php echo site_url('kadinkes/klinik_disetujui'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Jumlah Klinik yang disetujui</a>
+        <a href="<?php echo site_url('kadinkes/lihat_klinik'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Lihat Klinik</a>
       </li>
       <li>
-        <a href="<?php echo site_url('kadinkes/pengaturan'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Pengaturan</a>
+        <a href="<?php echo site_url('kadinkes/lihat_klinik_tervalidasi'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Klinik Tervalidasi</a>
+      </li>
+      <li>
+        <a href="<?php echo site_url('kadinkes/lihat_klinik_takberizin'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Klinik tak Berizin</a>
       </li>
       <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>

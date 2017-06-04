@@ -17,7 +17,7 @@ echo form_open('perizinan/data_dasar',$attributes);
     <div class="row form">
       <div class="col s12">
         <div class="card-panel cus-tambah white lighten-2">
-          <p class="sub-tit teal lighten-2">Isi Data Dasar Klinik</p>
+          <p class="sub-tit teal lighten-2">Isi Data Dasar Klinik <?php echo date("Y-03-20"); ?></p>
           <div class="content">
             <div class="row">
               <div class="input-field col s6">
@@ -28,9 +28,9 @@ echo form_open('perizinan/data_dasar',$attributes);
                 <label>Nama Klinik :</label>
                 <input id="val1" type="text" name="nama" value="<?php echo set_value('nama'); ?>">
               </div>
-              <div class="input-field col s6">
+              <!-- <div class="input-field col s6">
                 <label class="active" for="dibuat">Tanggal Mulai Izin :</label>
-                <input type="date" class="datepicker" id="dibuat" name="tgl_mulai_izin" value="<?php echo date("d-m-Y"); ?>">
+                <input type="date" class="datepicker" id="dibuat" name="tgl_mulai_izin" value="<?php echo date("Y-m-d"); ?>">
               </div>
               <div class="input-field col s6">
                 <select name="periode">
@@ -39,15 +39,15 @@ echo form_open('perizinan/data_dasar',$attributes);
                   <option value="2">II</option>
                 </select>
                 <label>Periode :</label>
-              </div>
-              <div class="input-field col s6">
+              </div> -->
+              <!-- <div class="input-field col s6">
                 <select name="status">
                   <option selected disabled>Pilih Perizinan</option>
                   <option value="tidak_berizin">Tidak Berizin</option>
                   <option value="berizin">Sudah Berizin</option>
                 </select>
                 <label>Status Perizinan :</label>
-              </div>
+              </div> -->
               <div class="input-field col s12">
                 <textarea name="alamat" id="val2" class="materialize-textarea"><?php echo set_value('alamat'); ?></textarea>
                 <label for="val3">Alamat :</label>
@@ -76,14 +76,14 @@ echo form_open('perizinan/data_dasar',$attributes);
                 <label>Penanggung Jawab :</label>
                 <input id="val5" type="text" name="penanggun_jawab" value="<?php echo set_value('penanggun_jawab'); ?>">
               </div>
-              <div class="input-field col s6">
+              <!-- <div class="input-field col s6">
                 <select name="jenis_klinik">
                   <option selected disabled>Pilih Jenis Klinik</option>
                   <option value="pratama">Pratama</option>
                   <option value="utama">Utama</option>
                 </select>
                 <label>Jenis Klinik :</label>
-              </div>
+              </div> -->
               <div class="input-field col s6">
                 <select name="milik">
                   <option selected disabled>Pilih Kepemilikan</option>
