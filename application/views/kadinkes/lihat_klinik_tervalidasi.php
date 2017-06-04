@@ -5,8 +5,8 @@
   <div class="title">
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
-        <a href="#!" class="breadcrumb">Perizinan</a>
-        <a href="#!" class="breadcrumb">Lihat Data Dasar Klinik</a>
+        <a href="#!" class="breadcrumb">Kadinkes</a>
+        <a href="#!" class="breadcrumb">Lihat Data Klinik Tervalidasi</a>
       </div>
   </div>
   <nav class="teal">
@@ -23,8 +23,7 @@
 
   <div class="content ">
     <div class="card-panel white lighten-2">
-        <a href="<?php echo site_url('perizinan/data_dasar'); ?>" class="waves-effect waves-light btn">Tambah</a>
-        <a href="<?php echo site_url('perizinan/cetak_excel'); ?>" class="waves-effect waves-light btn">excel</a>
+
     <table class="highlight striped" id="example">
       <thead>
         <tr>
@@ -34,7 +33,7 @@
           <th>Nama Klinik</th>
           <th>Alamat</th>
           <th>Kecamatan</th>
-          <th width="80px">Control</th>
+          <th>Control</th>
         </tr>
       </thead>
       <tbody>
@@ -60,7 +59,7 @@
           </td>
         </tr>
 
-        <div id="modal<?php echo $news_item->no_surat_izin ?>" class="delete modal">
+        <div id="modal<?php echo $news_item->no_surat_izin ?>" class="modal">
           <div class="modal-content">
             <h6>Data Lengkap</h6>
             <div class="row">

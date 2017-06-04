@@ -5,7 +5,8 @@ class Kadinkes extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this->load->model('penelitian_model');
+    $this->load->model('perizinan_model');
+    $this->load->helper('date_helper');
 	}
 
   public function beranda(){
@@ -19,10 +20,11 @@ class Kadinkes extends CI_Controller {
 		}
 	}
 
-  public function klinik_disetujui(){
+  public function lihat_klinik(){
 		if ($this->session->userdata('username')) {
-			$data = array('isi' => 'kadinkes/klinik_disetujui');
+			$data = array('isi' => 'kadinkes/lihat_klinik');
 			$data['title'] = $this->judul;
+      $data['admin'] = $this->perizinan_model->get_data_dasar();
 			$this->load->view('templates/themes', $data);
 		}
 		else{
@@ -30,16 +32,29 @@ class Kadinkes extends CI_Controller {
 		}
 	}
 
-  public function pengaturan(){
+  public function lihat_klinik_takberizin(){
 		if ($this->session->userdata('username')) {
-			$data = array('isi' => 'kadinkes/pengaturan');
+			$data = array('isi' => 'kadinkes/lihat_klinik_takberizin');
 			$data['title'] = $this->judul;
+      $data['admin'] = $this->perizinan_model->get_data_dasar_takberizin();
 			$this->load->view('templates/themes', $data);
 		}
 		else{
 			redirect('login');
 		}
 	}
+
+  public function lihat_klinik_tervalidasi(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'kadinkes/lihat_klinik_tervalidasi');
+      $data['title'] = $this->judul;
+      $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
 
 
 }
