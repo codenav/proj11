@@ -49,6 +49,26 @@ class Puskesmas extends CI_Controller {
       redirect('login');
     }
   }
+  public function puskesmas_pengawasan(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/pengawasan');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+  public function puskesmas_download(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/download');
+      $data['title'] = $this->judul;
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
 
 
 }

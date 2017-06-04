@@ -27,7 +27,7 @@
             <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik'); ?>">Klinik Tervalidasi</a></li>
             <li><a href="<?php echo site_url('puskesmas/puskesmas_input'); ?>">Input Hasil Pengawasan</a></li>
             <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>">Input Klinik Tak Berizin</a></li>
-            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>">Download hasil pengawasan</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_download'); ?>">Download hasil pengawasan</a></li>
           </ul>
         </div>
       </li>
@@ -37,7 +37,7 @@
         </a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik'); ?>">Laporan Klinik tak berizin</a></li>
+            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>">Laporan Klinik tak berizin</a></li>
           </ul>
         </div>
       </li>
