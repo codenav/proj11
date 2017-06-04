@@ -19,5 +19,16 @@ class Klinik extends CI_Controller {
 		}
 	}
 
+  public function lihat(){
+		if ($this->session->userdata('username')) {
+			$data = array('isi' => 'klinik/lihat');
+			$data['title'] = $this->judul;
+			$this->load->view('templates/themes', $data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
 
 }

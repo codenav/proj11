@@ -22,9 +22,6 @@
         <a href="<?php echo site_url('admin/user_puskesmas'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Puskesmas</a>
       </li>
       <li>
-        <a href="<?php echo site_url('admin/user_klinik'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Klinik</a>
-      </li>
-      <li>
         <a href="<?php echo site_url('admin/user_yankes'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Tambah User Yankes</a>
       </li>
       <li>
