@@ -66,25 +66,6 @@ class Perizinan extends CI_Controller {
 		}
 	}
 
-  public function index()
-  {
-    $data['isi'] = 'perizinan/daerah';
-  	$data['title'] = $this->judul;
-    $data['kecamatan']=$this->daerah->getKec();
-    $this->load->view('templates/themes', $data);
-  }
-
-
-  public function getKel($id_kec)
-  {
-    $kel=$this->daerah->getKel($id_kec);
-     echo"<option value=''>Pilih Kelurahan/Desa</option>";
-    foreach($kel as $k){
-      echo "<option value='{$k->id_kel}'>{$k->nama}</option>";
-    }
-  }
-
-
-
+  
 
 }

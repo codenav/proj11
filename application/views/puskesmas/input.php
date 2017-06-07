@@ -16,17 +16,17 @@ echo form_open('perizinan/',$attributes);
     <div class="row form">
       <div class="col s12">
         <div class="card-panel cus-tambah white lighten-2">
-          <p class="sub-tit teal lighten-2">Input Pengawasan Klinik <?php echo date("Y-03-20"); ?></p>
+          <p class="sub-tit teal lighten-2">Input Pengawasan Klinik</p>
           <div class="content">
             <div class="row">
               <div class="input-field col m6">
-                <select>
-                  <?php
-                  foreach ($klinik as $news_item) { ?>
-                    <option value=<?php echo $news_item->nama; ?>><?php echo $news_item->nama; ?></option>
-                    <?php } ?>
-                    </select>
-                    <label>Pilih Klinik</label>
+                  <select name="ffff">
+                    <option disabled selected>Pilih klinik</option>
+                    <?php foreach ($klinik as $news_item) { ?>
+                      <option value="<?php echo $news_item->nama; ?> "><?php echo $news_item->nama; ?></option>
+                      <?php } ?>
+                  </select>
+                  <label>Pilih Klinik</label>
                   </div>
                   <div class="input-field col s6">
                     <label class="active" for="dibuat">Tanggal Mulai Izin :</label>

@@ -17,6 +17,7 @@ class Puskesmas extends CI_Controller {
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/input');
       $data['title'] = $this->judul;
+      $data['klinik'] = $this->puskesmas_model->get_data_dasar();
       $this->load->view('templates/themes', $data);
     }
     else{

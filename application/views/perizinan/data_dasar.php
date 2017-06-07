@@ -67,7 +67,7 @@ echo form_open('perizinan/data_dasar',$attributes);
               <div class="input-field col s6">
                 <p>Kecamatan :</p>
             		<select name="kecamatan" class="browser-default" id="kecamatan">
-            			<option disabled>Pilih Kecamatan</option>
+            			<option disabled selected>Pilih Kecamatan</option>
             			<?php foreach($kecamatan as $kec){
             				echo '<option value="'.$kec->id_kec.'">'.$kec->nama.'</option>';
             			} ?>
@@ -78,11 +78,17 @@ echo form_open('perizinan/data_dasar',$attributes);
               <select name="kelurahan" class="browser-default" id="desa">
                 <option disabled>Pilih Kelurahan</option>
               </select>
-              </div>
+            </div>
+            <div class="input-field col s12">
+              <p>Puskesmas :</p>
+              <select name="puskesmas" class="browser-default" id="puskesmas">
+                <option disabled>Pilih Puskesmas</option>
+              </select>
+            </div>
 
 
 
-              <div class="input-field col s12">
+              <div class="input-field col s6">
                 <label>Penanggung Jawab :</label>
                 <input id="val5" type="text" name="penanggun_jawab" value="<?php echo set_value('penanggun_jawab'); ?>">
               </div>
