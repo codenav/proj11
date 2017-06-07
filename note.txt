@@ -1,0 +1,28 @@
+4
+Puskesmas Sarijadi
+0
+3273011004
+
+Edit Edit
+ Copy Copy
+ Delete Delete
+2
+Puskesmas Ledeng
+0
+3273011003
+
+Edit Edit
+ Copy Copy
+ Delete Delete
+3
+Puskesmas Karang Setra
+0
+3273011002
+
+Edit Edit
+ Copy Copy
+ Delete Delete
+1
+UPT Puskesmas Sukarasa
+0
+3273011001
