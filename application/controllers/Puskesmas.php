@@ -9,7 +9,7 @@ class Puskesmas extends CI_Controller {
     $this->load->model('perizinan_model');
     $this->load->helper('date_helper');
     $this->load->model('puskesmas_model');
-    
+
 
 	}
 
@@ -28,7 +28,7 @@ class Puskesmas extends CI_Controller {
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/daftar_klinik');
       $data['title'] = $this->judul;
-      $data['admin'] = $this->perizinan_model->get_data_dasar_takberizin();
+      $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
       $data['klinik'] = $this->puskesmas_model->get_data_dasar();
       $this->load->view('templates/themes', $data);
     }
