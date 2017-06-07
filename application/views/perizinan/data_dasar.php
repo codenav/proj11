@@ -165,4 +165,3 @@ echo form_open('perizinan/data_dasar',$attributes);
   </div>
 </main>
 <?php echo form_close();?>
-<script type="text/javascript" src="<?php echo base_url() ?>assets/js/ajax_daerah.js"></script>

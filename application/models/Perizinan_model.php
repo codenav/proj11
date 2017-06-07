@@ -35,6 +35,7 @@ class Perizinan_model extends CI_Model{
       'telp'=> $this->input->post('telp'),
       'kecamatan'=> $this->input->post('kecamatan'),
       'kelurahan'=> $this->input->post('kelurahan'),
+			'puskesmas'=> $this->input->post('puskesmas'),
       'penanggun_jawab'=> $this->input->post('penanggun_jawab'),
       'jenis_klinik'=> "pratama",
       'milik'=> $this->input->post('milik'),
