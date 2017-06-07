@@ -17,7 +17,7 @@ echo form_open('perizinan/data_dasar',$attributes);
     <div class="row form">
       <div class="col s12">
         <div class="card-panel cus-tambah white lighten-2">
-          <p class="sub-tit teal lighten-2">Isi Data Dasar Klinik <?php echo date("Y-03-20"); ?></p>
+          <p class="sub-tit teal lighten-2">Isi Data Dasar Klinik </p>
           <div class="content">
             <div class="row">
               <div class="input-field col s6">
@@ -65,13 +65,23 @@ echo form_open('perizinan/data_dasar',$attributes);
                 <input id="val5" type="text" name="telp" value="<?php echo set_value('telp'); ?>">
               </div>
               <div class="input-field col s6">
-                <label>Kecamatan :</label>
-                <input id="val5" type="text" name="kecamatan" value="<?php echo set_value('kecamatan'); ?>">
+                <p>Kecamatan :</p>
+            		<select name="kecamatan" class="browser-default" id="kecamatan">
+            			<option disabled>Pilih Kecamatan</option>
+            			<?php foreach($kecamatan as $kec){
+            				echo '<option value="'.$kec->id_kec.'">'.$kec->nama.'</option>';
+            			} ?>
+            		</select>
               </div>
-              <div class="input-field col s6">
-                <label>Kelurahan :</label>
-                <input id="val5" type="text" name="kelurahan" value="<?php echo set_value('kelurahan'); ?>">
+            <div class="input-field col s6">
+              <p>Desa :</p>
+              <select name="kelurahan" class="browser-default" id="desa">
+                <option disabled>Pilih Kelurahan</option>
+              </select>
               </div>
+
+
+
               <div class="input-field col s12">
                 <label>Penanggung Jawab :</label>
                 <input id="val5" type="text" name="penanggun_jawab" value="<?php echo set_value('penanggun_jawab'); ?>">
@@ -149,3 +159,4 @@ echo form_open('perizinan/data_dasar',$attributes);
   </div>
 </main>
 <?php echo form_close();?>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/ajax_daerah.js"></script>

@@ -23,7 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+$http = 'http' . ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 's' : '') . '://';
+$newurl = str_replace("index.php","", $_SERVER['SCRIPT_NAME']);
+
+$config['base_url'] = "$http" . $_SERVER['SERVER_NAME'] . "" . $newurl;
 
 /*
 |--------------------------------------------------------------------------
@@ -314,7 +317,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html`
 |
 */
-$config['encryption_key'] = 'dOtVmN78PzAclIk3K6jK06ReotJ96a1l';
+$config['encryption_key'] = 'abcdefghijklmnopqrstuvwxyz';
 
 /*
 |--------------------------------------------------------------------------

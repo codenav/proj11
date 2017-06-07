@@ -7,6 +7,7 @@ class Perizinan extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->model('perizinan_model');
+    $this->load->model('m_wilayah');
     $this->load->helper('date_helper');
 	}
 
@@ -56,6 +57,7 @@ class Perizinan extends CI_Controller {
         redirect('perizinan/lihat_data_dasar');
 	    }
 			else {
+        $data['kecamatan']=$this->m_wilayah->get_all_provinsi();
 	    	$this->load->view('templates/themes', $data);
 	    }
 		}
@@ -63,6 +65,26 @@ class Perizinan extends CI_Controller {
 			redirect('login');
 		}
 	}
+
+  public function index()
+  {
+    $data['isi'] = 'perizinan/daerah';
+  	$data['title'] = $this->judul;
+    $data['kecamatan']=$this->daerah->getKec();
+    $this->load->view('templates/themes', $data);
+  }
+
+
+  public function getKel($id_kec)
+  {
+    $kel=$this->daerah->getKel($id_kec);
+     echo"<option value=''>Pilih Kelurahan/Desa</option>";
+    foreach($kel as $k){
+      echo "<option value='{$k->id_kel}'>{$k->nama}</option>";
+    }
+  }
+
+
 
 
 }

@@ -58,6 +58,8 @@ class Perizinan_model extends CI_Model{
 			}
 	}
 
+
+
 	public function get_data_dasar_tervalidasi(){
 		$this->db->select("*");
 		$this->db->from("klinik");

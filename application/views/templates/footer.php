@@ -5,6 +5,17 @@
 <script type="text/javascript" src="<?php echo base_url() ?>assets/vendor/datatables/datatables.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url() ?>assets/vendor/datatables/datatables_style.min.js"></script>
 
+<script>
+  $(document).ready(function(){
+  $("#kecamatan").change(function (){
+            var url = "<?php echo site_url('wilayah/add_ajax_des');?>/"+$(this).val();
+            $('#desa').load(url);
+            return false;
+        })
+    });
+</script>
+
+
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function(){
 $('.preloader-background').delay(1000).fadeOut('slow');
