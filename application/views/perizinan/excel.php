@@ -9,6 +9,7 @@ header("Expires: 0");
 <td>ID</td>
 <td>TITLE</td>
 <td>AUTHOR</td>
+<td>email</td>
 </tr>
 
 <?php

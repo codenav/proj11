@@ -21,10 +21,10 @@ echo form_open('perizinan/',$attributes);
             <div class="row">
               <div class="input-field col m6">
                 <select>
-                  <option value="" disabled selected>Pilih Klinik</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
+                  <?php
+                  foreach ($klinik as $news_item) { ?>
+                    <option value=<?php echo $news_item->nama; ?>><?php echo $news_item->nama; ?></option>
+                    <?php } ?>
                     </select>
                     <label>Pilih Klinik</label>
                   </div>

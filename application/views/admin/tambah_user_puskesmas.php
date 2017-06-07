@@ -21,7 +21,7 @@ echo form_open('admin/tambah_user_puskesmas',$attributes);
           <div class="content">
             <div class="row">
               <div class="input-field col s12">
-                <label>Nama Lengkap :</label>
+                <label>Nama Puskesmas :</label>
                 <input id="val1" type="text" name="nama_lengkap" value="<?php echo set_value('nama_lengkap'); ?>">
               </div>
               <div class="input-field col s12">
