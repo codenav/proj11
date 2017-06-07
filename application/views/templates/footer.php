@@ -13,6 +13,14 @@
             return false;
         })
     });
+
+  $(document).ready(function(){
+  $("#desa").change(function (){
+            var url = "<?php echo site_url('wilayah/add_ajax_pus');?>/"+$(this).val();
+            $('#puskesmas').load(url);
+            return false;
+        })
+    });
 </script>
 
 

@@ -28,9 +28,18 @@
 
 		function add_ajax_des($id_kec){
 		    $query = $this->db->get_where('kelurahan',array('id_kec'=>$id_kec));
-		    $data = "<option disabled> Pilih Kelurahan </option>";
+		    $data = "<option disabled selected> Pilih Kelurahan </option>";
 		    foreach ($query->result() as $value) {
 		        $data .= "<option value='".$value->id_kel."'>".$value->nama."</option>";
+		    }
+		    echo $data;
+		}
+
+		function add_ajax_pus($id_kel){
+		    $query = $this->db->get_where('puskesmas',array('id_kel'=>$id_kel));
+		    $data = "<option disabled> Pilih Puskesmas </option>";
+		    foreach ($query->result() as $value) {
+		        $data .= "<option value='".$value->id_puskesmas."'>".$value->puskesmas."</option>";
 		    }
 		    echo $data;
 		}
