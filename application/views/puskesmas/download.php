@@ -66,37 +66,25 @@
           <div class="modal-content">
             <h6>Download Output</h6>
             <div class="row">
-              <div class="col m6">No Surat Izin</div>
-              <div class="col m6">: <?php echo $news_item->no_surat_izin; ?></div>
-              <div class="col m6">Tanggal Mulai Izin</div>
-              <div class="col m6">: <?php echo tgl_indo($news_item->tgl_mulai_izin); ?></div>
-              <div class="col m6">Nama KLinik</div>
-              <div class="col m6">: <?php echo $news_item->nama; ?></div>
-              <div class="col m6">Alamat</div>
-              <div class="col m6">: <?php echo $news_item->alamat; ?></div>
-              <div class="col m6">RT</div>
-              <div class="col m6">: <?php echo $news_item->rt; ?></div>
-              <div class="col m6">RW</div>
-              <div class="col m6">: <?php echo $news_item->rw; ?></div>
-              <div class="col m6">Telepon</div>
-              <div class="col m6">: <?php echo $news_item->telp; ?></div>
-              <div class="col m6">Kecamatan</div>
-              <div class="col m6">: <?php echo $news_item->kecamatan; ?></div>
-              <div class="col m6">Kelurahan</div>
-              <div class="col m6">: <?php echo $news_item->kelurahan; ?></div>
-              <div class="col m6">Penanggung Jawab</div>
-              <div class="col m6">: <?php echo $news_item->penanggun_jawab; ?></div>
-              <div class="col m6">Jenis Klinik</div>
-              <div class="col m6">: <?php echo $news_item->jenis_klinik; ?></div>
-              <div class="col m6">Kepemilikan</div>
-              <div class="col m6">: <?php echo $news_item->milik; ?></div>
-              <div class="col m6">Jenis Layanan</div>
-              <div class="col m6">: <?php echo $news_item->jenis_layanan; ?></div>
+              <div class="col m6">Lokasi</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6">Oprasional</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6">Bangunan</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6">Ruangan</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6">Sarana Prasarana</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6">Sanitasi</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6">Rekam Medis</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6">Tenaga Kesehatan</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6">Administrasi</div>
+              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
             </div>
-
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" >Tidak</a>
           </div>
         </div>
 

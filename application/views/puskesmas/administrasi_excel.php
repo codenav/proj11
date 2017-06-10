@@ -4,8 +4,8 @@ header("Content-Disposition: attachment; filename=exceldata.xls");
 header("Pragma: no-cache");
 header("Expires: 0");
 ?>
-<h3>Variable dan Scoring Hasil pengawasan dan pembinaan klinik kesesuiaan Klinik</h3>
-<table border='1' width="70%">
+<h3>Variabel dan Scoring Hasil Pengawasan dan Pembinaan Klinik kesesuianan Administrasi Klinik</h3>
+<table border='2' width="70%">
   <tr>
     <th>No</th>
     <th>Uraian</th>
@@ -13,6 +13,6 @@ header("Expires: 0");
   </tr>
   <tr>
     <td>1</td>
-    <td>Keseuainan Lokasi</td>
+    <td>Laporan Penyakit LB 1</td>
   </tr>
 </table>
