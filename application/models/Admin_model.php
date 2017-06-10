@@ -17,7 +17,18 @@
         return $penelitian;
         }
     }
-
+    public function get_data_puskesmas(){
+      $this->db->select("*");
+      $this->db->from("puskesmas");
+      $this->db->order_by("puskesmas","asc");
+      $query = $this->db->get();
+        if ($query->num_rows() >0){
+          foreach ($query->result() as $data) {
+            $penelitian[] = $data;
+          }
+        return $penelitian;
+        }
+    }
     public function get_admin_id($id = FALSE){
       $this->db->select("*");
       $this->db->from("admin");

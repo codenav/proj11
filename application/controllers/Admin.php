@@ -104,6 +104,7 @@ class Admin extends CI_Controller {
         redirect('admin/user_puskesmas');
 	    }
 			else {
+				$data['puskes'] = $this->admin_model->get_data_puskesmas();
 	    	$this->load->view('templates/themes', $data);
 	    }
 		}
