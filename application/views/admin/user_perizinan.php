@@ -29,7 +29,7 @@
         <tr>
           <th>No</th>
           <th>Username</th>
-          <th>Nama Lengkap</th>
+          <th>Nama PJ Perizinan</th>
           <th>E-Mail</th>
           <th>Akses</th>
           <th width="80px">Control</th>
