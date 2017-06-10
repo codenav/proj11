@@ -5,7 +5,7 @@ class Admin extends CI_Controller {
 		$this->load->model('admin_model');
 	}
 
-	public $judul = "Sistem Informasi Pengawasan Dan Pengendalaian Klinik Oleh Puskemas";
+	public $judul = "Sistem Informasi Pengawasan Dan Pembinaan Klinik Oleh Puskemas";
 
   public function view(){
     if ($this->session->userdata('username')) {

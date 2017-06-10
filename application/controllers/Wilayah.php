@@ -3,7 +3,7 @@
 
 	class Wilayah extends CI_Controller {
 
-		public $judul = "Sistem Informasi Pengawasan dan Pengendalaian Klinik oleh Puskemas";
+		public $judul = "Sistem Informasi Pengawasan dan Pembinaan Klinik oleh Puskemas";
 
 		function __construct() {
 			parent::__construct();

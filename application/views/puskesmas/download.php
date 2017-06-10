@@ -64,7 +64,7 @@
 
         <div id="modal<?php echo $news_item->no_surat_izin ?>" class="modal">
           <div class="modal-content">
-            <h6>Data Lengkap</h6>
+            <h6>Download Output</h6>
             <div class="row">
               <div class="col m6">No Surat Izin</div>
               <div class="col m6">: <?php echo $news_item->no_surat_izin; ?></div>
