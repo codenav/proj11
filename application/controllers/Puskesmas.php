@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Puskesmas extends CI_Controller {
 
-  public $judul = "Sistem Informasi Pengawasan dan Pengendalaian Klinik oleh Puskemas";
+  public $judul = "Sistem Informasi Pengawasan dan Pembinaan Klinik oleh Puskemas";
 
 	function __construct() {
 		parent::__construct();
@@ -81,6 +81,16 @@ class Puskesmas extends CI_Controller {
       redirect('login');
     }
   }
+
+  public function cetak_excel(){
+		if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('perizinan/output_excel',$data);
+		}
+		else{
+			redirect('login');
+		}
+	}
 
 
 

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Penelitian extends CI_Controller {
 
-	public $judul = "Sistem Informasi Pengawasan dan Pengendalaian Klinik oleh Puskemas";
+	public $judul = "Sistem Informasi Pengawasan dan Pembinaan Klinik oleh Puskemas";
 
 	public function __construct(){
     parent::__construct();

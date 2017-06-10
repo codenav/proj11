@@ -21,7 +21,7 @@
     </div>
   </nav>
 
-  <div class="content ">
+  <div class="content">
     <div class="card-panel white lighten-2">
 
     <table class="highlight striped" id="example">
