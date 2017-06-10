@@ -1,28 +1,28 @@
-4
-Puskesmas Sarijadi
-0
-3273011004
+<?php
+header("Content-type: application/octet-stream");
+header("Content-Disposition: attachment; filename=exceldata.xls");
+header("Pragma: no-cache");
+header("Expires: 0");
+?>
+<table border='1' width="70%">
+<tr>
+<td>ID</td>
+<td>TITLE</td>
+<td>AUTHOR</td>
+<td>email</td>
+</tr>
 
-Edit Edit
- Copy Copy
- Delete Delete
-2
-Puskesmas Ledeng
-0
-3273011003
+<?php
+  $i=1;
+if ($excel > 0 ) {
 
-Edit Edit
- Copy Copy
- Delete Delete
-3
-Puskesmas Karang Setra
-0
-3273011002
+foreach ($excel as $news_item) { ?>
+  <tr>
+    <td align="center"><?php echo $i; ?></td>
+    <td><?php echo $news_item->no_surat_izin; ?></td>
+    <td><?php echo $news_item->alamat; ?></td>
+  </tr>
 
-Edit Edit
- Copy Copy
- Delete Delete
-1
-UPT Puskesmas Sukarasa
-0
-3273011001
+<?php $i++;} } ?>
+
+</table>

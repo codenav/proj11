@@ -3,7 +3,7 @@
   <?php } ?>
 <?php
 $attributes = array('onsubmit' => "return validate();");
-echo form_open('perizinan/',$attributes);
+echo form_open('puskesmas/puskesmas_pengawasan/',$attributes);
 ?>
 <main>
 
@@ -21,10 +21,10 @@ echo form_open('perizinan/',$attributes);
           <div class="content">
             <div class="row">
               <div class="input-field col m6">
-                  <select name="ffff">
+                  <select name="no_surat_izin">
                     <option disabled selected>Pilih klinik</option>
                     <?php foreach ($klinik as $news_item) { ?>
-                      <option value="<?php echo $news_item->nama; ?> "><?php echo $news_item->nama; ?></option>
+                      <option value="<?php echo $news_item->no_surat_izin; ?> "><?php echo $news_item->nama; ?></option>
                       <?php } ?>
                   </select>
                   <label>Pilih Klinik</label>
@@ -34,7 +34,7 @@ echo form_open('perizinan/',$attributes);
                     <input type="date" class="datepicker" id="dibuat" name="tgl_mulai_izin" value="<?php echo date("Y-m-d"); ?>">
                   </div>
                   <div class="input-field col m6">
-                    <select>
+                    <select name="periode">
                       <option value="" disabled selected>Pilh Periode</option>
                       <option value="1">I</option>
                       <option value="2">II</option>
@@ -47,8 +47,11 @@ echo form_open('perizinan/',$attributes);
       </div>
 
         <div class="col s12">
-          <a href="<?php echo site_url('puskesmas/puskesmas_pengawasan'); ?>" class="btn waves-effect waves-light btn-large type="submit" name="action"">Input</a>
-          </button>
+          <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Tambahkan
+            <i class="material-icons right">send</i>
+          <!-- </button>
+          <!-- <a href="<?php echo site_url('puskesmas/puskesmas_pengawasan'); ?>" class="btn waves-effect waves-light btn-large type="submit" name="action"">Input</a> -->
+          </button> -->
         </div>
     </div>
   </div>
