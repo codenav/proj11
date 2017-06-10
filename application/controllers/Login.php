@@ -25,15 +25,18 @@ class Login extends CI_Controller {
 			foreach ($admin as $baru) {
 				$hash_pas = $baru->password;
 				$hak_akses = $baru->akses;
+				$nama_lengkap = $baru->nama_lengkap;
 			}
 		}else {
 			$hash_pas = '';
 			$hak_akses = '';
+			$nama_lengkap = '';
 		}
 
 		$newdata = array(
 			'username'  => $user,
-      'akses'     => $hak_akses
+      'akses'     => $hak_akses,
+			'nama_lengkap'     => $nama_lengkap
 		);
 
  		if (password_verify($pas, $hash_pas)) {

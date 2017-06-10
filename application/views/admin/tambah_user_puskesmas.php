@@ -21,9 +21,19 @@ echo form_open('admin/tambah_user_puskesmas',$attributes);
           <div class="content">
             <div class="row">
               <div class="input-field col s12">
+                <select name="nama_lengkap">
+                  <option disabled selected>Pilih Puskesmas</option>
+                  <?php foreach ($puskes as $news_item) { ?>
+                    <option value="<?php echo $news_item->id_puskesmas; ?> "><?php echo $news_item->puskesmas; ?></option>
+                    <?php } ?>
+                </select>
+                <label>Nama Puskesmas</label>
+              </div>
+
+              <!-- <div class="input-field col s12">
                 <label>Nama Puskesmas :</label>
                 <input id="val1" type="text" name="nama_lengkap" value="<?php echo set_value('nama_lengkap'); ?>">
-              </div>
+              </div> -->
               <div class="input-field col s12">
                 <textarea name="alamat" id="val2" class="materialize-textarea"><?php echo set_value('alamat'); ?></textarea>
                 <label for="val3">Alamat</label>

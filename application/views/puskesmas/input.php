@@ -6,10 +6,11 @@ $attributes = array('onsubmit' => "return validate();");
 echo form_open('perizinan/',$attributes);
 ?>
 <main>
+
   <div class="title">
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
-        <a href="#!" class="breadcrumb">Input Pengawasasn Klinik</a>
+        <a href="#!" class="breadcrumb">Input Pengawasasn Klinik<?php echo $this->session->userdata('nama_lengkap') ?></a>
       </div>
   </div>
   <div class="content">
