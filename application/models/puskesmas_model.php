@@ -29,4 +29,15 @@
   			return $namaklinik;
   			}
   	}
+
+    public function tambah_pengawasan(){
+      $data = array (
+        'id_puskesmas'=> $this->input->post('no_surat_izin'),
+  			'klinik'=> $this->input->post('no_surat_izin'),
+        'tanggal'=> $this->input->post('tgl_mulai_izin'),
+  			'periode'=>$this->input->post('periode')
+      );
+
+      $this->db->insert('pengawasan', $data);
+    }
   }

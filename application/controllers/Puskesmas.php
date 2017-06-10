@@ -63,6 +63,7 @@ class Puskesmas extends CI_Controller {
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/pengawasan');
       $data['title'] = $this->judul;
+      $this->puskesmas_model->tambah_pengawasan();
       $this->load->view('templates/themes', $data);
     }
     else{
