@@ -9,7 +9,8 @@ class Puskesmas extends CI_Controller {
     $this->load->model('perizinan_model');
     $this->load->helper('date_helper');
     $this->load->model('puskesmas_model');
-
+    $this->load->helper(array('form', 'url'));
+    $this->load->helper('url_helper');
 
 	}
 
@@ -64,12 +65,27 @@ class Puskesmas extends CI_Controller {
       $data = array('isi' => 'puskesmas/pengawasan');
       $data['title'] = $this->judul;
       $this->puskesmas_model->tambah_pengawasan();
+      $data['id_peng'] = $this->puskesmas_model->getLastInserted();
+
       $this->load->view('templates/themes', $data);
     }
     else{
       redirect('login');
     }
   }
+
+  public function tambah_data_puskesmas_pengawasan(){
+    if ($this->session->userdata('username')) {
+      $id = $this->puskesmas_model->getLastInserted();
+      $this->puskesmas_model->tambah_data_puskesmas_pengawasan($id);
+      $this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
+      redirect('penelitian/lihat');
+    }
+    else{
+      redirect('login');
+    }
+  }
+
   public function puskesmas_download(){
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/download');

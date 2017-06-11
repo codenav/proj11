@@ -1,24 +1,26 @@
-
-
-  <?php if ($this->session->flashdata('success_msg')) { ?>
+    <?php if ($this->session->flashdata('success_msg')) { ?>
         <div id="snackbar"> <?php echo $this->session->flashdata('success_msg') ?> </div>
     <?php } ?>
+
+    <?php
+      echo form_open('puskesmas/tambah_data_puskesmas_pengawasan/');
+    ?>
   <main>
     <div class="title">
       <span><?php echo $title; ?></span>
         <div class="col s12 bred">
-          <a href="#!" class="breadcrumb">Input Data Hasil Pengawasan</a>
+          <a href="#!" class="breadcrumb">Input Data Hasil Pengawasan </a>
         </div>
     </div>
     <nav class="teal">
       <div class="nav-wrapper ">
-        <form>
+
           <div class="input-field">
-            <input id="searchbox" type="search" required>
-            <label for="searchbox" class="active"><i class="material-icons">cari</i></label>
+            <input id="as" type="search">
+            <label for="as" class="active"><i class="material-icons">cari</i></label>
             <i class="material-icons">close</i>
           </div>
-        </form>
+
       </div>
     </nav>
     <div class="row">
@@ -42,16 +44,16 @@
                  <span class="black-text"><p><h3>Kesesuaian Lokasi</h3></p>
                  <div class="card-panel white">
                      <p>Standart Lokasi Klinik</p>
-                         <input name="1" type="radio" id="1" />
-                             <label for="1">Ya</label>
-                         <input name="1" type="radio" id="2" />
-                       <label for="2">Tidak</label>
+                         <input name="lokasi_st_lokasi" value="ya" type="radio" id="1" />
+                         <label for="1">Ya</label>
+                         <input name="lokasi_st_lokasi" value="tidak" type="radio" id="2" />
+                         <label for="2">Tidak</label>
                    </div>
                      <div class="row">
                        <div class="col s12">
                          <div class="card-panel cus-tambah white lighten-2">
                            <p>Catatan</p>
-                           <textarea id="textarea1" class="materialize-textarea"></textarea>
+                           <textarea id="textarea1" name="lokasi_catatan" class="materialize-textarea"></textarea>
                            <label for="textarea1">Catatan</label>
                       </div>
                   </div>
@@ -61,28 +63,28 @@
                <span class="black-text"><p><h3>Oprasional Standart Klinik</h3></p>
                <div class="card-panel white">
                    <p>Status Beroprasi</p>
-                       <input name="group3" type="radio" id="5" />
+                       <input name="operasional_st_beroperasi" value="ya" type="radio" id="5" />
                            <label for="5">Ya</label>
-                       <input name="group3" type="radio" id="6" />
+                       <input name="operasional_st_beroperasi" value="tidak" type="radio" id="6" />
                      <label for="6">Tidak</label>
                  </div>
                  <div class="card-panel white">
                      <p>Pemasangan Plat Nama dan Klasifikasi</p>
-                         <input name="group4" type="radio" id="7" />
+                         <input name="operasional_st_plat" value="ya" type="radio" id="7" />
                              <label for="7">Ya</label>
-                         <input name="group4" type="radio" id="8" />
+                         <input name="operasional_st_plat" value="tidak" type="radio" id="8" />
                        <label for="8">Tidak</label>
                    </div>
                    <div class="card-panel white">
                        <p>Kesesuaian Oprasional Jenis Layanan Dengan Izin</p>
-                           <input name="group5" type="radio" id="9" />
+                           <input name="operasional_st_kesesuaian" value="ya" type="radio" id="9" />
                                <label for="9">Ya</label>
-                           <input name="group5" type="radio" id="10" />
+                           <input name="operasional_st_kesesuaian" value="tidak" type="radio" id="10" />
                          <label for="10">Tidak</label>
                      </div>
                <div class="card-panel white">
                    <p>Catatan Operasional Jenis Layanan</p>
-                   <textarea id="textarea1" class="materialize-textarea"></textarea>
+                   <textarea id="textarea1" name="operasional_catatan" class="materialize-textarea"></textarea>
                    <label for="textarea1">Catatan Jenis Layanan</label>
                  </div>
                    <div class="row">
@@ -437,7 +439,9 @@
                      <label for="20">Tidak</label>
                  </div>
                  <div class="input-field col m6">
-                     <a href="<?php echo site_url('puskesmas/puskesmas_kesesuaian'); ?>" class="waves-effect waves-light btn">Selesai</a>
+                   <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Selesai
+                     <i class="material-icons right">send</i>
+                     </button>
                  </div>
              </div>
          </div>
@@ -445,3 +449,4 @@
   </div>
   </div>
   </main>
+  <?php echo form_close();?>

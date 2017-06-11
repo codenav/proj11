@@ -10,7 +10,7 @@ echo form_open('puskesmas/puskesmas_pengawasan/',$attributes);
   <div class="title">
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
-        <a href="#!" class="breadcrumb">Input Pengawasasn Klinik<?php echo $this->session->userdata('nama_lengkap') ?></a>
+        <a href="#!" class="breadcrumb">Input Pengawasasn Klinik</a>
       </div>
   </div>
   <div class="content">
@@ -49,9 +49,10 @@ echo form_open('puskesmas/puskesmas_pengawasan/',$attributes);
         <div class="col s12">
           <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Tambahkan
             <i class="material-icons right">send</i>
+            </button>
           <!-- </button>
           <!-- <a href="<?php echo site_url('puskesmas/puskesmas_pengawasan'); ?>" class="btn waves-effect waves-light btn-large type="submit" name="action"">Input</a> -->
-          </button> -->
+
         </div>
     </div>
   </div>
