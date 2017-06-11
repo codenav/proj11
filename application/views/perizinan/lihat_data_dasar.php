@@ -24,7 +24,6 @@
   <div class="content ">
     <div class="card-panel white lighten-2">
         <a href="<?php echo site_url('perizinan/data_dasar'); ?>" class="waves-effect waves-light btn">Tambah</a>
-        <a href="<?php echo site_url('perizinan/cetak_excel'); ?>" class="waves-effect waves-light btn">Excel</a>
     <table class="highlight striped" id="example">
       <thead>
         <tr>
@@ -34,7 +33,7 @@
           <th>Nama Klinik</th>
           <th>Alamat</th>
           <th>Kecamatan</th>
-          <th width="80px">Control</th>
+          <th width="80px">Lihat Data</th>
         </tr>
       </thead>
       <tbody>
@@ -78,12 +77,6 @@
               <div class="col m6">: <?php echo $news_item->rw; ?></div>
               <div class="col m6">Telepon</div>
               <div class="col m6">: <?php echo $news_item->telp; ?></div>
-              <div class="col m6">Kecamatan</div>
-              <div class="col m6">: <?php echo $news_item->kecamatan; ?></div>
-              <div class="col m6">Kelurahan</div>
-              <div class="col m6">: <?php echo $news_item->kelurahan; ?></div>
-              <div class="col m6">Puskesmas</div>
-              <div class="col m6">: <?php echo $news_item->puskesmas; ?></div>
               <div class="col m6">Penanggung Jawab</div>
               <div class="col m6">: <?php echo $news_item->penanggun_jawab; ?></div>
               <div class="col m6">Jenis Klinik</div>

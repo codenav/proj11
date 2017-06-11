@@ -67,23 +67,23 @@
             <h6>Download Output</h6>
             <div class="row">
               <div class="col m6">Lokasi</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/lokasi_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
               <div class="col m6">Oprasional</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/oprasional_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
               <div class="col m6">Bangunan</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/bangunan_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
               <div class="col m6">Ruangan</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/raungan_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
               <div class="col m6">Sarana Prasarana</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/sapras_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
               <div class="col m6">Sanitasi</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/sanitasi_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
               <div class="col m6">Rekam Medis</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/medrek_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
               <div class="col m6">Tenaga Kesehatan</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/tenagakesehatan_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
               <div class="col m6">Administrasi</div>
-              <div class="col m6"><a class="btn-flat disabled">Downlaod</a></div>
+              <div class="col m6"><a href="<?php echo site_url('puskesmas/administrasi_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
             </div>
           </div>
         </div>

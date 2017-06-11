@@ -39,6 +39,20 @@ class Puskesmas extends CI_Controller {
       redirect('login');
     }
   }
+
+  public function bap(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/bap');
+      $data['title'] = $this->judul;
+      $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      $data['klinik'] = $this->puskesmas_model->get_data_dasar();
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
   public function puskesmas_daftar_klinik_takberizin(){
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/daftar_klinik_takberizin');
@@ -108,6 +122,93 @@ class Puskesmas extends CI_Controller {
 		}
 	}
 
+  public function lokasi_excel(){
+		if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/lokasi_excel',$data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+  public function oprasional_excel(){
+    if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/oprasional_excel',$data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function bangunan_excel(){
+		if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/bangunan_excel',$data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+  public function raungan_excel(){
+    if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/ruangan_excel',$data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function sapras_excel(){
+    if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/sapras_excel',$data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+  public function sanitasi_excel(){
+		if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/sanitasi_excel',$data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+  public function medrek_excel(){
+    if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/medrek_excel',$data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
+  public function tenagakesehatan_excel(){
+		if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/tenagakesehatan_excel',$data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
+  public function administrasi_excel(){
+		if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('puskesmas/administrasi_excel',$data);
+		}
+		else{
+			redirect('login');
+		}
+	}
 
 
 }

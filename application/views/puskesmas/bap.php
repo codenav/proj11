@@ -35,7 +35,7 @@
           <th>RW</th>
           <th>Telp</th>
           <th>Penggangung Jawab</th>
-          <th>Aksi</th>
+          <th>Download</th>
         </tr>
       </thead>
       <tbody>
@@ -62,38 +62,7 @@
           </td>
         </tr>
 
-        <div id="modal<?php echo $news_item->no_surat_izin ?>" class="modal">
-          <div class="modal-content">
-            <h6>Data Lengkap</h6>
-            <div class="row">
-              <div class="col m6">No Surat Izin</div>
-              <div class="col m6">: <?php echo $news_item->no_surat_izin; ?></div>
-              <div class="col m6">Tanggal Mulai Izin</div>
-              <div class="col m6">: <?php echo tgl_indo($news_item->tgl_mulai_izin); ?></div>
-              <div class="col m6">Nama KLinik</div>
-              <div class="col m6">: <?php echo $news_item->nama; ?></div>
-              <div class="col m6">Alamat</div>
-              <div class="col m6">: <?php echo $news_item->alamat; ?></div>
-              <div class="col m6">RT</div>
-              <div class="col m6">: <?php echo $news_item->rt; ?></div>
-              <div class="col m6">RW</div>
-              <div class="col m6">: <?php echo $news_item->rw; ?></div>
-              <div class="col m6">Telepon</div>
-              <div class="col m6">: <?php echo $news_item->telp; ?></div>
-              <div class="col m6">Penanggung Jawab</div>
-              <div class="col m6">: <?php echo $news_item->penanggun_jawab; ?></div>
-              <div class="col m6">Jenis Klinik</div>
-              <div class="col m6">: <?php echo $news_item->jenis_klinik; ?></div>
-              <div class="col m6">Kepemilikan</div>
-              <div class="col m6">: <?php echo $news_item->milik; ?></div>
-              <div class="col m6">Jenis Layanan</div>
-              <div class="col m6">: <?php echo $news_item->jenis_layanan; ?></div>
-            </div>
-
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" >Tidak</a>
-          </div>
+        <div id="modal<?php echo site_url('puskesmas/lokasi_excel');?>" class="modal">
         </div>
 
           <?php $i++;} } ?>
