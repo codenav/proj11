@@ -76,8 +76,7 @@ class Puskesmas extends CI_Controller {
 
   public function tambah_data_puskesmas_pengawasan(){
     if ($this->session->userdata('username')) {
-      $id = $this->puskesmas_model->getLastInserted();
-      $this->puskesmas_model->tambah_data_puskesmas_pengawasan($id);
+      $this->puskesmas_model->tambah_data_puskesmas_pengawasan();
       $this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
       redirect('penelitian/lihat');
     }

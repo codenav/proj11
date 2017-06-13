@@ -43,14 +43,113 @@
       //$data['id'] = $this->db->insert_id();
     }
 
-    public function tambah_data_puskesmas_pengawasan($id){
-      $data_lokasi = array (
-        'id_klinik'=> $id,
-        'st_lokasi'=> $this->input->post('lokasi_st_lokasi'),
-        'id_puskesmas'=> $id,
-        'catatan'=>$this->input->post('lokasi_catatan')
-      );
+    public function tambah_data_puskesmas_pengawasan(){
 
+      $id_pengawasan = $this->input->post('id_peng');
+
+      $data_lokasi = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'st_lokasi'=> $this->input->post('lokasi_st_lokasi'),
+        'catatan'=> $this->input->post('lokasi_catatan')
+      );
       $this->db->insert('kesesuaian_lokasi_klinik', $data_lokasi);
-    }
+
+      $data_operasional = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'st_beroprasi'=> $this->input->post('operasional_st_beroperasi'),
+        'st_plat'=> $this->input->post('operasional_st_plat'),
+        'st_kesesuaian_jenis_ijin_operasional'=> $this->input->post('operasional_st_kesesuaian'),
+        'catatan'=> $this->input->post('operasional_catatan')
+      );
+      $this->db->insert('operasional', $data_operasional);
+
+      $data_bangunan = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'st_bangunan_permanen'=> $this->input->post('bangunan_permanen'),
+        'bangunan_bergabung_fisik'=> $this->input->post('bangunan_bergabung'),
+        'ctt_dan_saran_bangunan'=> $this->input->post('bangunan_catatan'),
+      );
+      $this->db->insert('bangunan', $data_bangunan);
+
+      $data_ruangan = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'ruang_konsul'=> $this->input->post('ruangan_konsultasi'),
+        'ruang_admin'=> $this->input->post('ruangan_administrasi'),
+        'ruang_obat'=> $this->input->post('ruangan_obat'),
+        'ruang_tindakan'=> $this->input->post('ruangan_tindakan'),
+        'ruang_asi'=> $this->input->post('ruangan_asi'),
+        'ruang_mandi'=> $this->input->post('ruangan_mandi'),
+        'keterangan'=> $this->input->post('ruangan_catatan')
+      );
+        $this->db->insert('ruangan', $data_ruangan);
+
+      $data_sarana = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'instalasi_listrik'=> $this->input->post('sarana_listrik'),
+        'instalasi_kebakaran'=> $this->input->post('sarana_pencegahan'),
+        'sarana_gas_mds'=> $this->input->post('sarana_gas'),
+        'tata_udara'=> $this->input->post('sarana_udara'),
+        'sarana_pencahayaan'=> $this->input->post('sarana_pencegahan'),
+        'air_bersih'=> $this->input->post('sarana_air'),
+        'ambulans'=> $this->input->post('sarana_ambulan'),
+        'kat_jml_tt'=> $this->input->post('sarana_tt'),
+        'keterangan'=> $this->input->post('sarana_catatan')
+      );
+      $this->db->insert('sarana_prasarana', $data_sarana);
+
+      $data_sanitasi = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'tsmp_medis'=> $this->input->post('sanitasi_instalasi'),
+        'tsmp_organik'=> $this->input->post('sanitasi_sampah'),
+        'wastafel'=> $this->input->post('sanitasi_wastafel'),
+        'saluran_air_kotor'=> $this->input->post('sanitasi_saluran'),
+        'limbah_mds'=> $this->input->post('sanitasi_pengelolaan'),
+        'keterangan'=> $this->input->post('sanitasi_catatan')
+
+      );
+      $this->db->insert('sanitasi', $data_sanitasi);
+
+      $data_kesesuaian = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'id_pasien'=> $this->input->post('kesesuaian_identitas'),
+        'kelengkapan_anamnesa'=> $this->input->post('kesesuaian_kelengkapan'),
+        'fisik'=> $this->input->post('kesesuaian_pemeriksaan'),
+        'jenis_terapi'=> $this->input->post('kesesuaian_jenis'),
+        'tindakan'=> $this->input->post('kesesuaian_follow'),
+        'nama_ttd_pemeriksa'=> $this->input->post('kesesuaian_ttd'),
+        'keterangan'=> $this->input->post('kesesuaian_catatan')
+
+      );
+      $this->db->insert('rekam_medik', $data_kesesuaian);
+
+      $data_kesehatan = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'dokter'=> $this->input->post('tenaga_dokter'),
+        'str_dokter'=> $this->input->post('tenaga_str_dokter'),
+        'sip_dokter'=> $this->input->post('tenaga_sip'),
+        'perawat'=> $this->input->post('tenaga_perawat'),
+        'str_perawat'=> $this->input->post('tenaga_str_perawat'),
+        'sip_perawat'=> $this->input->post('tenaga_sip_perawat'),
+        'apoteker'=> $this->input->post('tenaga_apoteker'),
+        'sik'=> $this->input->post('tenaga_sik'),
+        'sipa_apoteker'=> $this->input->post('tenaga_sipa'),
+        'analisis'=> $this->input->post('tenaga_analis'),
+        'str_analis'=> $this->input->post('tenaga_str_kesehatan'),
+        'sip_analis'=> $this->input->post('tenaga_sip_kesehatan'),
+        'gizi'=> $this->input->post('tenaga_gizi'),
+        'str_gizi'=> $this->input->post('tenaga_str_gizi'),
+        'sip_gizi'=> $this->input->post('tenaga_sip_gizi'),
+        'keterangan'=> $this->input->post('tenaga_catatan')
+
+      );
+      $this->db->insert('tenaga_kesehatan', $data_kesehatan);
+
+      $data_administrasi = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'laporan'=> $this->input->post('administrasi_laporan'),
+        'catatan'=> $this->input->post('administrasi_catatan')
+
+      );
+      $this->db->insert('administrasi', $data_administrasi);
+  }
   }

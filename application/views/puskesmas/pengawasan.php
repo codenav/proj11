@@ -6,10 +6,11 @@
       echo form_open('puskesmas/tambah_data_puskesmas_pengawasan/');
     ?>
   <main>
+     <input name="id_peng" value="<?php echo $id_peng; ?>" type="hidden" />
     <div class="title">
       <span><?php echo $title; ?></span>
         <div class="col s12 bred">
-          <a href="#!" class="breadcrumb">Input Data Hasil Pengawasan </a>
+          <a href="#!" class="breadcrumb">Input Data Hasil Pengawasan  </a>
         </div>
     </div>
     <nav class="teal">
@@ -98,21 +99,21 @@
                <span class="black-text"><p><h3>Bangunan</h3></p>
                <div class="card-panel white">
                    <p>Bangunan Permanen</p>
-                       <input name="group1" type="radio" id="test21" />
+                       <input name="bangunan_permanen" value="ya" type="radio" id="test21" />
                            <label for="test21">Ya</label>
-                       <input name="group1" type="radio" id="test20" />
+                       <input name="bangunan_permanen" value="tidak" type="radio" id="test20" />
                      <label for="test20">Tidak</label>
                  </div>
                  <div class="card-panel white">
                      <p>Bangunan Bergabung Fisik Dengan Tempat Tinggal Perorangan</p>
-                         <input name="group2" type="radio" id="test22" />
+                         <input name="bangunan_bergabung" value="ya" type="radio" id="test22" />
                              <label for="test22">Ya</label>
-                         <input name="group2" type="radio" id="test23" />
+                         <input name="bangunan_bergabung" value="tidak" type="radio" id="test23" />
                        <label for="test23">Tidak</label>
                    </div>
                    <div class="card-panel white">
                        <p>Catatan kesesuaian Bangunan</p>
-                       <textarea id="textarea1" class="materialize-textarea"></textarea>
+                       <textarea id="textarea1" name="bangunan_catatan" class="materialize-textarea"></textarea>
                        <label for="textarea1">Catatan Kesesuaian Bangunan</label>
                      </div>
                </div>
@@ -120,49 +121,49 @@
                <span class="black-text"><p><h3>Ruangan</h3></p>
                <div class="card-panel white">
                    <p>Ruang Konsultasi</p>
-                       <input name="group1" type="radio" id="99" />
+                       <input name="ruangan_konsultasi" value="ya" type="radio" id="99" />
                            <label for="99">Ya</label>
-                       <input name="group1" type="radio" id="98" />
+                       <input name="ruangan_konsultasi" value="tidak" type="radio" id="98" />
                      <label for="98">Tidak</label>
                  </div>
                  <div class="card-panel white">
                      <p>Ruang Administrasi</p>
-                         <input name="2" type="radio" id="97" />
+                         <input name="ruangan_administrasi" value="ya" type="radio" id="97" />
                              <label for="97">Ya</label>
-                         <input name="2" type="radio" id="96" />
+                         <input name="ruangan_administrasi" value="tidak" type="radio" id="96" />
                        <label for="96">Tidak</label>
                    </div>
                    <div class="card-panel white">
                        <p>Ruang Obat dan Pelayanan Farmasi</p>
-                           <input name="3" type="radio" id="95" />
+                           <input name="ruangan_obat" value="ya" type="radio" id="95" />
                                <label for="95">Ya</label>
-                           <input name="3" type="radio" id="94" />
+                           <input name="ruangan_obat" value="tidak" type="radio" id="94" />
                          <label for="94">Tidak</label>
                      </div>
                      <div class="card-panel white">
                          <p>Ruang Tindakan</p>
-                             <input name="4" type="radio" id="88" />
+                             <input name="ruangan_tindakan" value="ya" type="radio" id="88" />
                                  <label for="88">Ya</label>
-                             <input name="4" type="radio" id="93" />
+                             <input name="ruangan_tindakan" value="tidak" type="radio" id="93" />
                            <label for="93">Tidak</label>
                        </div>
                        <div class="card-panel white">
                            <p>Pojok ASI</p>
-                               <input name="5" type="radio" id="92" />
+                               <input name="ruangan_asi" value="ya" type="radio" id="92" />
                                    <label for="92">Ya</label>
-                               <input name="5" type="radio" id="91" />
+                               <input name="ruangan_asi" value="tidak" type="radio" id="91" />
                              <label for="91">Tidak</label>
                          </div>
                          <div class="card-panel white">
                              <p>Kamar Mandi</p>
-                                 <input name="6" type="radio" id="90" />
+                                 <input name="ruangan_mandi" value="ya" type="radio" id="90" />
                                      <label for="90">Ya</label>
-                                 <input name="6" type="radio" id="89" />
+                                 <input name="ruangan_mandi" value="tidak" type="radio" id="89" />
                                <label for="89">Tidak</label>
                            </div>
                    <div class="card-panel white">
                        <p>Catatan Ketersediaan Ruangan</p>
-                       <textarea id="textarea1" class="materialize-textarea"></textarea>
+                       <textarea id="textarea1" name="ruangan_catatan" class="materialize-textarea"></textarea>
                        <label for="textarea1">Catatan Ketersediaan Ruangan</label>
                   </div>
              </div>
@@ -170,63 +171,63 @@
                <span class="black-text"><p><h3>Sarana Prasarana</h3></p>
                <div class="card-panel white">
                    <p>Instalasi Listrik</p>
-                       <input name="group12" type="radio" id="72" />
+                       <input name="sarana_listrik" value="ya" type="radio" id="72" />
                            <label for="72">Ya</label>
-                       <input name="group12" type="radio" id="73" />
+                       <input name="sarana_listrik" value="tidak" type="radio" id="73" />
                      <label for="73">Tidak</label>
                  </div>
                  <div class="card-panel white">
                      <p>Pencegahan Pelangulangan Kebakaran</p>
-                         <input name="group1" type="radio" id="74" />
+                         <input name="sarana_pencegahan" value="ya" type="radio" id="74" />
                              <label for="74">Ya</label>
-                         <input name="group1" type="radio" id="75" />
+                         <input name="sarana_pencegahan" value="tidak" type="radio" id="75" />
                        <label for="75">Tidak</label>
                    </div>
                    <div class="card-panel white">
                        <p>Sarana Gas Medis</p>
-                           <input name="1" type="radio" id="76" />
+                           <input name="sarana_gas" value="ya" type="radio" id="76" />
                                <label for="76">Ya</label>
-                           <input name="1" type="radio" id="77" />
+                           <input name="sarana_gas" value="tidak" type="radio" id="77" />
                          <label for="77">Tidak</label>
                      </div>
                      <div class="card-panel white">
                          <p>Sarana Tata Udara</p>
-                             <input name="2" type="radio" id="78" />
+                             <input name="sarana_udara" value="ya" type="radio" id="78" />
                                  <label for="78">Ya</label>
-                             <input name="2" type="radio" id="79" />
+                             <input name="sarana_udara" value="tidak" type="radio" id="79" />
                            <label for="79">Tidak</label>
                        </div>
                        <div class="card-panel white">
-                           <p>Sarana Pencahaaan</p>
-                               <input name="3" type="radio" id="80" />
+                           <p>Sarana Pencegahan</p>
+                               <input name="sarana_pencegahan" value="ya" type="radio" id="80" />
                                    <label for="80">Ya</label>
-                               <input name="3" type="radio" id="81" />
+                               <input name="sarana_pencegahan" value="tidak" type="radio" id="81" />
                              <label for="81">Tidak</label>
                          </div>
                          <div class="card-panel white">
                              <p>Sarana Air Bersih</p>
-                                 <input name="4" type="radio" id="82" />
+                                 <input name="sarana_air" value="ya" type="radio" id="82" />
                                      <label for="82">Ya</label>
-                                 <input name="4" type="radio" id="83" />
+                                 <input name="sarana_air" value="tidak" type="radio" id="83" />
                                <label for="83">Tidak</label>
                            </div>
                            <div class="card-panel white">
                                <p>Ambulans</p>
-                                   <input name="5" type="radio" id="84" />
+                                   <input name="sarana_ambulan" value="ya" type="radio" id="84" />
                                        <label for="84">Ya</label>
-                                   <input name="5" type="radio" id="85" />
+                                   <input name="sarana_ambulan" value="tidak" type="radio" id="85" />
                                  <label for="85">Tidak</label>
                              </div>
                              <div class="card-panel white">
                                  <p>Jumlah TT (RI)</p>
-                                     <input name="6" type="radio" id="86" />
+                                     <input name="sarana_tt" value="ya" type="radio" id="86" />
                                          <label for="86"> 5 - 10 </label>
-                                     <input name="6" type="radio" id="87" />
+                                     <input name="sarana_tt" value="tidak" type="radio" id="87" />
                                    <label for="87">< 5 - > 10 </label>
                                </div>
                    <div class="card-panel white">
                        <p>Catatan Sarana Prasarana</p>
-                       <textarea id="textarea1" class="materialize-textarea"></textarea>
+                       <textarea id="textarea1" name="sarana_catatan" class="materialize-textarea"></textarea>
                        <label for="textarea1">Catatan Saarana Prasarana</label>
                      </div>
              </div>
@@ -234,42 +235,42 @@
                <span class="black-text"><p><h3>Sanitasi</h3></p>
                <div class="card-panel white">
                    <p>Instalasi Sanitasi</p>
-                       <input name="1" type="radio" id="71" />
+                       <input name="sanitasi_instalasi" value="ya" type="radio" id="71" />
                            <label for="71">Ya</label>
-                       <input name="1" type="radio" id="70" />
+                       <input name="sanitasi_instalasi" value="tidak" type="radio" id="70" />
                      <label for="70">Tidak</label>
                  </div>
                  <div class="card-panel white">
                      <p>Tempat Sampah</p>
-                         <input name="2" type="radio" id="69" />
+                         <input name="sanitasi_sampah" value="ya" type="radio" id="69" />
                              <label for="69">Ya</label>
-                         <input name="2" type="radio" id="62" />
+                         <input name="sanitasi_sampah" value="tidak" type="radio" id="62" />
                        <label for="62">Tidak</label>
                    </div>
                    <div class="card-panel white">
                        <p>Wastafel</p>
-                           <input name="3" type="radio" id="68" />
+                           <input name="sanitasi_wastafel" value="ya" type="radio" id="68" />
                                <label for="68">Ya</label>
-                           <input name="3" type="radio" id="67" />
+                           <input name="sanitasi_wastafel" value="tidak" type="radio" id="67" />
                          <label for="67">Tidak</label>
                      </div>
                      <div class="card-panel white">
                          <p>Saluran Air Kotor</p>
-                             <input name="4" type="radio" id="66" />
+                             <input name="sanitasi_saluran" value="ya" type="radio" id="66" />
                                  <label for="66">Ya</label>
-                             <input name="4" type="radio" id="65" />
+                             <input name="sanitasi_saluran" value="tidak" type="radio" id="65" />
                            <label for="65">Tidak</label>
                        </div>
                        <div class="card-panel white">
                            <p>Pengelolaan Limbah Medis</p>
-                               <input name="5" type="radio" id="64" />
+                               <input name="sanitasi_pengelolaan" value="ya" type="radio" id="64" />
                                    <label for="64">Ya</label>
-                               <input name="5" type="radio" id="63" />
+                               <input name="sanitasi_pengelolaan" value="tidak" type="radio" id="63" />
                              <label for="63">Tidak</label>
                          </div>
                    <div class="card-panel white">
                        <p>Catatan Sanitasi</p>
-                       <textarea id="textarea1" class="materialize-textarea"></textarea>
+                       <textarea id="textarea1" name="sanitasi_catatan" class="materialize-textarea"></textarea>
                        <label for="textarea1">Catatan Sanitasi</label>
                      </div>
              </div>
@@ -277,49 +278,49 @@
                <span class="black-text"><p><h3>Kesesuaian Kartu Status Klien / Rekam Medik</h3></p>
                <div class="card-panel white">
                    <p>Identitas Klien</p>
-                       <input name="1" type="radio" id="61" />
+                       <input name="kesesuaian_identitas" value="ya" type="radio" id="61" />
                            <label for="61">Lengkap</label>
-                       <input name="1" type="radio" id="60" />
+                       <input name="kesesuaian_identitas" value="tidak" type="radio" id="60" />
                      <label for="60">Tidak Lengkap</label>
                  </div>
                  <div class="card-panel white">
                      <p>Kelengkapan Anamnesis</p>
-                         <input name="2" type="radio" id="59" />
+                         <input name="kesesuaian_kelengkapan" value="ya" type="radio" id="59" />
                              <label for="59">Lengkap</label>
-                         <input name="2" type="radio" id="58" />
+                         <input name="kesesuaian_kelengkapan" value="tidak" type="radio" id="58" />
                        <label for="58">Tidak Lengkap</label>
                    </div>
                    <div class="card-panel white">
                        <p>Hasil Pemeriksaan Fisik</p>
-                           <input name="3" type="radio" id="57" />
+                           <input name="kesesuaian_pemeriksaan" value="ya" type="radio" id="57" />
                                <label for="57">Lengkap</label>
-                           <input name="3" type="radio" id="56" />
+                           <input name="kesesuaian_pemeriksaan" value="tidak" type="radio" id="56" />
                          <label for="56">Tidak Lengkap</label>
                      </div>
                      <div class="card-panel white">
                          <p>Jenis Terai/Tindakan Sesuai Hasil Pemeriksaan Fisik</p>
-                             <input name="4" type="radio" id="55" />
+                             <input name="kesesuaian_jenis" value="ya" type="radio" id="55" />
                                  <label for="55">Lengkap</label>
-                             <input name="4" type="radio" id="54" />
+                             <input name="kesesuaian_jenis" value="tidak" type="radio" id="54" />
                            <label for="54">Tidak Lengkap</label>
                        </div>
                        <div class="card-panel white">
                            <p>Follow UP Theraphy / Tindakan</p>
-                               <input name="5" type="radio" id="53" />
+                               <input name="kesesuaian_follow" value="ya" type="radio" id="53" />
                                    <label for="53">Lengkap</label>
-                               <input name="5" type="radio" id="52" />
+                               <input name="kesesuaian_follow" value="tidak" type="radio" id="52" />
                              <label for="52">Tidak Lengkap</label>
                          </div>
                          <div class="card-panel white">
                              <p>Nama dan TTD Pemeriksa</p>
-                                 <input name="6" type="radio" id="51" />
+                                 <input name="kesesuaian_ttd" value="ya" type="radio" id="51" />
                                      <label for="51">Lengkap</label>
-                                 <input name="6" type="radio" id="50" />
+                                 <input name="kesesuaian_ttd" value="tidak" type="radio" id="50" />
                                <label for="50">Tidak Lengkap</label>
                            </div>
                    <div class="card-panel white">
                        <p>Catatan Rekam Medis</p>
-                       <textarea id="textarea1" class="materialize-textarea"></textarea>
+                       <textarea id="textarea1" name="kesesuaian_catatan" class="materialize-textarea"></textarea>
                        <label for="textarea1">Catatan Rekam Medis</label>
                      </div>
              </div>
@@ -327,105 +328,112 @@
                <span class="black-text"><p><h3>Tenaga Kesehatan</h3></p>
                <div class="card-panel white">
                    <p>Dokter</p>
-                       <input name="1" type="radio" id="49" />
+                       <input name="tenaga_dokter" value="ya" type="radio" id="49" />
                            <label for="49">Ya</label>
-                       <input name="1" type="radio" id="48" />
+                       <input name="tenaga_dokter" value="tidak" type="radio" id="48" />
                      <label for="48">Tidak</label>
                  </div>
                  <div class="card-panel white">
                      <p>STR Dokter</p>
-                         <input name="2" type="radio" id="47" />
+                         <input name="tenaga_str_dokter" value="ya" type="radio" id="47" />
                              <label for="47">Ya</label>
-                         <input name="2" type="radio" id="46" />
+                         <input name="tenaga_str_dokter" value="tidak" type="radio" id="46" />
                        <label for="46">Tidak</label>
                    </div>
                    <div class="card-panel white">
                        <p>SIP Dokter</p>
-                           <input name="3" type="radio" id="45" />
+                           <input name="tenaga_sip" value="ya" type="radio" id="45" />
                                <label for="45">Ya</label>
-                           <input name="3" type="radio" id="44" />
+                           <input name="tenaga_sip" value="tidak" type="radio" id="44" />
                          <label for="44">Tidak</label>
                      </div>
                      <div class="card-panel white">
                          <p>Perawat</p>
-                             <input name="4" type="radio" id="43" />
+                             <input name="tenaga_perawat" value="ya" type="radio" id="43" />
                                  <label for="43">Ya</label>
-                             <input name="4" type="radio" id="42" />
+                             <input name="tenaga_perawat" value="tidak" type="radio" id="42" />
                            <label for="42">Tidak</label>
                        </div>
                        <div class="card-panel white">
                            <p>STR Perawat</p>
-                               <input name="5" type="radio" id="41" />
+                               <input name="tenaga_str_perawat" value="ya" type="radio" id="41" />
                                    <label for="41">Ya</label>
-                               <input name="5" type="radio" id="40" />
+                               <input name="tenaga_str_perawat" value="tidak" type="radio" id="40" />
                              <label for="40">Tidak</label>
                          </div>
                          <div class="card-panel white">
+                             <p>SIP Perawat</p>
+                                 <input name="tenaga_sip_perawat" value="ya" type="radio" id="410" />
+                                     <label for="410">Ya</label>
+                                 <input name="tenaga_sip_perawat" value="tidak" type="radio" id="400" />
+                               <label for="400">Tidak</label>
+                           </div>
+                         <div class="card-panel white">
                              <p>Apoteker</p>
-                                 <input name="6" type="radio" id="39" />
+                                 <input name="tenaga_apoteker" value="ya" type="radio" id="39" />
                                      <label for="39">Ya</label>
-                                 <input name="6" type="radio" id="38" />
+                                 <input name="tenaga_apoteker" value="tidak" type="radio" id="38" />
                                <label for="38">Tidak</label>
                            </div>
                            <div class="card-panel white">
                                <p>SIK</p>
-                                   <input name="7" type="radio" id="37" />
+                                   <input name="tenaga_sik" value="ya" type="radio" id="37" />
                                        <label for="37">Ya</label>
-                                   <input name="7" type="radio" id="36" />
+                                   <input name="tenaga_sik" value="tidak" type="radio" id="36" />
                                  <label for="36">Tidak</label>
                              </div>
                              <div class="card-panel white">
                                  <p>SIPA</p>
-                                     <input name="8" type="radio" id="35" />
+                                     <input name="tenaga_sipa" value="ya" type="radio" id="35" />
                                          <label for="35">Ya</label>
-                                     <input name="8" type="radio" id="34" />
+                                     <input name="tenaga_sipa" value="tidak" type="radio" id="34" />
                                    <label for="34">Tidak</label>
                                </div>
                                <div class="card-panel white">
                                    <p>Analis Kesehatan</p>
-                                       <input name="9" type="radio" id="33" />
+                                       <input name="tenaga_analis" value="ya" type="radio" id="33" />
                                            <label for="33">Ya</label>
-                                       <input name="9" type="radio" id="32" />
+                                       <input name="tenaga_analis" value="tidak" type="radio" id="32" />
                                      <label for="32">Tidak</label>
                                  </div>
                                  <div class="card-panel white">
-                                     <p>STR</p>
-                                         <input name="10" type="radio" id="31" />
+                                     <p>STR Kesehatan</p>
+                                         <input name="tenaga_str_kesehatan" value="ya" type="radio" id="31" />
                                              <label for="31">Ya</label>
-                                         <input name="10" type="radio" id="30" />
+                                         <input name="tenaga_str_kesehatan" value="tidak" type="radio" id="30" />
                                        <label for="30">Tidak</label>
                                    </div>
                                    <div class="card-panel white">
-                                       <p>SIP</p>
-                                           <input name="11" type="radio" id="29" />
+                                       <p>SIP Kesehatan</p>
+                                           <input name="tenaga_sip_kesehatan" value="ya" type="radio" id="29" />
                                                <label for="29">Ya</label>
-                                           <input name="11" type="radio" id="28" />
+                                           <input name="tenaga_sip_kesehatan" value="tidak" type="radio" id="28" />
                                          <label for="28">Tidak</label>
                                      </div>
                                      <div class="card-panel white">
                                          <p>Gizi</p>
-                                             <input name="12" type="radio" id="27" />
+                                             <input name="tenaga_gizi" value="ya" type="radio" id="27" />
                                                  <label for="27">Ya</label>
-                                             <input name="12" type="radio" id="26" />
+                                             <input name="tenaga_gizi" value="tidak" type="radio" id="26" />
                                            <label for="26">Tidak</label>
                                        </div>
                                        <div class="card-panel white">
-                                           <p>STR</p>
-                                               <input name="13" type="radio" id="25" />
+                                           <p>STR Gizi</p>
+                                               <input name="tenaga_str_gizi" value="ya" type="radio" id="25" />
                                                    <label for="25">Ya</label>
-                                               <input name="13" type="radio" id="24" />
+                                               <input name="tenaga_str_gizi" value="tidak" type="radio" id="24" />
                                              <label for="24">Tidak</label>
                                          </div>
                                          <div class="card-panel white">
-                                             <p>SIP</p>
-                                                 <input name="14" type="radio" id="23" />
+                                             <p>SIP Gizi</p>
+                                                 <input name="tenaga_sip_gizi" value="ya" type="radio" id="23" />
                                                      <label for="23">Ya</label>
-                                                 <input name="14" type="radio" id="22" />
+                                                 <input name="tenaga_sip_gizi" value="tidak" type="radio" id="22" />
                                                <label for="22">Tidak</label>
                                            </div>
                    <div class="card-panel white">
                        <p>Catatan Ketenagaan</p>
-                       <textarea id="textarea1" class="materialize-textarea"></textarea>
+                       <textarea id="textarea1" name="tenaga_catatan" class="materialize-textarea"></textarea>
                        <label for="textarea1">Catatan Ketenagaan</label>
                      </div>
              </div>
@@ -433,11 +441,16 @@
                <span class="black-text"><p><h3>Administrasi Klinik</h3></p>
                <div class="card-panel white">
                    <p>Laporan Laporan Penyakit (LB1)</p>
-                       <input name="1" type="radio" id="21" />
+                       <input name="administrasi_laporan" value="ya" type="radio" id="21" />
                            <label for="21">Ya</label>
-                       <input name="1" type="radio" id="20" />
+                       <input name="administrasi_laporan" value="tidak" type="radio" id="20" />
                      <label for="20">Tidak</label>
                  </div>
+                 <div class="card-panel white">
+                     <p>Catatan Administrasi</p>
+                     <textarea id="textarea231" name="administrasi_catatan" class="materialize-textarea"></textarea>
+                     <label for="textarea231">Catatan Administrasi</label>
+                   </div>
                  <div class="input-field col m6">
                    <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Selesai
                      <i class="material-icons right">send</i>
