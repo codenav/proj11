@@ -130,10 +130,6 @@ echo form_open('perizinan/data_dasar',$attributes);
                           <label for="teb3">Pelayanan Kes.GIMUL</label>
                         </div>
                         <div class="col s6">
-                          <input type="checkbox" class="filled-in" id="teb4" name="hobi[]" value="3"/>
-                          <label for="teb4">Pelayanan GADAR</label>
-                        </div>
-                        <div class="col s6">
                           <input type="checkbox" class="filled-in" id="teb5" name="hobi[]" value="4"/>
                           <label for="teb5">Pelayanan Rawat Inap</label>
                         </div>

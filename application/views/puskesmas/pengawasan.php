@@ -44,7 +44,7 @@
              <div id="test1" class="col s12">
                  <span class="black-text"><p><h3>Kesesuaian Lokasi</h3></p>
                  <div class="card-panel white">
-                     <p>Standart Lokasi Klinik</p>
+                     <p>Lokasi Klinik</p>
                          <input name="lokasi_st_lokasi" value="ya" type="radio" id="1" />
                          <label for="1">Ya</label>
                          <input name="lokasi_st_lokasi" value="tidak" type="radio" id="2" />
@@ -53,15 +53,15 @@
                      <div class="row">
                        <div class="col s12">
                          <div class="card-panel cus-tambah white lighten-2">
-                           <p>Catatan</p>
+                           <p>Catatan dan Saran</p>
                            <textarea id="textarea1" name="lokasi_catatan" class="materialize-textarea"></textarea>
-                           <label for="textarea1">Catatan</label>
+                           <label for="textarea1">Catatan Saran</label>
                       </div>
                   </div>
                </div>
              </div>
              <div id="test2" class="col s12">
-               <span class="black-text"><p><h3>Oprasional Standart Klinik</h3></p>
+               <span class="black-text"><p><h3>Oprasional Klinik</h3></p>
                <div class="card-panel white">
                    <p>Status Beroprasi</p>
                        <input name="operasional_st_beroperasi" value="ya" type="radio" id="5" />
@@ -86,7 +86,7 @@
                <div class="card-panel white">
                    <p>Catatan Operasional Jenis Layanan</p>
                    <textarea id="textarea1" name="operasional_catatan" class="materialize-textarea"></textarea>
-                   <label for="textarea1">Catatan Jenis Layanan</label>
+                   <label for="textarea1">Catatan Oprasional Jenis Layanan</label>
                  </div>
                    <div class="row">
                      <div class="col s12">
@@ -112,8 +112,13 @@
                        <label for="test23">Tidak</label>
                    </div>
                    <div class="card-panel white">
+<<<<<<< HEAD
                        <p>Catatan kesesuaian Bangunan</p>
                        <textarea id="textarea1" name="bangunan_catatan" class="materialize-textarea"></textarea>
+=======
+                       <p>Catatan Kesesuaian Bangunan</p>
+                       <textarea id="textarea1" class="materialize-textarea"></textarea>
+>>>>>>> 726b18c5fd7edc712ddbce5eef54f79a59074e13
                        <label for="textarea1">Catatan Kesesuaian Bangunan</label>
                      </div>
                </div>
@@ -305,8 +310,13 @@
                            <label for="54">Tidak Lengkap</label>
                        </div>
                        <div class="card-panel white">
+<<<<<<< HEAD
                            <p>Follow UP Theraphy / Tindakan</p>
                                <input name="kesesuaian_follow" value="ya" type="radio" id="53" />
+=======
+                           <p>Follow UP Theraphy/Tindakan</p>
+                               <input name="5" type="radio" id="53" />
+>>>>>>> 726b18c5fd7edc712ddbce5eef54f79a59074e13
                                    <label for="53">Lengkap</label>
                                <input name="kesesuaian_follow" value="tidak" type="radio" id="52" />
                              <label for="52">Tidak Lengkap</label>

@@ -52,7 +52,7 @@ echo form_open('puskesmas/puskesmas_pengawasan/',$attributes);
             </button>
           <!-- </button>
           <!-- <a href="<?php echo site_url('puskesmas/puskesmas_pengawasan'); ?>" class="btn waves-effect waves-light btn-large type="submit" name="action"">Input</a> -->
-
+          </button>
         </div>
     </div>
   </div>

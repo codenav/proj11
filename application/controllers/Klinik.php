@@ -20,16 +20,17 @@ class Klinik extends CI_Controller {
 		}
 	}
   public function lihat_data(){
-		if ($this->session->userdata('username')) {
-			$data = array('isi' => 'klinik/lihat_data');
-			$data['title'] = $this->judul;
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'klinik/lihat_data');
+      $data['title'] = $this->judul;
       $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
-			$this->load->view('templates/themes', $data);
-		}
-		else{
-			redirect('login');
-		}
-	}
+      $data['klinik'] = $this->puskesmas_model->get_data_dasar();
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
 
   public function lihat(){
 		if ($this->session->userdata('username')) {

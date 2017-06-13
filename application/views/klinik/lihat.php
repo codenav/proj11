@@ -23,8 +23,6 @@
 
   <div class="content ">
     <div class="card-panel white lighten-2">
-        <a href="<?php echo site_url('perizinan/data_dasar'); ?>" class="waves-effect waves-light btn">Tambah</a>
-        <a href="<?php echo site_url('perizinan/cetak_excel'); ?>" class="waves-effect waves-light btn">excel</a>
     <table class="highlight striped" id="example">
       <thead>
         <tr>
