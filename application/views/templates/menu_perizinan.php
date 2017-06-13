@@ -9,7 +9,7 @@
   <li>
     <div class="userView user">
       <div class="background teal lighten-1"></div>
-      <a href="#" class="icon-menu"><span class="nama"><i class="material-icons">account_circle</i><?php echo $this->session->userdata('username') ?></span></a>
+      <a href="#" class="icon-menu"><span class="nama"><i class="material-icons">account_circle</i>Petugas Perizinan</span></a>
     </div>
   </li>
 

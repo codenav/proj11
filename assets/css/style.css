@@ -55,8 +55,9 @@ opacity: 0.9;
 .side-nav .userView.user .nama {
 	color: white;
 	font-size: 14px;
+	padding: 30px;
 	font-weight: 600;
-	line-height: 70px;
+	/* line-height: 70px; */
 	text-transform: capitalize;
 }
 .side-nav .userView.user .nama i.material-icons {
