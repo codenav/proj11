@@ -112,13 +112,11 @@
                        <label for="test23">Tidak</label>
                    </div>
                    <div class="card-panel white">
-<<<<<<< HEAD
-                       <p>Catatan kesesuaian Bangunan</p>
-                       <textarea id="textarea1" name="bangunan_catatan" class="materialize-textarea"></textarea>
-=======
+
                        <p>Catatan Kesesuaian Bangunan</p>
-                       <textarea id="textarea1" class="materialize-textarea"></textarea>
->>>>>>> 726b18c5fd7edc712ddbce5eef54f79a59074e13
+                       <textarea id="textarea1" name="bangunan_catatan" class="materialize-textarea"></textarea>
+
+
                        <label for="textarea1">Catatan Kesesuaian Bangunan</label>
                      </div>
                </div>
@@ -310,13 +308,8 @@
                            <label for="54">Tidak Lengkap</label>
                        </div>
                        <div class="card-panel white">
-<<<<<<< HEAD
-                           <p>Follow UP Theraphy / Tindakan</p>
-                               <input name="kesesuaian_follow" value="ya" type="radio" id="53" />
-=======
                            <p>Follow UP Theraphy/Tindakan</p>
-                               <input name="5" type="radio" id="53" />
->>>>>>> 726b18c5fd7edc712ddbce5eef54f79a59074e13
+                               <input name="kesesuaian_follow" value="ya" type="radio" id="53" />
                                    <label for="53">Lengkap</label>
                                <input name="kesesuaian_follow" value="tidak" type="radio" id="52" />
                              <label for="52">Tidak Lengkap</label>

@@ -29,12 +29,9 @@
         <tr>
           <th>No</th>
           <th>Klinik</th>
-          <th>Alamat</th>
-          <th>Kelurahan</th>
           <th>RT</th>
           <th>RW</th>
-          <th>Telp</th>
-          <th>Penggangung Jawab</th>
+          <th>tanggal</th>
           <th>Download</th>
         </tr>
       </thead>
@@ -48,14 +45,11 @@
         <tr>
           <!-- atribut di table database -->
           <td align="center"><?php echo $i; ?></td>
-          <td><?php echo $news_item->nama; ?></td>
-          <td><?php echo $news_item->alamat; ?></td>
-          <td><?php echo $news_item->kelurahan; ?></td>
-          <td><?php echo $news_item->rt; ?></td>
-          <td><?php echo $news_item->rw; ?></td>
-          <td><?php echo $news_item->telp; ?></td>
-          <td><?php echo $news_item->penanggun_jawab; ?></td>
-            <td><a href="#modal<?php echo $news_item->no_surat_izin ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
+          <td><?php echo $news_item['nama']; ?></td>
+          <td><?php echo $news_item['rt']; ?></td>
+          <td><?php echo $news_item['rw']; ?></td>
+          <td><?php echo $news_item['tanggal']; ?></td>
+            <td><a href="<?php echo site_url('puskesmas/cetak_laporan_bap/'.$news_item['id']);?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
               <i class="material-icons">view_module</i>
             </a>
             </td>

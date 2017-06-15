@@ -5,6 +5,72 @@
       $this->load->database();
     }
 
+    public function get_laporan_lokasi($id){
+      $this->db->select("catatan");
+      $this->db->from("kesesuaian_lokasi_klinik");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
+    public function get_laporan_operasional($id){
+      $this->db->select("*");
+      $this->db->from("operasional");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
+    public function get_laporan_bangunan($id){
+      $this->db->select("*");
+      $this->db->from("bangunan");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
+    public function get_laporan_sarana($id){
+      $this->db->select("*");
+      $this->db->from("sarana_prasarana");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
+    public function get_laporan_sanitasi($id){
+      $this->db->select("*");
+      $this->db->from("sanitasi");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
+    public function get_laporan_tenaga($id){
+      $this->db->select("*");
+      $this->db->from("tenaga_kesehatan");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
+    public function get_laporan_rekam($id){
+      $this->db->select("*");
+      $this->db->from("rekam_medik");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
+    public function get_laporan_administrasi($id){
+      $this->db->select("*");
+      $this->db->from("administrasi");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
+
+
     public function get_data_dasar(){
   		$this->db->select("*");
   		$this->db->from("klinik");
@@ -152,4 +218,40 @@
       );
       $this->db->insert('administrasi', $data_administrasi);
   }
+
+  public function get_data_pengawasan($id_pus){
+    $query = $this->db->query(
+      'SELECT *
+        FROM pengawasan
+        join klinik on klinik.no_surat_izin = pengawasan.klinik
+        WHERE id_puskesmas = "'.$id_pus.'"
+      ');
+    return $query->result_array();
+  }
+
+  public function get_data_klinik_per($id){
+    $query = $this->db->query(
+      'SELECT *
+        FROM pengawasan
+        join klinik on klinik.no_surat_izin = pengawasan.klinik
+        WHERE id = "'.$id.'"
+      ');
+    return $query->result_array();
+  }
+
+
+  // public function get_data_pengawasan($id_pus){
+  //   $this->db->select("*");
+  //   $this->db->from("pengawasan");
+  //   $this->db->where("id_puskesmas", $id_pus);
+  //   $query = $this->db->get();
+  //     if ($query->num_rows() >0){
+  //       foreach ($query->result() as $data) {
+  //         $namaklinik[] = $data;
+  //       }
+  //     return $namaklinik;
+  //     }
+  // }
+
+
   }

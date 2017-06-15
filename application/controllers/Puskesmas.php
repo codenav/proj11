@@ -44,7 +44,8 @@ class Puskesmas extends CI_Controller {
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/bap');
       $data['title'] = $this->judul;
-      $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      //$data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      $data['admin'] = $this->puskesmas_model->get_data_pengawasan($this->session->userdata('nama_lengkap'));
       $data['klinik'] = $this->puskesmas_model->get_data_dasar();
       $this->load->view('templates/themes', $data);
     }
@@ -208,6 +209,26 @@ class Puskesmas extends CI_Controller {
 			redirect('login');
 		}
 	}
+
+  public function cetak_laporan_bap($id){
+    $data['klinik'] = $this->puskesmas_model->get_data_klinik_per($id);
+		$data['lokasi'] = $this->puskesmas_model->get_laporan_lokasi($id);
+    $data['operasional'] = $this->puskesmas_model->get_laporan_operasional($id);
+    $data['bangunan'] = $this->puskesmas_model->get_laporan_bangunan($id);
+    $data['sarana'] = $this->puskesmas_model->get_laporan_sarana($id);
+    $data['sanitasi'] = $this->puskesmas_model->get_laporan_sanitasi($id);
+    $data['tenaga'] = $this->puskesmas_model->get_laporan_tenaga($id);
+    $data['rekam'] = $this->puskesmas_model->get_laporan_rekam($id);
+    $data['administrasi'] = $this->puskesmas_model->get_laporan_administrasi($id);
+
+		$html=$this->load->view('puskesmas/laporan_pdf', $data, true);
+
+		$this->load->library('m_pdf_lanscape');
+		$pdf = $this->m_pdf_lanscape->load();
+		$pdf->WriteHTML($html);
+		$pdf->Output('laporan.pdf',I);
+	}
+
 
 
 }

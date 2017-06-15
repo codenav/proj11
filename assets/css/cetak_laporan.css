@@ -7,6 +7,7 @@
   line-height: 24px;
 	display: inline;
 	margin-top: -70px;
+	font-weight: bold;
 }
 .sub {
 	margin-bottom: 30px;
@@ -22,9 +23,24 @@
 	width: 70px;
 	display: inline;
 }
+.p1 {
+	margin-top: 50px;
+	width: 200px;
+	font-size: 12px;
+	text-align: center;
+	display: inline-block;
+	float: left;
+}
+.marp{
+	margin-left: 80px;
+	margin-top: 0px;
+}
 .head-surat {
-	border-bottom: 1px solid #000;
+
 	margin-bottom: 10px;
+}
+.konten {
+	padding: 20px 150px 20px;
 }
 table {
     border-collapse: collapse;
@@ -52,6 +68,10 @@ th {
     color: white;
 }
 
+h2.laporan {
+	font-size: 14px;
+	font-weight: bold;
+}
 
 /*SIMPLE*/
 /*table {
