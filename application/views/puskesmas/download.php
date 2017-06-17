@@ -58,7 +58,7 @@
             <td><a href="<?php echo site_url('puskesmas/lokasi_excel'); ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
               <i class="material-icons">view_module</i>
             </a>
-            </td>
+          </td>
           </td>
         </tr>
           <?php $i++;} } ?>
