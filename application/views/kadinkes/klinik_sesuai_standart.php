@@ -6,7 +6,7 @@
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
         <a href="#!" class="breadcrumb">Kadinkes</a>
-        <a href="#!" class="breadcrumb">Lihat Data Klinik Tervalidasi</a>
+        <a href="#!" class="breadcrumb">Lihat Data Klinik Sesuai Standart</a>
       </div>
   </div>
   <nav class="teal">
@@ -20,7 +20,6 @@
       </form>
     </div>
   </nav>
-
   <div class="content">
     <div class="card-panel white lighten-2">
 
@@ -55,9 +54,10 @@
             <a href="<?php echo $news_item->no_surat_izin ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
               <i class="material-icons">view_module</i>
             </a>
-
           </td>
         </tr>
+        <div id="modal<?php echo $news_item->no_surat_izin ?>" class="modal">
+        </div>
 
           <?php $i++;} } ?>
         </tbody>

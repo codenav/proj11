@@ -56,5 +56,17 @@ class Kadinkes extends CI_Controller {
     }
   }
 
+  public function klinik_sesuai_standart(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'kadinkes/klinik_sesuai_standart');
+      $data['title'] = $this->judul;
+      $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
 
 }

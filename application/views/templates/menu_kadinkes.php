@@ -22,13 +22,18 @@
         <a href="<?php echo site_url('kadinkes/lihat_klinik'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Lihat Klinik</a>
       </li>
       <li>
-        <a href="<?php echo site_url('kadinkes/lihat_klinik_tervalidasi'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Klinik Tervalidasi</a>
-      </li>
-      <li>
         <a href="<?php echo site_url('kadinkes/lihat_klinik_takberizin'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Klinik tak Berizin</a>
       </li>
       <li>
-        <a href="<?php echo site_url('kadinkes/download'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Download</a>
+        <a class="collapsible-header waves-effect waves-teal icon-menu">
+          <i class="material-icons">assignment</i>Download
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="<?php echo site_url('kadinkes/klinik_sesuai_standart'); ?>">Klinik Sesuai Standart</a></li>
+            <li><a href="<?php echo site_url('kadinkes/lihat_klinik_tervalidasi'); ?>">Jumlah Klinik Tervalidasi</a></li>
+          </ul>
+        </div>
       </li>
       <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>

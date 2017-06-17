@@ -218,10 +218,6 @@
       );
       $this->db->insert('administrasi', $data_administrasi);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 27d75224c74937f8badf87dcda194dd6f552b50f
     public function get_data_lokasi(){
     $this->db->select("*");
     $this->db->from("kesesuaian_lokasi_klinik");
@@ -356,8 +352,4 @@
   //     }
   // }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 27d75224c74937f8badf87dcda194dd6f552b50f
   }
