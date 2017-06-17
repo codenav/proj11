@@ -336,6 +336,15 @@
     return $query->result_array();
   }
 
+  public function get_data_pengawasan_all(){
+    $query = $this->db->query(
+      'SELECT *
+        FROM pengawasan
+        join klinik on klinik.no_surat_izin = pengawasan.klinik
+      ');
+    return $query->result_array();
+  }
+
   public function get_data_klinik_per($id){
     $query = $this->db->query(
       'SELECT *
