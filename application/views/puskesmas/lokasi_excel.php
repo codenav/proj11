@@ -18,13 +18,11 @@ header("Expires: 0");
   <tr>
     <td>1</td>
     <td>Keseuainan Lokasi</td>
-<?php
-$i=1;
-if ($lokasi > 0 ) {
-foreach ($lokasi as $news_item) { ?>
-  <!-- atribut di table database -->
-    <td><?php echo $news_item->st_lokasi; ?></td>
-    <?php } } ?>
+    <td>
+      <?php foreach ($lokasi as $news_item) {
+        echo $news_item->st_lokasi;
+      }?>
+    </td>
     </tr>
     </table>
 
@@ -39,32 +37,24 @@ foreach ($lokasi as $news_item) { ?>
   <tr>
   <td>1</td>
   <td>Status Operasi</td>
-  <?php
-  $i=1;
-  if ($oprasional > 0 ) {
-  foreach ($oprasional as $news_item) { ?>
-  <!-- atribut di table database -->
-  <td><?php echo $news_item->st_beroprasi; ?></td>
-  <?php } } ?>
+  <td>
+    <?php foreach ($operasional as $news_item) {
+      echo $news_item->st_beroprasi;
+  }?>
+  </td>
   </tr>
   <tr>
     <td>2</td>
     <td>Pemasangan Plat Nama dan Klasifikasi</td>
-    <?php
-    $i=1;
-    if ($oprasional > 0 ) {
-    foreach ($oprasional as $news_item) { ?>
-    <td><?php echo $news_item->st_plat; ?></td>
-    <?php } } ?>
+    <td>
+      <?php foreach ($operasional as $news_item) { echo $news_item->st_plat;}?>
+    </td>
   <tr>
     <td>3</td>
     <td>Kesesuaian Lokasi Jenis Layanan Dengan Izin</td>
-    <?php
-    $i=1;
-    if ($oprasional > 0 ) {
-    foreach ($oprasional as $news_item) { ?>
-    <td><?php echo $news_item->st_kesesuaian_jenis_ijin_operasional; ?></td>
-    <?php } } ?>
+    <td>
+      <?php foreach ($operasional as $news_item) { echo $news_item->st_kesesuaian_jenis_ijin_operasional;}?>
+    </td>
   </tr>
   <tr>
     <td>4</td>
@@ -81,22 +71,17 @@ foreach ($lokasi as $news_item) { ?>
     <tr>
         <td>1</td>
         <td>Bangunan Permanen</td>
-        <?php
-        $i=1;
-        if ($bangunan > 0 ) {
-        foreach ($bangunan as $news_item) { ?>
-          <!-- atribut di table database -->
-          <td><?php echo $news_item->st_bangunan_permanen; ?></td>
-          <?php } } ?>
+        <td>
+  <?php foreach ($bangunan as $news_item) { echo $news_item->st_bangunan_permanen;}?>
+        </td>
+
     <tr>
         <td>2</td>
         <td>Bangunan Bergabung Fisik Dengan Tempat Tinggal Perorangan</td>
-        <?php
-        $i=1;
-        if ($bangunan > 0 ) {
-        foreach ($bangunan as $news_item) { ?>
-        <td><?php echo $news_item->bangunan_bergabung_fisik; ?></td>
-        <?php } } ?>
+        <td>
+  <?php foreach ($bangunan as $news_item) { echo $news_item->bangunan_bergabung_fisik;}?>
+        </td>
+
     <tr>
         <td>3</td>
         <td>Catatan Keseuian Bangunan</td>
