@@ -3,7 +3,7 @@
   <?php } ?>
 <?php
 $attributes = array('onsubmit' => "return validate();");
-echo form_open('perizinan/data_dasar',$attributes);
+echo form_open('puskesmas/tambah_takberizin',$attributes);
 ?>
 <main>
   <div class="title">
@@ -66,12 +66,12 @@ echo form_open('perizinan/data_dasar',$attributes);
               </div>
               <div class="input-field col s6">
                 <p>Kecamatan :</p>
-            		<select name="kecamatan" class="browser-default" id="kecamatan">
-            			<option disabled selected>Pilih Kecamatan</option>
-            			<?php foreach($kecamatan as $kec){
-            				echo '<option value="'.$kec->id_kec.'">'.$kec->nama.'</option>';
-            			} ?>
-            		</select>
+                <select name="kecamatan" class="browser-default" id="kecamatan">
+                  <option disabled selected>Pilih Kecamatan</option>
+                  <?php foreach($kecamatan as $kec){
+                    echo '<option value="'.$kec->id_kec.'">'.$kec->nama.'</option>';
+                  } ?>
+                </select>
               </div>
             <div class="input-field col s6">
               <p>Desa :</p>

@@ -7,6 +7,7 @@ class Puskesmas extends CI_Controller {
 		parent::__construct();
 		$this->load->model('penelitian_model');
     $this->load->model('perizinan_model');
+    $this->load->model('m_wilayah');
     $this->load->helper('date_helper');
     $this->load->model('puskesmas_model');
     $this->load->helper(array('form', 'url'));
@@ -69,12 +70,20 @@ class Puskesmas extends CI_Controller {
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/tambah_klinik_takberizin');
       $data['title'] = $this->judul;
+      $data['kecamatan']=$this->m_wilayah->get_all_provinsi();
       $this->load->view('templates/themes', $data);
     }
     else{
       redirect('login');
     }
   }
+
+  public function tambah_takberizin(){
+    $this->perizinan_model->tambah_data_takberizin();
+    $this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
+    redirect('puskesmas/puskesmas_daftar_klinik_takberizin');
+  }
+
   public function puskesmas_pengawasan(){
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/pengawasan');
@@ -112,6 +121,16 @@ class Puskesmas extends CI_Controller {
     }
   }
 
+  public function cetak_klinik_sesuai_standar_excel(){
+    if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('perizinan/output_excel',$data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
   public function cetak_excel(){
 		if ($this->session->userdata('username')) {
       $data['excel'] = $this->perizinan_model->get_data_dasar();
@@ -125,15 +144,6 @@ class Puskesmas extends CI_Controller {
   public function lokasi_excel(){
 		if ($this->session->userdata('username')) {
       $data['excel'] = $this->perizinan_model->get_data_dasar();
-      $data['lokasi'] = $this->puskesmas_model->get_data_lokasi();
-      $data['oprasional'] = $this->puskesmas_model->get_data_oprasional();
-      $data['bangunan'] = $this->puskesmas_model->get_data_bangunan();
-      $data['ruangan'] = $this->puskesmas_model->get_data_ruangan();
-      $data['sarana_prasarana'] = $this->puskesmas_model->get_data_sarana_prasarana();
-      $data['sanitasi'] = $this->puskesmas_model->get_data_sanitasi();
-      $data['rekam_medik'] = $this->puskesmas_model->get_data_rekam_medik();
-      $data['tenaga_kesehatan'] = $this->puskesmas_model->get_data_tenaga_kesehatan();
-      $data['administrasi'] = $this->puskesmas_model->get_data_administrasi();
       $this->load->view('puskesmas/lokasi_excel',$data);
 		}
 		else{

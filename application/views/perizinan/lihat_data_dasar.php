@@ -31,8 +31,10 @@
           <th>No Surat Izin</th>
           <th>Tanggal Mulai Izin</th>
           <th>Nama Klinik</th>
-          <th>Alamat</th>
+          <th>RT</th>
+          <th>RW</th>
           <th>Kecamatan</th>
+          <th>Alamat</th>  
           <th width="80px">Lihat Data</th>
         </tr>
       </thead>
@@ -49,8 +51,11 @@
           <td><?php echo $news_item->no_surat_izin; ?></td>
           <td><?php echo tgl_indo($news_item->tgl_mulai_izin); ?></td>
           <td><?php echo $news_item->nama; ?></td>
-          <td><?php echo $news_item->alamat; ?></td>
+          <td><?php echo $news_item->rt; ?></td>
+          <td><?php echo $news_item->rw; ?></td>
           <td><?php echo $news_item->kecamatan; ?></td>
+          <td><?php echo $news_item->alamat; ?></td>
+
           <td>
             <a href="#modal<?php echo $news_item->no_surat_izin ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
               <i class="material-icons">view_module</i>
