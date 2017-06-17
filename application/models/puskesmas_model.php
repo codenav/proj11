@@ -152,4 +152,104 @@
       );
       $this->db->insert('administrasi', $data_administrasi);
   }
+    public function get_data_lokasi(){
+    $this->db->select("*");
+    $this->db->from("kesesuaian_lokasi_klinik");
+    $query = $this->db->get();
+      if ($query->num_rows() >0){
+        foreach ($query->result() as $data) {
+          $namaklinik[] = $data;
+        }
+      return $namaklinik;
+      }
+  }
+     public function get_data_oprasional(){
+    $this->db->select("*");
+    $this->db->from("operasional");
+    $query = $this->db->get();
+      if ($query->num_rows() >0){
+    foreach ($query->result() as $data) {
+      $namaklinik[] = $data;
+    }
+  return $namaklinik;
+  }
+}
+    public function get_data_bangunan(){
+          $this->db->select("*");
+          $this->db->from("bangunan");
+          $query = $this->db->get();
+          if ($query->num_rows() >0){
+            foreach ($query->result() as $data) {
+              $namaklinik[] = $data;
+            }
+      return $namaklinik;
+      }
+    }
+    public function get_data_ruangan(){
+          $this->db->select("*");
+          $this->db->from("ruangan");
+          $query = $this->db->get();
+          if ($query->num_rows() >0){
+            foreach ($query->result() as $data) {
+              $namaklinik[] = $data;
+            }
+      return $namaklinik;
+      }
+    }
+    public function get_data_sarana_prasarana(){
+          $this->db->select("*");
+          $this->db->from("sarana_prasarana");
+          $query = $this->db->get();
+          if ($query->num_rows() >0){
+            foreach ($query->result() as $data) {
+              $namaklinik[] = $data;
+            }
+      return $namaklinik;
+      }
+    }
+    public function get_data_sanitasi(){
+          $this->db->select("*");
+          $this->db->from("sanitasi");
+          $query = $this->db->get();
+          if ($query->num_rows() >0){
+            foreach ($query->result() as $data) {
+              $namaklinik[] = $data;
+            }
+      return $namaklinik;
+      }
+    }
+    public function get_data_rekam_medik(){
+          $this->db->select("*");
+          $this->db->from("rekam_medik");
+          $query = $this->db->get();
+          if ($query->num_rows() >0){
+            foreach ($query->result() as $data) {
+              $namaklinik[] = $data;
+            }
+      return $namaklinik;
+      }
+    }
+    public function get_data_tenaga_kesehatan(){
+          $this->db->select("*");
+          $this->db->from("tenaga_kesehatan");
+          $query = $this->db->get();
+          if ($query->num_rows() >0){
+            foreach ($query->result() as $data) {
+              $namaklinik[] = $data;
+            }
+      return $namaklinik;
+      }
+    }
+    public function get_data_administrasi(){
+          $this->db->select("*");
+          $this->db->from("administrasi");
+          $query = $this->db->get();
+          if ($query->num_rows() >0){
+            foreach ($query->result() as $data) {
+              $namaklinik[] = $data;
+            }
+      return $namaklinik;
+      }
+    }
+
   }

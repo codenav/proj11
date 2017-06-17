@@ -55,39 +55,12 @@
           <td><?php echo $news_item->rw; ?></td>
           <td><?php echo $news_item->telp; ?></td>
           <td><?php echo $news_item->penanggun_jawab; ?></td>
-            <td><a href="#modal<?php echo $news_item->no_surat_izin ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
+            <td><a href="<?php echo site_url('puskesmas/lokasi_excel'); ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
               <i class="material-icons">view_module</i>
             </a>
             </td>
           </td>
         </tr>
-
-        <div id="modal<?php echo $news_item->no_surat_izin ?>" class="modal">
-          <div class="modal-content">
-            <h6>Download Output</h6>
-            <div class="row">
-              <div class="col m6">Lokasi</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/lokasi_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-              <div class="col m6">Oprasional</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/oprasional_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-              <div class="col m6">Bangunan</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/bangunan_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-              <div class="col m6">Ruangan</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/raungan_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-              <div class="col m6">Sarana Prasarana</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/sapras_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-              <div class="col m6">Sanitasi</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/sanitasi_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-              <div class="col m6">Rekam Medis</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/medrek_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-              <div class="col m6">Tenaga Kesehatan</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/tenagakesehatan_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-              <div class="col m6">Administrasi</div>
-              <div class="col m6"><a href="<?php echo site_url('puskesmas/administrasi_excel'); ?>" class="waves-effect waves-teal btn-flat">Downlaod</a></div>
-            </div>
-          </div>
-        </div>
-
           <?php $i++;} } ?>
         </tbody>
     </table>
