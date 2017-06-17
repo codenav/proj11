@@ -134,6 +134,15 @@ class Puskesmas extends CI_Controller {
   public function lokasi_excel(){
 		if ($this->session->userdata('username')) {
       $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $data['lokasi'] = $this->puskesmas_model->get_data_lokasi();
+      $data['oprasional'] = $this->puskesmas_model->get_data_oprasional();
+      $data['bangunan'] = $this->puskesmas_model->get_data_bangunan();
+      $data['ruangan'] = $this->puskesmas_model->get_data_ruangan();
+      $data['sarana_prasarana'] = $this->puskesmas_model->get_data_sarana_prasarana();
+      $data['sanitasi'] = $this->puskesmas_model->get_data_sanitasi();
+      $data['rekam_medik'] = $this->puskesmas_model->get_data_rekam_medik();
+      $data['tenaga_kesehatan'] = $this->puskesmas_model->get_data_tenaga_kesehatan();
+      $data['administrasi'] = $this->puskesmas_model->get_data_administrasi();
       $this->load->view('puskesmas/lokasi_excel',$data);
 		}
 		else{

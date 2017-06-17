@@ -30,7 +30,7 @@ echo form_open('puskesmas/puskesmas_pengawasan/',$attributes);
                   <label>Pilih Klinik</label>
                   </div>
                   <div class="input-field col s6">
-                    <label class="active" for="dibuat">Tanggal Mulai Izin :</label>
+                    <label class="active" for="dibuat">Tanggal input :</label>
                     <input type="date" class="datepicker" id="dibuat" name="tgl_mulai_izin" value="<?php echo date("Y-m-d"); ?>">
                   </div>
                   <div class="input-field col m6">
