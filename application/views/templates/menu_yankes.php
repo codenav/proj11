@@ -30,6 +30,9 @@
         <a href="<?php echo site_url(''); ?>" class="icon-menu"><i class="material-icons">assignment</i>Cetak Laporan</a>
       </li>
       <li>
+        <a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Klinik Tidak Terdaftar</a>
+      </li>
+      <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>
       </li>
     </ul>

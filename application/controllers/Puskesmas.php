@@ -7,6 +7,7 @@ class Puskesmas extends CI_Controller {
 		parent::__construct();
 		$this->load->model('penelitian_model');
     $this->load->model('perizinan_model');
+    $this->load->model('m_wilayah');
     $this->load->helper('date_helper');
     $this->load->model('puskesmas_model');
     $this->load->helper(array('form', 'url'));
@@ -69,12 +70,20 @@ class Puskesmas extends CI_Controller {
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/tambah_klinik_takberizin');
       $data['title'] = $this->judul;
+      $data['kecamatan']=$this->m_wilayah->get_all_provinsi();
       $this->load->view('templates/themes', $data);
     }
     else{
       redirect('login');
     }
   }
+
+  public function tambah_takberizin(){
+    $this->perizinan_model->tambah_data_takberizin();
+    $this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
+    redirect('puskesmas/puskesmas_daftar_klinik_takberizin');
+  }
+
   public function puskesmas_pengawasan(){
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/pengawasan');

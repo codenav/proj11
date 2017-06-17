@@ -28,6 +28,9 @@
         <a href="<?php echo site_url('kadinkes/lihat_klinik_takberizin'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Klinik tak Berizin</a>
       </li>
       <li>
+        <a href="<?php echo site_url('kadinkes/download'); ?>" class="icon-menu"><i class="material-icons">assignment</i>Download</a>
+      </li>
+      <li>
         <a href="<?php echo site_url('login/logout'); ?>" class="icon-menu"><i class="material-icons">power_settings_new</i>Logout</a>
       </li>
 
