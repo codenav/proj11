@@ -225,7 +225,11 @@
       );
       $this->db->insert('administrasi', $data_administrasi);
   }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> f64501e05f3da054ca602cf90cd3c5e987d9f4e1
   public function get_data_lokasi(){
     $this->db->select("*");
     $this->db->from("kesesuaian_lokasi_klinik");
@@ -332,6 +336,15 @@
         FROM pengawasan
         join klinik on klinik.no_surat_izin = pengawasan.klinik
         WHERE id_puskesmas = "'.$id_pus.'"
+      ');
+    return $query->result_array();
+  }
+
+  public function get_data_pengawasan_all(){
+    $query = $this->db->query(
+      'SELECT *
+        FROM pengawasan
+        join klinik on klinik.no_surat_izin = pengawasan.klinik
       ');
     return $query->result_array();
   }
