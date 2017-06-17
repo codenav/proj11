@@ -29,13 +29,10 @@
         <tr>
           <th>No</th>
           <th>Klinik</th>
-          <th>Alamat</th>
-          <th>Kelurahan</th>
           <th>RT</th>
           <th>RW</th>
-          <th>Telp</th>
-          <th>Penggangung Jawab</th>
-          <th>Aksi</th>
+          <th>tanggal</th>
+          <th>Download</th>
         </tr>
       </thead>
       <tbody>
@@ -44,23 +41,20 @@
         $i=1;
         if ($admin > 0 ) {
 
-        foreach ($admin as $news_item) { ?>
-        <tr>
-          <!-- atribut di table database -->
-          <td align="center"><?php echo $i; ?></td>
-          <td><?php echo $news_item->nama; ?></td>
-          <td><?php echo $news_item->alamat; ?></td>
-          <td><?php echo $news_item->kelurahan; ?></td>
-          <td><?php echo $news_item->rt; ?></td>
-          <td><?php echo $news_item->rw; ?></td>
-          <td><?php echo $news_item->telp; ?></td>
-          <td><?php echo $news_item->penanggun_jawab; ?></td>
-            <td><a href="<?php echo site_url('puskesmas/lokasi_excel'); ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
-              <i class="material-icons">view_module</i>
-            </a>
-          </td>
-          </td>
-        </tr>
+          foreach ($admin as $news_item) { ?>
+          <tr>
+            <!-- atribut di table database -->
+            <td align="center"><?php echo $i; ?></td>
+            <td><?php echo $news_item['nama']; ?></td>
+            <td><?php echo $news_item['rt']; ?></td>
+            <td><?php echo $news_item['rw']; ?></td>
+            <td><?php echo $news_item['tanggal']; ?></td>
+              <td><a href="<?php echo site_url('puskesmas/lokasi_excel/'.$news_item['id']);?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
+                <i class="material-icons">view_module</i>
+              </a>
+              </td>
+            </td>
+          </tr>
           <?php $i++;} } ?>
         </tbody>
     </table>

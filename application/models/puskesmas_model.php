@@ -6,8 +6,15 @@
     }
 
     public function get_laporan_lokasi($id){
-      $this->db->select("catatan");
+      $this->db->select("*");
       $this->db->from("kesesuaian_lokasi_klinik");
+      $this->db->where("id_pengawasan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+    public function get_laporan_ruangan($id){
+      $this->db->select("*");
+      $this->db->from("ruangan");
       $this->db->where("id_pengawasan", $id);
       $query = $this->db->get();
       return $query->result();
@@ -218,11 +225,7 @@
       );
       $this->db->insert('administrasi', $data_administrasi);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 27d75224c74937f8badf87dcda194dd6f552b50f
-    public function get_data_lokasi(){
+  public function get_data_lokasi(){
     $this->db->select("*");
     $this->db->from("kesesuaian_lokasi_klinik");
     $query = $this->db->get();
@@ -356,8 +359,5 @@
   //     }
   // }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 27d75224c74937f8badf87dcda194dd6f552b50f
   }
