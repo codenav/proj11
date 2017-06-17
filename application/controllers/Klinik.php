@@ -36,6 +36,7 @@ class Klinik extends CI_Controller {
 		if ($this->session->userdata('username')) {
 			$data = array('isi' => 'klinik/lihat');
 			$data['title'] = $this->judul;
+      $data['admin'] = $this->puskesmas_model->get_data_pengawasan($this->session->userdata('nama_lengkap'));
 			$this->load->view('templates/themes', $data);
 		}
 		else{

@@ -225,11 +225,8 @@
       );
       $this->db->insert('administrasi', $data_administrasi);
   }
-<<<<<<< HEAD
-    public function get_data_lokasi(){
-=======
+
   public function get_data_lokasi(){
->>>>>>> 3d86b227381337150b24b25c0921ba8fd5a669c0
     $this->db->select("*");
     $this->db->from("kesesuaian_lokasi_klinik");
     $query = $this->db->get();
@@ -363,8 +360,4 @@
   //     }
   // }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3d86b227381337150b24b25c0921ba8fd5a669c0
   }
