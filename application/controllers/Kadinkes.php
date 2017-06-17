@@ -68,5 +68,15 @@ class Kadinkes extends CI_Controller {
     }
   }
 
+  public function klinik_sesuai_standart_excel(){
+		if ($this->session->userdata('username')) {
+      $data['excel'] = $this->perizinan_model->get_data_dasar();
+      $this->load->view('kadinkes/standart_excel',$data);
+		}
+		else{
+			redirect('login');
+		}
+	}
+
 
 }

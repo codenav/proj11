@@ -50,10 +50,8 @@
           <td><?php echo $news_item->nama; ?></td>
           <td><?php echo $news_item->alamat; ?></td>
           <td><?php echo $news_item->kecamatan; ?></td>
-          <td>
-            <a href="<?php echo $news_item->no_surat_izin ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
-              <i class="material-icons">view_module</i>
-            </a>
+          <td><a href="<?php echo site_url('kadinkes/klinik_sesuai_standart_excel')  ?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
+          <i class="material-icons">view_module</i></a>
           </td>
         </tr>
         <div id="modal<?php echo $news_item->no_surat_izin ?>" class="modal">
