@@ -60,8 +60,6 @@ class Klinik extends CI_Controller {
       redirect('login');
     }
   }
-<<<<<<< HEAD
-=======
 
   public function lihat(){
 		if ($this->session->userdata('username')) {
@@ -75,6 +73,4 @@ class Klinik extends CI_Controller {
 		}
 	}
 
-
->>>>>>> f64501e05f3da054ca602cf90cd3c5e987d9f4e1
 }
