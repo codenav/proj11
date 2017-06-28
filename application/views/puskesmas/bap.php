@@ -49,8 +49,8 @@
           <td><?php echo $news_item['rt']; ?></td>
           <td><?php echo $news_item['rw']; ?></td>
           <td><?php echo $news_item['tanggal']; ?></td>
-            <td><a href="<?php echo site_url('puskesmas/cetak_laporan_bap/'.$news_item['id']);?>" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
-              <i class="material-icons">view_module</i>
+            <td><a href="<?php echo site_url('puskesmas/cetak_laporan_bap/'.$news_item['id']);?>" target="_blank" class="btn blue lighten-2 modal-trigger waves-effect waves-light pad">
+              <i class="material-icons" >view_module</i>
             </a>
             </td>
           </td>
