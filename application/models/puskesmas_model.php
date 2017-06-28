@@ -113,7 +113,7 @@
   			'periode'=>$this->input->post('periode')
       );
       $this->db->insert('pengawasan', $data);
-      //$data['id'] = $this->db->insert_id();
+      
     }
 
     public function tambah_data_puskesmas_pengawasan(){
