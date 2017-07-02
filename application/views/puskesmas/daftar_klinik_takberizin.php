@@ -36,7 +36,7 @@
                 <th>Nama Klinik</th>
                 <th>Alamat</th>
                 <th>Kecamatan</th>
-                <th>Control</th>
+                <th>Lihat</th>
               </tr>
             </thead>
             <tbody>

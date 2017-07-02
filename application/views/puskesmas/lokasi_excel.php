@@ -25,8 +25,6 @@ header("Expires: 0");
     </td>
     </tr>
     </table>
-
-
 <h3>HASIL PENGAWASAN DAN PEMBINAAN KLINIK KATEGORI OPERASIONAL</h3>
 <table border='1' width="70%">
   <tr>
