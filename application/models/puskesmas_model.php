@@ -78,6 +78,8 @@
 
 
 
+
+
     public function get_data_dasar(){
   		$this->db->select("*");
   		$this->db->from("klinik");
@@ -113,7 +115,7 @@
   			'periode'=>$this->input->post('periode')
       );
       $this->db->insert('pengawasan', $data);
-      
+
     }
 
     public function tambah_data_puskesmas_pengawasan(){

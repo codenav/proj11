@@ -103,7 +103,8 @@ class Puskesmas extends CI_Controller {
       $data['title'] = $this->judul;
       $this->puskesmas_model->tambah_pengawasan();
       $data['id_peng'] = $this->puskesmas_model->getLastInserted();
-
+      $id = $this->puskesmas_model->getLastInserted();
+      $data['klinik'] = $this->puskesmas_model->get_data_klinik_per($id);
       $this->load->view('templates/themes', $data);
     }
     else{

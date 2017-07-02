@@ -10,7 +10,7 @@
     <div class="title">
       <span><?php echo $title; ?></span>
         <div class="col s12 bred">
-          <a href="#!" class="breadcrumb">Input Data Hasil Pengawasan  </a>
+          <a href="#!" class="breadcrumb">Input Data Hasil Pengawasan <?php foreach ($klinik as $news_item) {$jenis_layanan= $news_item['jenis_layanan'];} ?> </a>
         </div>
     </div>
     <nav class="teal">
@@ -111,14 +111,18 @@
                          <input name="bangunan_bergabung" value="tidak" type="radio" id="test23" />
                        <label for="test23">Tidak</label>
                    </div>
-                   <div class="card-panel white">
 
-                       <p>Catatan Kesesuaian Bangunan</p>
-                       <textarea id="textarea1" name="bangunan_catatan" class="materialize-textarea"></textarea>
+                   <!-- KONDISI -->
+                   <?php if ($jenis_layanan == "0" || $jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" ){
+                     echo "";
+                   }else { ?>
+                     <div class="card-panel white">
+                         <p>Catatan Kesesuaian Bangunan</p>
+                         <textarea id="textarea1" name="bangunan_catatan" class="materialize-textarea"></textarea>
+                         <label for="textarea1">Catatan Kesesuaian Bangunan</label>
+                       </div>
+                   <?php } ?>
 
-
-                       <label for="textarea1">Catatan Kesesuaian Bangunan</label>
-                     </div>
                </div>
              <div id="test4" class="col s12">
                <span class="black-text"><p><h3>Ruangan</h3></p>
@@ -136,13 +140,19 @@
                          <input name="ruangan_administrasi" value="tidak" type="radio" id="96" />
                        <label for="96">Tidak</label>
                    </div>
-                   <div class="card-panel white">
-                       <p>Ruang Obat dan Pelayanan Farmasi</p>
-                           <input name="ruangan_obat" value="ya" type="radio" id="95" />
-                               <label for="95">Ya</label>
-                           <input name="ruangan_obat" value="tidak" type="radio" id="94" />
-                         <label for="94">Tidak</label>
-                     </div>
+                   <?php if ($jenis_layanan == "0" || $jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" ){
+                     echo "";
+                   }else { ?>
+                     <div class="card-panel white">
+                         <p>Ruang Obat dan Pelayanan Farmasi</p>
+                             <input name="ruangan_obat" value="ya" type="radio" id="95" />
+                                 <label for="95">Ya</label>
+                             <input name="ruangan_obat" value="tidak" type="radio" id="94" />
+                           <label for="94">Tidak</label>
+                       </div>
+                  <?php } ?>
+
+
                      <div class="card-panel white">
                          <p>Ruang Tindakan</p>
                              <input name="ruangan_tindakan" value="ya" type="radio" id="88" />
@@ -164,11 +174,18 @@
                                  <input name="ruangan_mandi" value="tidak" type="radio" id="89" />
                                <label for="89">Tidak</label>
                            </div>
-                   <div class="card-panel white">
-                       <p>Catatan Ketersediaan Ruangan</p>
-                       <textarea id="textarea1" name="ruangan_catatan" class="materialize-textarea"></textarea>
-                       <label for="textarea1">Catatan Ketersediaan Ruangan</label>
-                  </div>
+
+                           <!-- KONDISI -->
+                           <?php if ($jenis_layanan == "0" || $jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" ){
+                             echo "";
+                           }else { ?>
+                             <div class="card-panel white">
+                                  <p>Catatan Ketersediaan Ruangan</p>
+                                  <textarea id="textarea1" name="ruangan_catatan" class="materialize-textarea"></textarea>
+                                  <label for="textarea1">Catatan Ketersediaan Ruangan</label>
+                             </div>
+                           <?php } ?>
+
              </div>
              <div id="test5" class="col s12">
                <span class="black-text"><p><h3>Sarana Prasarana</h3></p>
@@ -214,20 +231,28 @@
                                  <input name="sarana_air" value="tidak" type="radio" id="83" />
                                <label for="83">Tidak</label>
                            </div>
-                           <div class="card-panel white">
-                               <p>Ambulans</p>
-                                   <input name="sarana_ambulan" value="ya" type="radio" id="84" />
-                                       <label for="84">Ya</label>
-                                   <input name="sarana_ambulan" value="tidak" type="radio" id="85" />
-                                 <label for="85">Tidak</label>
-                             </div>
-                             <div class="card-panel white">
-                                 <p>Jumlah TT (RI)</p>
-                                     <input name="sarana_tt" value="ya" type="radio" id="86" />
-                                         <label for="86"> 5 - 10 </label>
-                                     <input name="sarana_tt" value="tidak" type="radio" id="87" />
-                                   <label for="87">< 5 - > 10 </label>
+                           <!-- KONDISI -->
+                           <?php if ($jenis_layanan == "0" || $jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" ){
+                             echo "";
+                           }else {
+                             echo '<div class="card-panel white">
+                                 <p>Ambulans</p>
+                                     <input name="sarana_ambulan" value="ya" type="radio" id="84" />
+                                         <label for="84">Ya</label>
+                                     <input name="sarana_ambulan" value="tidak" type="radio" id="85" />
+                                   <label for="85">Tidak</label>
                                </div>
+                               <div class="card-panel white">
+                                   <p>Jumlah TT (RI)</p>
+                                       <input name="sarana_tt" value="ya" type="radio" id="86" />
+                                           <label for="86"> 5 - 10 </label>
+                                       <input name="sarana_tt" value="tidak" type="radio" id="87" />
+                                     <label for="87">< 5 - > 10 </label>
+                                 </div>';
+                           } ?>
+                            <!-- KONDISI -->
+
+
                    <div class="card-panel white">
                        <p>Catatan Sarana Prasarana</p>
                        <textarea id="textarea1" name="sarana_catatan" class="materialize-textarea"></textarea>
@@ -329,116 +354,131 @@
              </div>
              <div id="test8" class="col s12">
                <span class="black-text"><p><h3>Tenaga Kesehatan</h3></p>
-               <div class="card-panel white">
-                   <p>Dokter</p>
-                       <input name="tenaga_dokter" value="ya" type="radio" id="49" />
-                           <label for="49">Ya</label>
-                       <input name="tenaga_dokter" value="tidak" type="radio" id="48" />
-                     <label for="48">Tidak</label>
-                 </div>
-                 <div class="card-panel white">
-                     <p>STR Dokter</p>
-                         <input name="tenaga_str_dokter" value="ya" type="radio" id="47" />
-                             <label for="47">Ya</label>
-                         <input name="tenaga_str_dokter" value="tidak" type="radio" id="46" />
-                       <label for="46">Tidak</label>
-                   </div>
+                 <!-- KONDISI -->
+                 <!--  $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" -->
+                 <?php if ($jenis_layanan == "0"){
+                   echo "";
+                 }
+                 if ($jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" || $jenis_layanan == "6,5,4,2,1,0" ) { ?>
                    <div class="card-panel white">
-                       <p>SIP Dokter</p>
-                           <input name="tenaga_sip" value="ya" type="radio" id="45" />
-                               <label for="45">Ya</label>
-                           <input name="tenaga_sip" value="tidak" type="radio" id="44" />
-                         <label for="44">Tidak</label>
+                       <p>Dokter</p>
+                           <input name="tenaga_dokter" value="ya" type="radio" id="49" />
+                               <label for="49">Ya</label>
+                           <input name="tenaga_dokter" value="tidak" type="radio" id="48" />
+                         <label for="48">Tidak</label>
                      </div>
                      <div class="card-panel white">
-                         <p>Perawat</p>
-                             <input name="tenaga_perawat" value="ya" type="radio" id="43" />
-                                 <label for="43">Ya</label>
-                             <input name="tenaga_perawat" value="tidak" type="radio" id="42" />
-                           <label for="42">Tidak</label>
+                         <p>STR Dokter</p>
+                             <input name="tenaga_str_dokter" value="ya" type="radio" id="47" />
+                                 <label for="47">Ya</label>
+                             <input name="tenaga_str_dokter" value="tidak" type="radio" id="46" />
+                           <label for="46">Tidak</label>
                        </div>
                        <div class="card-panel white">
-                           <p>STR Perawat</p>
-                               <input name="tenaga_str_perawat" value="ya" type="radio" id="41" />
-                                   <label for="41">Ya</label>
-                               <input name="tenaga_str_perawat" value="tidak" type="radio" id="40" />
-                             <label for="40">Tidak</label>
+                           <p>SIP Dokter</p>
+                               <input name="tenaga_sip" value="ya" type="radio" id="45" />
+                                   <label for="45">Ya</label>
+                               <input name="tenaga_sip" value="tidak" type="radio" id="44" />
+                             <label for="44">Tidak</label>
                          </div>
-                         <div class="card-panel white">
-                             <p>SIP Perawat</p>
-                                 <input name="tenaga_sip_perawat" value="ya" type="radio" id="410" />
-                                     <label for="410">Ya</label>
-                                 <input name="tenaga_sip_perawat" value="tidak" type="radio" id="400" />
-                               <label for="400">Tidak</label>
-                           </div>
-                         <div class="card-panel white">
-                             <p>Apoteker</p>
-                                 <input name="tenaga_apoteker" value="ya" type="radio" id="39" />
-                                     <label for="39">Ya</label>
-                                 <input name="tenaga_apoteker" value="tidak" type="radio" id="38" />
-                               <label for="38">Tidak</label>
-                           </div>
-                           <div class="card-panel white">
-                               <p>SIK</p>
-                                   <input name="tenaga_sik" value="ya" type="radio" id="37" />
-                                       <label for="37">Ya</label>
-                                   <input name="tenaga_sik" value="tidak" type="radio" id="36" />
-                                 <label for="36">Tidak</label>
-                             </div>
-                             <div class="card-panel white">
-                                 <p>SIPA</p>
-                                     <input name="tenaga_sipa" value="ya" type="radio" id="35" />
-                                         <label for="35">Ya</label>
-                                     <input name="tenaga_sipa" value="tidak" type="radio" id="34" />
-                                   <label for="34">Tidak</label>
-                               </div>
-                               <div class="card-panel white">
-                                   <p>Analis Kesehatan</p>
-                                       <input name="tenaga_analis" value="ya" type="radio" id="33" />
-                                           <label for="33">Ya</label>
-                                       <input name="tenaga_analis" value="tidak" type="radio" id="32" />
-                                     <label for="32">Tidak</label>
-                                 </div>
-                                 <div class="card-panel white">
-                                     <p>STR Kesehatan</p>
-                                         <input name="tenaga_str_kesehatan" value="ya" type="radio" id="31" />
-                                             <label for="31">Ya</label>
-                                         <input name="tenaga_str_kesehatan" value="tidak" type="radio" id="30" />
-                                       <label for="30">Tidak</label>
-                                   </div>
-                                   <div class="card-panel white">
-                                       <p>SIP Kesehatan</p>
-                                           <input name="tenaga_sip_kesehatan" value="ya" type="radio" id="29" />
-                                               <label for="29">Ya</label>
-                                           <input name="tenaga_sip_kesehatan" value="tidak" type="radio" id="28" />
-                                         <label for="28">Tidak</label>
-                                     </div>
-                                     <div class="card-panel white">
-                                         <p>Gizi</p>
-                                             <input name="tenaga_gizi" value="ya" type="radio" id="27" />
-                                                 <label for="27">Ya</label>
-                                             <input name="tenaga_gizi" value="tidak" type="radio" id="26" />
-                                           <label for="26">Tidak</label>
-                                       </div>
-                                       <div class="card-panel white">
-                                           <p>STR Gizi</p>
-                                               <input name="tenaga_str_gizi" value="ya" type="radio" id="25" />
-                                                   <label for="25">Ya</label>
-                                               <input name="tenaga_str_gizi" value="tidak" type="radio" id="24" />
-                                             <label for="24">Tidak</label>
-                                         </div>
-                                         <div class="card-panel white">
-                                             <p>SIP Gizi</p>
-                                                 <input name="tenaga_sip_gizi" value="ya" type="radio" id="23" />
-                                                     <label for="23">Ya</label>
-                                                 <input name="tenaga_sip_gizi" value="tidak" type="radio" id="22" />
-                                               <label for="22">Tidak</label>
-                                           </div>
+                 <?php } if ($jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" || $jenis_layanan == "6,5,4,2,1,0" ) { ?>
                    <div class="card-panel white">
-                       <p>Catatan Ketenagaan</p>
-                       <textarea id="textarea1" name="tenaga_catatan" class="materialize-textarea"></textarea>
-                       <label for="textarea1">Catatan Ketenagaan</label>
+                       <p>Perawat</p>
+                           <input name="tenaga_perawat" value="ya" type="radio" id="43" />
+                               <label for="43">Ya</label>
+                           <input name="tenaga_perawat" value="tidak" type="radio" id="42" />
+                         <label for="42">Tidak</label>
                      </div>
+                     <div class="card-panel white">
+                         <p>STR Perawat</p>
+                             <input name="tenaga_str_perawat" value="ya" type="radio" id="41" />
+                                 <label for="41">Ya</label>
+                             <input name="tenaga_str_perawat" value="tidak" type="radio" id="40" />
+                           <label for="40">Tidak</label>
+                       </div>
+                       <div class="card-panel white">
+                           <p>SIP Perawat</p>
+                               <input name="tenaga_sip_perawat" value="ya" type="radio" id="410" />
+                                   <label for="410">Ya</label>
+                               <input name="tenaga_sip_perawat" value="tidak" type="radio" id="400" />
+                             <label for="400">Tidak</label>
+                         </div>
+                 <?php } if ($jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" || $jenis_layanan == "6,5,4,2,1,0" ) { ?>
+                   <div class="card-panel white">
+                       <p>Apoteker</p>
+                           <input name="tenaga_apoteker" value="ya" type="radio" id="39" />
+                               <label for="39">Ya</label>
+                           <input name="tenaga_apoteker" value="tidak" type="radio" id="38" />
+                         <label for="38">Tidak</label>
+                     </div>
+                     <div class="card-panel white">
+                         <p>SIK</p>
+                             <input name="tenaga_sik" value="ya" type="radio" id="37" />
+                                 <label for="37">Ya</label>
+                             <input name="tenaga_sik" value="tidak" type="radio" id="36" />
+                           <label for="36">Tidak</label>
+                       </div>
+                       <div class="card-panel white">
+                           <p>SIPA</p>
+                               <input name="tenaga_sipa" value="ya" type="radio" id="35" />
+                                   <label for="35">Ya</label>
+                               <input name="tenaga_sipa" value="tidak" type="radio" id="34" />
+                             <label for="34">Tidak</label>
+                         </div>
+                  <?php } if ($jenis_layanan == "6,5,2,1,0" || $jenis_layanan == "6,5,4,2,1,0" ) { ?>
+                    <div class="card-panel white">
+                        <p>Analis Kesehatan</p>
+                            <input name="tenaga_analis" value="ya" type="radio" id="33" />
+                                <label for="33">Ya</label>
+                            <input name="tenaga_analis" value="tidak" type="radio" id="32" />
+                          <label for="32">Tidak</label>
+                      </div>
+                      <div class="card-panel white">
+                          <p>STR Kesehatan</p>
+                              <input name="tenaga_str_kesehatan" value="ya" type="radio" id="31" />
+                                  <label for="31">Ya</label>
+                              <input name="tenaga_str_kesehatan" value="tidak" type="radio" id="30" />
+                            <label for="30">Tidak</label>
+                        </div>
+                        <div class="card-panel white">
+                            <p>SIP Kesehatan</p>
+                                <input name="tenaga_sip_kesehatan" value="ya" type="radio" id="29" />
+                                    <label for="29">Ya</label>
+                                <input name="tenaga_sip_kesehatan" value="tidak" type="radio" id="28" />
+                              <label for="28">Tidak</label>
+                          </div>
+                  <?php } if ($jenis_layanan == "6,5,4,2,1,0") { ?>
+                    <div class="card-panel white">
+                        <p>Gizi</p>
+                            <input name="tenaga_gizi" value="ya" type="radio" id="27" />
+                                <label for="27">Ya</label>
+                            <input name="tenaga_gizi" value="tidak" type="radio" id="26" />
+                          <label for="26">Tidak</label>
+                      </div>
+                      <div class="card-panel white">
+                          <p>STR Gizi</p>
+                              <input name="tenaga_str_gizi" value="ya" type="radio" id="25" />
+                                  <label for="25">Ya</label>
+                              <input name="tenaga_str_gizi" value="tidak" type="radio" id="24" />
+                            <label for="24">Tidak</label>
+                        </div>
+                        <div class="card-panel white">
+                            <p>SIP Gizi</p>
+                                <input name="tenaga_sip_gizi" value="ya" type="radio" id="23" />
+                                    <label for="23">Ya</label>
+                                <input name="tenaga_sip_gizi" value="tidak" type="radio" id="22" />
+                              <label for="22">Tidak</label>
+                          </div>
+                  <?php } ?>
+
+                  <?php if ($jenis_layanan != "0") { ?>
+                    <div class="card-panel white">
+                        <p>Catatan Ketenagaan</p>
+                        <textarea id="textarea1" name="tenaga_catatan" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Catatan Ketenagaan</label>
+                      </div>
+                  <?php } ?>
+
              </div>
              <div id="test9" class="col s12">
                <span class="black-text"><p><h3>Administrasi Klinik</h3></p>
