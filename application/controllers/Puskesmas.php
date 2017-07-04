@@ -130,7 +130,8 @@ class Puskesmas extends CI_Controller {
       $data = array('isi' => 'puskesmas/download');
       $data['title'] = $this->judul;
       //$data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
-      $data['admin'] = $this->puskesmas_model->tervalid();
+      //$data['admin'] = $this->puskesmas_model->tervalid();
+      $data['admin'] = $this->puskesmas_model->get_data_pengawasan($this->session->userdata('nama_lengkap'));
       $data['klinik'] = $this->puskesmas_model->get_data_dasar();
       $this->load->view('templates/themes', $data);
     }
