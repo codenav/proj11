@@ -38,7 +38,7 @@
         </a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="<?php echo site_url('puskesmas/puskesmas_daftar_klinik_takberizin'); ?>">Laporan Klinik tak berizin</a></li>
+            <li><a href="<?php echo site_url('puskesmas/klnik_tidak_stadart'); ?>">Klinik Tidak Sesuai Standart</a></li>
           </ul>
         </div>
       </li>

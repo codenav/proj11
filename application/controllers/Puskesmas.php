@@ -41,6 +41,19 @@ class Puskesmas extends CI_Controller {
     }
   }
 
+  public function klnik_tidak_stadart(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/klnik_tidak_stadart');
+      $data['title'] = $this->judul;
+      //$data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      //$data['klinik'] = $this->puskesmas_model->get_data_dasar();
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
   public function bap(){
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/bap');

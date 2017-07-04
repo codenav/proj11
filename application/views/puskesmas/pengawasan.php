@@ -41,7 +41,7 @@
                <li class="tab col s2"><a href="#test9">Administrasi</a></li>
              </ul>
            </div>
-             <div id="test1" class="col s12">
+             <div id="test1" class="col s12" method="POST">
                  <span class="black-text"><p><h3>Kesesuaian Lokasi</h3></p>
                  <div class="card-panel white">
                      <p>Lokasi Klinik</p>
