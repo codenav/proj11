@@ -5,7 +5,7 @@
   <div class="title">
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
-        <a href="#!" class="breadcrumb">Kadinkes</a>
+        <a href="#!" class="breadcrumb">Puskesmas</a>
         <a href="#!" class="breadcrumb">Lihat Data Klinik Tervalidasi</a>
       </div>
   </div>
@@ -20,7 +20,6 @@
       </form>
     </div>
   </nav>
-
   <div class="content ">
     <div class="card-panel white lighten-2">
 
@@ -92,7 +91,7 @@
 
           </div>
           <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" >Tidak</a>
+            <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" >Tutup</a>
           </div>
         </div>
 

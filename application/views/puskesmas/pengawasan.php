@@ -35,6 +35,7 @@
                <li class="tab col s2"><a href="#test3">Bangunan</a></li>
                <li class="tab col s2"><a href="#test4">Ruangan</a></li>
                <li class="tab col s2"><a href="#test5">Sarana Prasarana</a></li>
+               <li class="tab col s2"><a href="#test10">Peralatan</a></li>
                <li class="tab col s2"><a href="#test6">Sanitasi</a></li>
                <li class="tab col s2"><a href="#test7">Rekam Medis</a></li>
                <li class="tab col s2"><a href="#test8">Tenaga Kesehatan</a></li>
@@ -218,7 +219,7 @@
                            <label for="79">Tidak</label>
                        </div>
                        <div class="card-panel white">
-                           <p>Sarana Pencegahan</p>
+                           <p>Sarana Pencahayaan</p>
                                <input name="sarana_pencegahan" value="ya" type="radio" id="80" />
                                    <label for="80">Ya</label>
                                <input name="sarana_pencegahan" value="tidak" type="radio" id="81" />
@@ -258,6 +259,16 @@
                        <textarea id="textarea1" name="sarana_catatan" class="materialize-textarea"></textarea>
                        <label for="textarea1">Catatan Saarana Prasarana</label>
                      </div>
+             </div>
+             <div id="test10" class="col s12">
+               <span class="black-text"><p><h3>Peralatan</h3></p>
+               <div class="card-panel white">
+                   <p>Ketersediaan Peralatan Kesehatan Klinik</p>
+                       <input name="sanitasi_instalasi" value="ya" type="radio" id="102" />
+                           <label for="102">Ya</label>
+                       <input name="sanitasi_instalasi" value="tidak" type="radio" id="103" />
+                     <label for="103">Tidak</label>
+                 </div>
              </div>
              <div id="test6" class="col s12">
                <span class="black-text"><p><h3>Sanitasi</h3></p>

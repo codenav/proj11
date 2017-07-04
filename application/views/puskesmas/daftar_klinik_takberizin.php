@@ -5,7 +5,7 @@
   <div class="title">
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
-        <a href="#!" class="breadcrumb">Admin</a>
+        <a href="#!" class="breadcrumb">puskesmas</a>
         <a href="#!" class="breadcrumb">Data Klinik</a>
       </div>
   </div>
@@ -96,7 +96,7 @@
 
                 </div>
                 <div class="modal-footer">
-                  <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" >Tidak</a>
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" >Tutup</a>
                 </div>
               </div>
 

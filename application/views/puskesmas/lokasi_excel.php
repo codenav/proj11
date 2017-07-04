@@ -259,6 +259,20 @@ header("Expires: 0");
       </tr>
     </table>
 
+  <h3>HASIL PENGAWASAN DAN PEMBINAAN KLINIK KATEGORI PERALATAN</h3>
+  <<table border='1' width="70%">
+    <tr>
+      <th>No</th>
+      <th>Uraian</th>
+      <th>Hasil</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Peralatan</td>
+    </tr>
+    
+  </table>
+
 
 <h3>HASIL PENGAWASAN DAN PEMBINAAN KLINIK KATEGORI SARANA SANITASI</h3>
   <table border='1' width="70%">

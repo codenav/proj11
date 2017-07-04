@@ -5,7 +5,7 @@
   <div class="title">
     <span><?php echo $title; ?></span>
       <div class="col s12 bred">
-        <a href="#!" class="breadcrumb">Kadinkes</a>
+        <a href="#!" class="breadcrumb">Puskesmas</a>
         <a href="#!" class="breadcrumb">Lihat Data Klinik Tervalidasi</a>
       </div>
   </div>

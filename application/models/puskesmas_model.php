@@ -44,6 +44,14 @@
       return $query->result();
     }
 
+    public function get_laporan_peralatan($id){
+      $this->db->select("*");
+      $this->db->from("peralatan");
+      $this->db->where("id_peralatan", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
     public function get_laporan_sanitasi($id){
       $this->db->select("*");
       $this->db->from("sanitasi");
@@ -75,10 +83,6 @@
       $query = $this->db->get();
       return $query->result();
     }
-
-
-
-
 
     public function get_data_dasar(){
   		$this->db->select("*");
@@ -291,6 +295,17 @@
       return $namaklinik;
       }
     }
+    public function get_data_peralatan(){
+          $this->db->select("*");
+          $this->db->from("peralatan");
+          $query = $this->db->get();
+          if ($query->num_rows() >0){
+            foreach ($query->result() as $data) {
+              $namaklinik[] = $data;
+            }
+      return $namaklinik;
+      }
+    }
     public function get_data_sanitasi(){
           $this->db->select("*");
           $this->db->from("sanitasi");
@@ -350,7 +365,7 @@
     $query = $this->db->query(
       'SELECT *
         FROM pengawasan
-      
+
       ');
     return $query->result_array();
   }
