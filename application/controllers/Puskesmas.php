@@ -31,8 +31,10 @@ class Puskesmas extends CI_Controller {
   public function puskesmas_daftar_klinik(){
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/daftar_klinik');
+      $id_pus = $this->session->userdata('nama_lengkap');
       $data['title'] = $this->judul;
-      $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      $data['admin'] = $this->puskesmas_model->get_data_dasar_per($id_pus);
+      //$data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
       $data['klinik'] = $this->puskesmas_model->get_data_dasar();
       $this->load->view('templates/themes', $data);
     }
