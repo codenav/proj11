@@ -111,7 +111,7 @@ echo form_open('perizinan/data_dasar',$attributes);
                 <label>Kepemilikan :</label>
               </div>
 
-              <div class="col s12">
+              <!-- <div class="col s12">
 
                   <p class="sub-tit teal lighten-2">Jenis Layanan :</p>
                   <div class="content">
@@ -145,7 +145,7 @@ echo form_open('perizinan/data_dasar',$attributes);
                     </div>
 
                 </div>
-              </div>
+              </div> -->
 
             </div>
           </div>

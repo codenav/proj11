@@ -113,7 +113,7 @@
                    </div>
 
                    <!-- KONDISI -->
-                   <?php if ($jenis_layanan == "0" || $jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" ){
+                   <?php if ($jenis_layanan == "0" || $jenis_layanan == "5,2,0" || $jenis_layanan == "5,0" || $jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" ){
                      echo "";
                    }else { ?>
                      <div class="card-panel white">
@@ -232,7 +232,7 @@
                                <label for="83">Tidak</label>
                            </div>
                            <!-- KONDISI -->
-                           <?php if ($jenis_layanan == "0" || $jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" ){
+                           <?php if ($jenis_layanan == "0" || $jenis_layanan == "5,2,0" || $jenis_layanan =="5,0" || $jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" ){
                              echo "";
                            }else {
                              echo '<div class="card-panel white">
@@ -359,7 +359,7 @@
                  <?php if ($jenis_layanan == "0"){
                    echo "";
                  }
-                 if ($jenis_layanan == "2,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" || $jenis_layanan == "6,5,4,2,1,0" ) { ?>
+                 if ($jenis_layanan == "2,0" || $jenis_layanan == "5,2,0" || $jenis_layanan == "5,0" || $jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" || $jenis_layanan == "6,5,4,2,1,0" ) { ?>
                    <div class="card-panel white">
                        <p>Dokter</p>
                            <input name="tenaga_dokter" value="ya" type="radio" id="49" />
@@ -381,7 +381,7 @@
                                <input name="tenaga_sip" value="tidak" type="radio" id="44" />
                              <label for="44">Tidak</label>
                          </div>
-                 <?php } if ($jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" || $jenis_layanan == "6,5,4,2,1,0" ) { ?>
+                 <?php } if ($jenis_layanan == "2,1,0" || $jenis_layanan == "5,2,0" || $jenis_layanan == "5,0" ||  $jenis_layanan == "5,2,1,0" || $jenis_layanan == "6,5,2,1,0" || $jenis_layanan == "6,5,4,2,1,0" ) { ?>
                    <div class="card-panel white">
                        <p>Perawat</p>
                            <input name="tenaga_perawat" value="ya" type="radio" id="43" />
