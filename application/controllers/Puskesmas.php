@@ -129,13 +129,27 @@ class Puskesmas extends CI_Controller {
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/download');
       $data['title'] = $this->judul;
-      $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      //$data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+      $data['admin'] = $this->puskesmas_model->tervalid();
+      $data['klinik'] = $this->puskesmas_model->get_data_dasar();
       $this->load->view('templates/themes', $data);
     }
     else{
       redirect('login');
     }
   }
+
+  // public function puskesmas_download(){
+  //   if ($this->session->userdata('username')) {
+  //     $data = array('isi' => 'puskesmas/download');
+  //     $data['title'] = $this->judul;
+  //     $data['admin'] = $this->perizinan_model->get_data_dasar_tervalidasi();
+  //     $this->load->view('templates/themes', $data);
+  //   }
+  //   else{
+  //     redirect('login');
+  //   }
+  // }
 
   public function cetak_klinik_sesuai_standar_excel(){
     if ($this->session->userdata('username')) {
@@ -157,8 +171,18 @@ class Puskesmas extends CI_Controller {
 		}
 	}
 
-  public function lokasi_excel(){
+  public function lokasi_excel($id){
 		if ($this->session->userdata('username')) {
+      $data['klinik'] = $this->puskesmas_model->get_data_klinik_per($id);
+      $data['lokasi'] = $this->puskesmas_model->get_laporan_lokasi($id);
+      $data['operasional'] = $this->puskesmas_model->get_laporan_operasional($id);
+      $data['bangunan'] = $this->puskesmas_model->get_laporan_bangunan($id);
+      $data['sarana_prasarana'] = $this->puskesmas_model->get_laporan_sarana($id);
+      $data['sanitasi'] = $this->puskesmas_model->get_laporan_sanitasi($id);
+      $data['tenaga_kesehatan'] = $this->puskesmas_model->get_laporan_tenaga($id);
+      $data['rekam_medik'] = $this->puskesmas_model->get_laporan_rekam($id);
+      $data['ruangan'] = $this->puskesmas_model->get_laporan_ruangan($id);
+      $data['administrasi'] = $this->puskesmas_model->get_laporan_administrasi($id);
       $data['excel'] = $this->perizinan_model->get_data_dasar();
       $this->load->view('puskesmas/lokasi_excel',$data);
 		}

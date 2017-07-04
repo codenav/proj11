@@ -346,6 +346,15 @@
     return $query->result_array();
   }
 
+  public function tervalid(){
+    $query = $this->db->query(
+      'SELECT *
+        FROM pengawasan
+      
+      ');
+    return $query->result_array();
+  }
+
   public function get_data_pengawasan_all(){
     $query = $this->db->query(
       'SELECT *

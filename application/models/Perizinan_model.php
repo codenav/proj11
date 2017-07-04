@@ -106,7 +106,7 @@ class Perizinan_model extends CI_Model{
 	public function get_data_dasar_tervalidasi(){
 		$this->db->select("*");
 		$this->db->from("klinik");
-		$this->db->where('status', "berizin");
+		$this->db->where("status", "berizin");
 		$this->db->order_by("no_surat_izin","asc");
 		$query = $this->db->get();
 			if ($query->num_rows() >0){
