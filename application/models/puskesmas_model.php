@@ -97,8 +97,9 @@
   	}
 
     public function get_data_dasar_per($id_pus){
-  		$this->db->select("*");
+  		$this->db->select("*,kelurahan.nama as kel");
   		$this->db->from("klinik");
+      $this->db->join('kelurahan', 'kelurahan.id_kel=klinik.kelurahan');
       $this->db->where("puskesmas", $id_pus);
   		$query = $this->db->get();
   			if ($query->num_rows() >0){
