@@ -41,6 +41,59 @@ echo form_open('puskesmas/puskesmas_pengawasan/',$attributes);
                       </select>
                     <label>Pilih Klinik</label>
                 </div>
+                <div class="col s12">
+
+                    <p class="sub-tit teal lighten-2">Jenis Layanan :</p>
+                    <div class="content">
+                      <div class="row">
+                        <div class="col s12">
+                          <p>
+                            <!-- a -->
+                             <input name="jenis_layanan" value="0" type="radio" id="test1" />
+                             <label for="test1">Pelayanan Kesehatan Umum</label>
+                           </p>
+                           <p>
+                             <!-- g -->
+                              <input name="jenis_layanan" value="5,0" type="radio" id="test2" />
+                              <label for="test2">Pelayanan Kesehatan Umum, Pelayanan Farmasi </label>
+                            </p>
+                            <p>
+                              <!-- b -->
+                               <input name="jenis_layanan" value="2,0" type="radio" id="test3" />
+                               <label for="test3">Pelayanan Kesehatan Umum, Pelayanan Kes. Gimul</label>
+                             </p>
+                             <p>
+                               <!-- h -->
+                                <input name="jenis_layanan" value="5,2,0" type="radio" id="test4" />
+                                <label for="test4">Pelayanan Kesehatan Umum, Pelayanan Kes. Gimul, Pelayanan Farmasi</label>
+                              </p>
+                              <p>
+                                <!-- c -->
+                                 <input name="jenis_layanan" value="2,1,0" type="radio" id="test5" />
+                                 <label for="test5">Pelayanan Kesehatan Umum, Pelayanan Kes. Gimul, Pelayanan KIA-KB</label>
+                               </p>
+                               <p>
+                                 <!-- d -->
+                                  <input name="jenis_layanan" value="5,2,1,0" type="radio" id="test6" />
+                                  <label for="test6">Pelayanan Kesehatan Umum, Pelayanan Kes. Gimul, Pelayanan KIA-KB, Pelayanan Farmasi</label>
+                                </p>
+                                <p>
+                                  <!-- e -->
+                                   <input name="jenis_layanan" value="6,5,2,1,0" type="radio" id="test7" />
+                                   <label for="test7">Pelayanan Kesehatan Umum, Pelayanan Kes. Gimul, Pelayanan KIA-KB, Pelayanan Farmasi, Pelayanan Laboratorium</label>
+                                 </p>
+                                 <p>
+                                   <!-- f -->
+                                    <input name="jenis_layanan" value="6,5,4,2,1,0" type="radio" id="test8" />
+                                    <label for="test8">Pelayanan Kesehatan Umum, Pelayanan Kes. Gimul, Pelayanan KIA-KB, Pelayanan Farmasi, Pelayanan Laboratorium, Pelayanan Farmasi, Pelayanan Rawat Inap</label>
+                                  </p>
+
+
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
             </div>
           </div>
         </div>

@@ -108,6 +108,14 @@
       return $this->db->insert_id();
     }
     public function tambah_pengawasan(){
+
+      $data_klinik = array (
+        'jenis_layanan'=>  $this->input->post('jenis_layanan')
+      );
+      $this->db->where('no_surat_izin', $this->input->post('no_surat_izin'));
+      $this->db->update('klinik', $data_klinik);
+
+
       $data = array (
         'id_puskesmas'=> $this->session->userdata('nama_lengkap'),
   			'klinik'=> $this->input->post('no_surat_izin'),
