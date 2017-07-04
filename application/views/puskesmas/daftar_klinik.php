@@ -50,7 +50,7 @@
           <td align="center"><?php echo $i; ?></td>
           <td><?php echo $news_item->nama; ?></td>
           <td><?php echo $news_item->alamat; ?></td>
-          <td><?php echo $news_item->kelurahan; ?></td>
+          <td><?php echo $news_item->kel; ?></td>
           <td><?php echo $news_item->rt; ?></td>
           <td><?php echo $news_item->rw; ?></td>
           <td><?php echo $news_item->telp; ?></td>
