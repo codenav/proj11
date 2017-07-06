@@ -24,7 +24,7 @@ echo form_open('puskesmas/puskesmas_pengawasan/',$attributes);
                   <select name="no_surat_izin">
                     <option disabled selected>Pilih klinik</option>
                     <?php foreach ($klinik as $news_item) { ?>
-                      <option value="<?php echo $news_item->no_surat_izin; ?> "><?php echo $news_item->nama; ?></option>
+                      <option value="<?php echo $news_item->no_surat_izin; ?> "><?php echo $news_item->nama_klinik; ?></option>
                       <?php } ?>
                   </select>
                   <label>Pilih Klinik</label>

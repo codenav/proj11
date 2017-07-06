@@ -187,6 +187,9 @@ class Puskesmas extends CI_Controller {
 
   public function lokasi_excel($id){
 		if ($this->session->userdata('username')) {
+
+
+      $data['pengawasan'] = $this->puskesmas_model->get_laporan_pengawasan($id);
       $data['klinik'] = $this->puskesmas_model->get_data_klinik_per($id);
       $data['lokasi'] = $this->puskesmas_model->get_laporan_lokasi($id);
       $data['operasional'] = $this->puskesmas_model->get_laporan_operasional($id);

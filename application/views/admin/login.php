@@ -13,7 +13,15 @@ echo form_open('login/validasi',$attributes);
   <div class="row">
     <div class="col offset-l3 l6 s12">
       <div class="card-panel cus-tambah white lighten-2">
-        <p class="card-login center-align">LOGIN</p>
+        <div class="row">
+          <div class="logo-login">
+              <a href="#!user" class="logo"><img class="responsive-img" src="<?php echo base_url() ?>assets/img/logo.png"></a>
+          </div>
+        </div>
+        <p class="card-login center-align">
+
+
+          LOGIN</p>
         <div class="content-login">
           <div class="row">
               <div class="input-field col s12">
