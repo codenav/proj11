@@ -264,11 +264,16 @@
                <span class="black-text"><p><h3>Peralatan</h3></p>
                <div class="card-panel white">
                    <p>Ketersediaan Peralatan Kesehatan Klinik</p>
-                       <input name="sanitasi_instalasi" value="ya" type="radio" id="102" />
-                           <label for="102">Ya</label>
-                       <input name="sanitasi_instalasi" value="tidak" type="radio" id="103" />
-                     <label for="103">Tidak</label>
+                       <input name="peralatan_kesehatan" value="ya" type="radio" id="112" />
+                           <label for="112">Ya</label>
+                       <input name="peralatan_kesehatan" value="tidak" type="radio" id="512" />
+                     <label for="512">Tidak</label>
                  </div>
+                 <div class="card-panel white">
+                     <p>Catatan Peralatan</p>
+                     <textarea id="textarea1" name="peralatan_catatan" class="materialize-textarea"></textarea>
+                     <label for="textarea1">Catatan Peralatan</label>
+                   </div>
              </div>
              <div id="test6" class="col s12">
                <span class="black-text"><p><h3>Sanitasi</h3></p>

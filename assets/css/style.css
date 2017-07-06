@@ -219,6 +219,10 @@ header, main, footer {
     font-weight: 600;
 }
 
+.logo-login {
+    padding: 30px 190px;
+    margin-bottom: -50px;
+}
 /*custom material*/
 .card-panel.cus-tambah {
 	padding: 0;

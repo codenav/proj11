@@ -4,8 +4,11 @@ header("Content-Disposition: attachment; filename=Data-Klinik.xls");
 header("Pragma: no-cache");
 header("Expires: 0");
 ?>
-<h3>KLINIK : </h3>
-<h3>PERIODE : </h3>
+
+<?php foreach ($pengawasan as $news_item) {
+  echo "<h3>KLINIK : ".$news_item->nama."</h3>";
+  echo "<h3>PERIODE : ".$news_item->periode."</h3>";
+}?>
 <h3>HASIL PENGAWASAN DAN PEMBINAAN KATEGORI KESESUAIAN LOKASI</h3>
 
 
@@ -270,7 +273,7 @@ header("Expires: 0");
       <td>1</td>
       <td>Peralatan</td>
     </tr>
-    
+
   </table>
 
 

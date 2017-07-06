@@ -20,6 +20,15 @@
       return $query->result();
     }
 
+    public function get_laporan_pengawasan($id){
+      $this->db->select("*");
+      $this->db->from("pengawasan");
+      $this->db->join('klinik', 'klinik.no_surat_izin=pengawasan.klinik');
+      $this->db->where("id", $id);
+      $query = $this->db->get();
+      return $query->result();
+    }
+
     public function get_laporan_operasional($id){
       $this->db->select("*");
       $this->db->from("operasional");
@@ -97,7 +106,7 @@
   	}
 
     public function get_data_dasar_per($id_pus){
-  		$this->db->select("*,kelurahan.nama as kel");
+  		$this->db->select("*,kelurahan.nama as kel, klinik.nama as nama_klinik");
   		$this->db->from("klinik");
       $this->db->join('kelurahan', 'kelurahan.id_kel=klinik.kelurahan');
       $this->db->where("puskesmas", $id_pus);
@@ -134,6 +143,13 @@
     public function tambah_data_puskesmas_pengawasan(){
 
       $id_pengawasan = $this->input->post('id_peng');
+
+      $data_peralatan = array (
+        'id_pengawasan'=> $id_pengawasan,
+        'peralatan_kesehatan'=> $this->input->post('peralatan_kesehatan'),
+        'catatan'=> $this->input->post('peralatan_catatan')
+      );
+      $this->db->insert('peralatan', $data_peralatan);
 
       $data_lokasi = array (
         'id_pengawasan'=> $id_pengawasan,
