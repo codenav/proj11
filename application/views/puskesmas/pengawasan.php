@@ -198,10 +198,10 @@
                      <label for="73">Tidak</label>
                  </div>
                  <div class="card-panel white">
-                     <p>Pencegahan Pelangulangan Kebakaran</p>
-                         <input name="sarana_pencegahan" value="ya" type="radio" id="74" />
+                     <p>Pencegahan Penangulangan Kebakaran</p>
+                         <input name="sarana_kebakaran" value="ya" type="radio" id="74" />
                              <label for="74">Ya</label>
-                         <input name="sarana_pencegahan" value="tidak" type="radio" id="75" />
+                         <input name="sarana_kebakaran" value="tidak" type="radio" id="75" />
                        <label for="75">Tidak</label>
                    </div>
                    <div class="card-panel white">
@@ -273,35 +273,35 @@
              <div id="test6" class="col s12">
                <span class="black-text"><p><h3>Sanitasi</h3></p>
                <div class="card-panel white">
-                   <p>Instalasi Sanitasi</p>
+                   <p>Ketersesiaan Tempat Sampah</p>
                        <input name="sanitasi_instalasi" value="ya" type="radio" id="71" />
                            <label for="71">Ya</label>
                        <input name="sanitasi_instalasi" value="tidak" type="radio" id="70" />
                      <label for="70">Tidak</label>
                  </div>
                  <div class="card-panel white">
-                     <p>Tempat Sampah</p>
+                     <p>Ketersediaan Tempat Sampah Organik</p>
                          <input name="sanitasi_sampah" value="ya" type="radio" id="69" />
                              <label for="69">Ya</label>
                          <input name="sanitasi_sampah" value="tidak" type="radio" id="62" />
                        <label for="62">Tidak</label>
                    </div>
                    <div class="card-panel white">
-                       <p>Wastafel</p>
+                       <p>Ketersediaan Tempat Sampah Medis</p>
                            <input name="sanitasi_wastafel" value="ya" type="radio" id="68" />
                                <label for="68">Ya</label>
                            <input name="sanitasi_wastafel" value="tidak" type="radio" id="67" />
                          <label for="67">Tidak</label>
                      </div>
                      <div class="card-panel white">
-                         <p>Saluran Air Kotor</p>
+                         <p>Ketersediaan Wastafel</p>
                              <input name="sanitasi_saluran" value="ya" type="radio" id="66" />
                                  <label for="66">Ya</label>
                              <input name="sanitasi_saluran" value="tidak" type="radio" id="65" />
                            <label for="65">Tidak</label>
                        </div>
                        <div class="card-panel white">
-                           <p>Pengelolaan Limbah Medis</p>
+                           <p>Ketersediaan Saluran Air Kotor</p>
                                <input name="sanitasi_pengelolaan" value="ya" type="radio" id="64" />
                                    <label for="64">Ya</label>
                                <input name="sanitasi_pengelolaan" value="tidak" type="radio" id="63" />

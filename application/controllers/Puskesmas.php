@@ -81,6 +81,19 @@ class Puskesmas extends CI_Controller {
       redirect('login');
     }
   }
+
+  public function puskesmas_sesuai_standrt(){
+    if ($this->session->userdata('username')) {
+      $data = array('isi' => 'puskesmas/puskesmas_sesuai_standrt');
+      $data['title'] = $this->judul;
+      $data['admin'] = $this->perizinan_model->get_data_dasar_takberizin();
+      $this->load->view('templates/themes', $data);
+    }
+    else{
+      redirect('login');
+    }
+  }
+
   public function puskesmas_tambah_klinik_takberizin(){
     if ($this->session->userdata('username')) {
       $data = array('isi' => 'puskesmas/tambah_klinik_takberizin');
@@ -95,7 +108,7 @@ class Puskesmas extends CI_Controller {
 
   public function tambah_takberizin(){
     $this->perizinan_model->tambah_data_takberizin();
-    $this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
+    $this->session->set_flashdata('success_msg', 'Data Berhasil Ditambahkan');
     redirect('puskesmas/puskesmas_daftar_klinik_takberizin');
   }
 
@@ -117,7 +130,7 @@ class Puskesmas extends CI_Controller {
   public function tambah_data_puskesmas_pengawasan(){
     if ($this->session->userdata('username')) {
       $this->puskesmas_model->tambah_data_puskesmas_pengawasan();
-      $this->session->set_flashdata('success_msg', 'User Berhasil Ditambahkan');
+      $this->session->set_flashdata('success_msg', 'Data Berhasil Ditambahkan');
       redirect('penelitian/lihat');
     }
     else{
@@ -288,6 +301,19 @@ class Puskesmas extends CI_Controller {
 		$pdf->WriteHTML($html);
 		$pdf->Output('laporan.pdf',I);
 	}
+
+  public function tampil_puskesmas_sesuai_standart($id){
+      if ($this->session->userdata('username')) {
+        $data = array('isi' => 'puskesmas/puskesmas_sesuai_standrt');
+        $data['title'] = $this->judul;
+        $data['puskesmas'] = $this->puskesmas_model->get_data_puskesmas();
+        $data['pengawasan'] = $this->puskesmas_model->get_data_pengawasan_standart();
+        $this->load->view('templates/themes', $data);
+      }
+      else{
+        redirect('login');
+      }
+    }
 
 
 

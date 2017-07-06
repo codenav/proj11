@@ -390,6 +390,24 @@
     return $query->result_array();
   }
 
+  public function get_data_puskesmas(){
+    $query = $this->db->query(
+      'SELECT *
+        FROM puskesmas
+
+      ');
+    return $query->result_array();
+  }
+
+  public function get_data_pengawasan_standart(){
+    $query = $this->db->query(
+      'SELECT *
+        FROM pengawasan
+        
+      ');
+    return $query->result_array();
+  }
+
 
   // public function get_data_pengawasan($id_pus){
   //   $this->db->select("*");
